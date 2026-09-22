@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+
+<head>
+	<meta charset="utf-8" />
+	<title>03.0_archive - SKI KLUB JIZERSKÁ PADESÁTKA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<!--****** Favicon ******-->
+	<!--****** Fonts ******-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+	<!--****** Styles  ******-->
+	<link rel="preload" href="css/styles.css" as="style" />
+	<link rel="stylesheet" media="screen, handheld" href="css/styles.css" />
+	<link rel="stylesheet" media="print" href="css/prints.css" />
+	<!--****** Styles  ******-->
+
+	<!--****** Scripts  ******-->
+	<link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script" crossorigin />
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin />
+	<link rel="preload" href="js/scripts.js" as="script" />
+	<!-- ****** scripts ****** -->
+</head>
+
+<body>
+	<div class="base">
+		<header class="header">
+			<div class="container-full">
+				<div class="header__inner">
+					<a href="/" class="header__logo">
+						<img src="images/ico/logo.svg" width="56" height="52" alt="Jizerská 50" />
+					</a>
+
+					<nav class="headerNav">
+						<ul class="headerNav__menu">
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Závody
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<div class="megaMenu__column megaMenu__column--featured">
+										<div class="megaMenu__featured">
+											<a class="hover-underline-center fw-bold text-white" href="#">Přehled všech závodů</a>
+											<div class="text-inverse-secondary fw-medium mx-auto">
+												Všechny ročníky a závody za 50 let
+											</div>
+										</div>
+									</div>
+
+									<div class="megaMenu__divider"></div>
+
+									<ul class="megaMenu__list">
+										<li><a href="#">Jizerská 50 2027</a></li>
+										<li><a href="#">Jizerská 30 2027</a></li>
+										<li><a href="#">Jizerská 10 2027</a></li>
+										<li><a href="#">Jizerská ČT 2027</a></li>
+										<li><a href="#">Jizerská 5 2027</a></li>
+										<li><a href="#">Jizerská 50 2027</a></li>
+										<li><a href="#">Jizerská 50 2027</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Výsledky
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<div class="megaMenu__column megaMenu__column--featured">
+										<div class="megaMenu__featured">
+											<a class="hover-underline-center fw-bold text-white" href="#">Výsledky závodů</a>
+										</div>
+									</div>
+
+									<div class="megaMenu__divider"></div>
+
+									<ul class="megaMenu__list">
+										<li><a href="#">Klub mistrů</a></li>
+										<li><a href="#">Král Jizerek</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Praktické informace
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">Program</a></li>
+										<li><a href="#">Doprava a parkování</a></li>
+										<li><a href="#">Ubytování</a></li>
+										<li><a href="#">Pro závodníky</a></li>
+										<li><a href="#">Pro diváky</a></li>
+										<li><a href="#">Jedlu poprvé</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item">
+								<a href="#" class="headerNav__link"> Články </a>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Jizerská 50
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">O Jizerské 50</a></li>
+										<li><a href="#">Historie</a></li>
+										<li><a href="#">Charita</a></li>
+										<li><a href="#">Komunita</a></li>
+										<li><a href="#">Partneři</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item">
+								<a href="#" class="headerNav__link">Eshop</a>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Kontakt
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">Kontakty</a></li>
+										<li><a href="#">Členská sekce</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- <div class="mobileFooter">
+          <a href="#" class="mobileFooter__register">
+            <span class="mobileFooter__icon">ID</span>
+            REGISTROVAT SE
+          </a>
+
+          <a href="#" class="mobileFooter__next">
+            <span></span>
+          </a>
+
+          <button class="mobileFooter__language" type="button">
+            CS
+            <span></span>
+          </button>
+        </div> -->
+					</nav>
+
+					<div class="headerActions">
+						<a href="#" class="button-secondary py-1 d-xxl-flex d-none">
+							<img src="images/ico/sportid.svg" alt="id" />
+							Registrovat se
+						</a>
+
+						<details class="headerActions__language d-xl-flex d-none">
+							<summary class="d-flex align-items-center gap-1">
+								CS
+								<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+							</summary>
+							<ul class="headerActions__language-list">
+								<li>
+									<a class="active" href="#">CS</a>
+								</li>
+								<li>
+									<a href="#">EN</a>
+								</li>
+								<li>
+									<a href="#">DE</a>
+								</li>
+							</ul>
+						</details>
+
+						<button class="headerActions__icon js-search-open" type="button" aria-label="Hledat">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.276 17.277l3.961 3.96" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								<path d="M11 19a8 8 0 100-16 8 8 0 000 16z" stroke="currentColor" stroke-width="1.5" />
+							</svg> </button>
+
+						<a href="#" class="headerActions__icon" aria-label="Počasí">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 2v2M4.93 4.93l1.41 1.41M20 12h2M19.07 4.93l-1.41 1.41M15.947 12.65a4.002 4.002 0 00-5.924-4.128M13 22H7a5 5 0 114.9-6H13a3 3 0 010 6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg> </a>
+
+						<a href="#" class="headerActions__icon d-xl-none">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7616 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<a href="#" class="headerActions__icon d-xl-none">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M23.9997 2.66699H19.9997C18.2316 2.66699 16.5359 3.36937 15.2856 4.61961C14.0354 5.86986 13.333 7.56555 13.333 9.33366V13.3337H9.33301V18.667H13.333V29.3337H18.6663V18.667H22.6663L23.9997 13.3337H18.6663V9.33366C18.6663 8.98004 18.8068 8.6409 19.0569 8.39085C19.3069 8.1408 19.6461 8.00033 19.9997 8.00033H23.9997V2.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<button class="headerActions__menu js-nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+							<img class="headerActions__menu-icon headerActions__menu-icon--open" src="images/ico/menu.svg" width="24" height="24" alt="" />
+
+							<img class="headerActions__menu-icon headerActions__menu-icon--close" src="images/ico/close.svg" width="24" height="24" alt="" />
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="headerSearch js-search">
+				<form class="headerSearch__form">
+					<button class="headerSearch__btn" type="submit">
+						<img src="images/ico/search-primary.svg" alt="" />
+					</button>
+
+					<input class="headerSearch__input" type="search" placeholder="Hledat informace" />
+				</form>
+
+				<div class="headerSearch__section">
+					<div class="headerSearch__title">Často hledané</div>
+
+					<ul class="headerSearch__list">
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Registrace
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Přeregistrace
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Výdej čísel
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Doprava
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Parkování
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Pravidla závodu
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="headerSearch__section">
+					<div class="headerSearch__title">Naposledy navštíveno</div>
+
+					<ul class="headerSearch__list">
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Jizerská 50
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Jizerská 25
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Kontakty
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="main" aria-label="Hlavní obsah">
+
+			<section class="subpageHero" style="background-image: url('../images/content/archive.png')">
+				<div class="container">
+					<div class="subpageHero__content">
+						<h1 class="h1 mb-4">Články</h1>
+						<div class="subtitle-primary">Přehled všech článků</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="archive-section">
+				<div class="menuLinks mb-lg-10 mb-4">
+					<div class="container">
+						<ul class="menuLinks__list">
+							<li>
+								<a class="active" href="#">Vše</a>
+							</li>
+							<li>
+								<a href="#">Závody</a>
+							</li>
+							<li>
+								<a href="#">Parneři</a>
+							</li>
+							<li>
+								<a href="#">Osobní závod</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mb-7">
+					<div class="container">
+						<div class="row g-6 mb-lg-18 mb-10 mb-15">
+							<div class="col-xl-8">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+
+							<div class="col-xl-4">
+								<div class="row g-4">
+									<div class="col-xl-12 col-md-6">
+										<a class="cardPost" href="#">
+											<div class="cardPost__img">
+												<div class="tag">Závod</div>
+												<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+											</div>
+
+											<div class="caption text-secondary">1 / 9 / 2026</div>
+											<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+										</a>
+									</div>
+
+									<div class="col-xl-12 col-md-6">
+										<a class="cardPost" href="#">
+											<div class="cardPost__img">
+												<div class="tag">Závod</div>
+												<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+											</div>
+
+											<div class="caption text-secondary">1 / 9 / 2026</div>
+											<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+
+							<div class="col-xl-4 col-md-6">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+
+							<div class="col-xl-8">
+								<a class="cardPost" href="#">
+									<div class="cardPost__img">
+										<div class="tag">Závod</div>
+										<img src="https://picsum.photos/id/10/301/162" srcset="
+        https://picsum.photos/id/10/301/162 1x,
+        https://picsum.photos/id/10/602/324 2x
+      " width="301" height="162" loading="lazy" alt="post" />
+									</div>
+
+									<div class="caption text-secondary">1 / 9 / 2026</div>
+									<div class="h4 text-uppercase">ENERGIE PRO JIZERSKOU 50!</div>
+								</a>
+							</div>
+						</div>
+						<div class="d-md-flex d-none gap-3 align-items-center justify-content-center flex-column">
+							<div class="text-secondary fw-medium text-center">
+								Výsledky 1–20 z 240
+							</div>
+							<button class="button-secondary">Načíst další výsledky</button>
+							<nav class="paginationWrap" aria-label="Stránkování">
+								<ul class="pagination paginationWrap__list mb-0">
+									<li class="page-item active">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item disabled">
+										<span class="page-link">...</span>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">67</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">68</a>
+									</li>
+								</ul>
+
+								<div class="paginationWrap__nav">
+									<a href="#" class="paginationWrap__nav-link paginationWrap__nav-link--prev disabled">
+										<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.001 9.11523H1.63435C1.12503 9.11523 0.712138 9.52812 0.712138 10.0374C0.712138 10.5468 1.12503 10.9597 1.63435 10.9597H15.001V9.11523Z" fill="currentColor" />
+											<path d="M1.32136 8.72314L11.4251 18.6958C10.6954 19.4161 9.51219 19.4161 8.78242 18.6958L4.38703e-08 10.0274L1.32136 8.72314Z" fill="currentColor" />
+											<path d="M1.32136 11.2769L11.4251 1.30422C10.6954 0.583921 9.51219 0.583922 8.78243 1.30422L1.54532e-07 9.97265L1.32136 11.2769Z" fill="currentColor" />
+										</svg>
+										<span>Předchozí</span>
+									</a>
+
+									<a href="#" class="paginationWrap__nav-link">
+										<span>Následující</span>
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="partners">
+				<div class="container">
+					<div class="partners__inner">
+						<div class="partners__group partners__group--center">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Generální partner</h3>
+
+							<ul class="partners__logos partners__logos--single">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-1.png" alt="Skupina ČEZ" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__group partners__group--center">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Premiový partner</h3>
+
+							<ul class="partners__logos partners__logos--single">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="T-Mobile" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__group partners__group--full">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Hlavní partneři</h3>
+
+							<ul class="partners__logos partners__logos--main">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-3.png" alt="Orlen" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners//p-4.png" alt="Vinci" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-5.png" alt="Dr. Max" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-6.png" alt="CRA" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-1.png" alt="Volkswagen" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="Generali Investments" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__row">
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">
+									Generální mediální partner
+								</h3>
+
+								<ul class="partners__logos">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-3.png" alt="Česká televize" />
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">
+									Hlavní mediální partner
+								</h3>
+
+								<ul class="partners__logos partners__logos--media">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-4.png" alt="Evropa 2" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-1.png" alt="Sport" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="partners__group partners__group--full">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">
+								Hlavní institucionální partneři
+							</h3>
+
+							<ul class="partners__logos partners__logos--institutions">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-6.png" alt="Národní sportovní agentura" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-5.png" alt="Partner" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-4.png" alt="Liberecký kraj" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-3.png" alt="Visit Czechia" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="Ministerstvo pro místní rozvoj" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__row">
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">Oficiální partneři</h3>
+
+								<ul class="partners__logos partners__logos--official">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-1.png" alt="Mincovna" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-2.png" alt="Swix" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-4.png" alt="Intersport" />
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">VIP catering partner</h3>
+
+								<ul class="partners__logos">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-5.png" alt="Delirest" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="partners__bottom">
+							<img src="images/content/partners/p-7.png" alt="Ski Classics" />
+
+							<span> Ski Classics World Championship 2026/2027 Season XVIII </span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="pubs">
+				<div class="container">
+					<div class="row g-md-4 g-8 justify-content-center">
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footerMenu">
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Závody</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Všechny závody</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 50 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 30 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 10 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 5 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 2 | 2026</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Výsledky</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Výsledky závodů</a>
+							</li>
+							<li>
+								<a href="#">Klub mistrů</a>
+							</li>
+							<li>
+								<a href="#">Král Jizerek</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Informace</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Aktuality</a>
+							</li>
+							<li>
+								<a href="#">Servis</a>
+							</li>
+							<li>
+								<a href="#">Charita</a>
+							</li>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Kontakty</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Kontakty</a>
+							</li>
+							<li>
+								<a href="#">Členská sekce</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__socials">
+						<a href="#" aria-label="Facebook"> <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M23.9997 2.66699H19.9997C18.2316 2.66699 16.5359 3.36937 15.2856 4.61961C14.0354 5.86986 13.333 7.56555 13.333 9.33366V13.3337H9.33301V18.667H13.333V29.3337H18.6663V18.667H22.6663L23.9997 13.3337H18.6663V9.33366C18.6663 8.98004 18.8068 8.6409 19.0569 8.39085C19.3069 8.1408 19.6461 8.00033 19.9997 8.00033H23.9997V2.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<a href="#" aria-label="Instagram">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7616 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footerInfo">
+				<div class="container">
+					<div class="d-flex flex-sm-row flex-column align-items-sm-center justify-content-between gap-4 flex-wrap">
+						<div class="text-white d-flex flex-md-row flex-column align-items-md-center gap-lg-8 gap-sm-3 gap-1 flex-wrap">
+							<div class="fw-extrabold text-uppercase">
+								SKI KLUB JIZERSKÁ PADESÁTKA
+							</div>
+
+							<a class="fw-medium hover-outline" href="mailto:info@jiz50.cz">
+								<span>e-mail:</span>
+								info@jiz50.cz
+							</a>
+						</div>
+
+						<a class="d-block" href="#" target="_blank">
+							<img src="images/ico/raul.svg" width="130" height="32" loading="lazy" class="object-fit-contain" alt="raul" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="container">
+					<div class="footerBottom__inner fw-medium text-white">
+						<a class="hover-underline-center" href="#">Obchodní podmínky</a>
+						<a class="hover-underline-center" href="#">Pravidla závodu </a>
+						<a class="hover-underline-center" href="#">Nastavení cookies </a>
+						<a class="hover-underline-center" href="#">Podmínky GDPR </a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script defer src="js/scripts.js"></script>
+</body>
+
+</html>

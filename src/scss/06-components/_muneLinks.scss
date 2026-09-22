@@ -1,0 +1,35 @@
+.menuLinks {
+  border-bottom: 1px solid var(--border-dark-hover);
+}
+.menuLinks__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 0;
+  @include media-breakpoint-down(lg) {
+    gap: 16px;
+    padding: 12px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  a {
+    display: block;
+    transition: color 0.25s ease;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: var(--text-secondary);
+    text-decoration-color: transparent;
+    white-space: nowrap;
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+  .active {
+    text-decoration-color: inherit;
+    color: var(--color-primary) !important;
+  }
+}

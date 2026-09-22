@@ -1,0 +1,56 @@
+.o-content {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 130%;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    margin: 0 0 24px 0;
+    > li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 1rem;
+      line-height: 130%;
+      letter-spacing: 0.15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 1rem;
+      }
+      &::before {
+        content: "";
+        background-color: var(--color-primary);
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.subtitle-primary {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 133%;
+}
+.subtitle-secondary {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  @include media-breakpoint-down(lg) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 125%;
+  }
+}
+
+.h1 {
+  font-size: 88px;
+  font-weight: 400;
+  @include media-breakpoint-down(lg) {
+    font-size: 52px;
+  }
+}
+.h2 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+.h3 {
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+  }
+}
+.h4 {
+  font-size: 28px;
+  line-height: 136%;
+  font-weight: 700;
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+    line-height: 116%;
+  }
+}
+
+.h5,
+.o-content h5 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110.00000000000001%;
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 130%;
+  }
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 166%;
+}
+
+.text-xs {
+  font-size: 14px;
+  line-height: 115%;
+  letter-spacing: 0.17px;
+}

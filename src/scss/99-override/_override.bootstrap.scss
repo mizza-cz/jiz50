@@ -1,0 +1,45 @@
+/*! purgecss start ignore */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px,
+);
+.container-full {
+  max-width: 1920px !important;
+  margin: 0 auto;
+  width: 100% !important;
+}
+.container {
+  max-width: 95.67rem !important;
+  width: 100% !important;
+  padding: 0 16px;
+  @include media-breakpoint-up(lg) {
+    padding: 0 24px;
+  }
+}
+.text-white {
+  color: var(--color-white) !important;
+}
+.text-inverse-secondary {
+  color: var(--text-inverse-secondary) !important;
+}
+.text-accent {
+  color: var(--color-accent) !important;
+}
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+.text-tertiary {
+  color: var(--color-tertiary) !important;
+}
+.fw-extrabold {
+  font-weight: 800 !important;
+}
+.bg-primary-light {
+  background-color: var(--color-primary-light) !important;
+}
+
+/*! purgecss end ignore */

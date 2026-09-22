@@ -1,0 +1,100 @@
+<section class="archive-section">
+  <div class="menuLinks mb-lg-10 mb-4">
+    <div class="container">
+      <ul class="menuLinks__list">
+        <li>
+          <a class="active" href="#">Vše</a>
+        </li>
+        <li>
+          <a href="#">Závody</a>
+        </li>
+        <li>
+          <a href="#">Parneři</a>
+        </li>
+        <li>
+          <a href="#">Osobní závod</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mb-7">
+    <div class="container">
+      <div class="row g-6 mb-lg-18 mb-10 mb-15">
+        <div class="col-xl-8">
+          {% include "@components/cardPost/cardPost.twig" %}
+        </div>
+
+        <div class="col-xl-4">
+          <div class="row g-4">
+            <div class="col-xl-12 col-md-6">
+              {% include "@components/cardPost/cardPost.twig" %}
+            </div>
+
+            <div class="col-xl-12 col-md-6">
+              {% include "@components/cardPost/cardPost.twig" %}
+            </div>
+          </div>
+        </div>
+
+        {% for i in 1..9 %}
+        <div class="col-xl-4 col-md-6">
+          {% include "@components/cardPost/cardPost.twig" %}
+        </div>
+        {% endfor %}
+
+        <div class="col-xl-4 col-md-6">
+          {% include "@components/cardPost/cardPost.twig" %}
+        </div>
+
+        <div class="col-xl-8">
+          {% include "@components/cardPost/cardPost.twig" %}
+        </div>
+      </div>
+      <div
+        class="d-md-flex d-none gap-3 align-items-center justify-content-center flex-column"
+      >
+        <div class="text-secondary fw-medium text-center">
+          Výsledky 1–20 z 240
+        </div>
+        <button class="button-secondary">Načíst další výsledky</button>
+        <nav class="paginationWrap" aria-label="Stránkování">
+          <ul class="pagination paginationWrap__list mb-0">
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item disabled">
+              <span class="page-link">...</span>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">67</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">68</a>
+            </li>
+          </ul>
+
+          <div class="paginationWrap__nav">
+            <a
+              href="#"
+              class="paginationWrap__nav-link paginationWrap__nav-link--prev disabled"
+            >
+              {% include "@images/arrow-left.svg" %}
+              <span>Předchozí</span>
+            </a>
+
+            <a href="#" class="paginationWrap__nav-link">
+              <span>Následující</span>
+              {% include "@images/arrow-right.svg" %}
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

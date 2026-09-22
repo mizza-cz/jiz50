@@ -1,0 +1,35 @@
+.cardPost {
+  display: block;
+  text-decoration: none;
+  &:hover .cardPost__img img {
+    transform: scale(1.05);
+  }
+  .tag {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: 2;
+  }
+  &__img {
+    width: 100%;
+    aspect-ratio: 301/162;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 0 0 32px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+  }
+}
