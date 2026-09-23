@@ -1,0 +1,16 @@
+{% extends "@components/base/base.twig" %} {% set title = "06.0_competitions" %}
+{% block main %}
+
+<section
+  class="subpageHero d-lg-flex d-none"
+  style="background-image: url('../images/content/archive.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Závody</h1>
+    </div>
+  </div>
+</section>
+
+{% include "@components/competitions-section/competitions-section.twig" %} {%
+include "@components/postsSlider/postsSlider.twig" %} {% endblock %}

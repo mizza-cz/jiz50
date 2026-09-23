@@ -1,0 +1,81 @@
+<section class="archive-section mb-lg-18 mb-12 mt-16">
+  <div class="container">
+    <div class="subtitle-secondary mb-1">závody</div>
+    <h2 class="h2 mb-8">
+      <span class="text-secondary">Vyber si</span>
+      svou výzvu
+    </h2>
+    <div class="row g-lg-6 g-2">
+      <div class="col-xl-6 d-sm-block d-none">
+        {% include "@components/cardCompetition/cardCompetition-main.twig" %}
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+
+      {% for i in 1..8 %}
+      <div class="col-xl-3 col-md-6">
+        {% include "@components/cardCompetition/cardCompetition.twig" %}
+      </div>
+      {% endfor %}
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 d-sm-block d-none">
+        {% include "@components/cardCompetition/cardCompetition-main.twig" %}
+      </div>
+    </div>
+    <div class="d-flex mt-6 align-items-center gap-4 justify-content-center">
+      <img
+        src="images/ico/check.svg"
+        width="48"
+        height="48"
+        class="object-fit-contain"
+        alt="check"
+      />
+      <div class="text-secondary subtitle-secondary">
+        Zobrazeno všech 122 závodů
+      </div>
+    </div>
+  </div>
+</section>
