@@ -1,0 +1,16 @@
+{% extends "@components/base/base.twig" %} {% set title = "05.0_weather" %} {%
+block main %}
+
+<section
+  class="subpageHero d-lg-flex d-none"
+  style="background-image: url('../images/content/archive.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Počasí</h1>
+      <div class="subtitle-primary">Bedřichov</div>
+    </div>
+  </div>
+</section>
+
+{% include "@components/weather-section/weather-section.twig" %} {% endblock %}

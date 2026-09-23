@@ -1,0 +1,37 @@
+<section class="postsSlider mb-12">
+  <div class="container">
+    <div
+      class="d-flex align-items-center flex-wrap justify-content-between gap-4 mb-4"
+    >
+      <div class="d-gird gap-1">
+        <div class="subtitle-secondary">Články</div>
+        <h5 class="h2">
+          Co je nového <span class="text-secondary">ve stopě</span>
+        </h5>
+      </div>
+      <div class="postsSlider__arrows">
+        <button
+          class="postsSlider__arrow postsSlider__arrow--prev"
+          type="button"
+        >
+          {% include "@images/arrow-left.svg" %}
+        </button>
+        <button
+          class="postsSlider__arrow postsSlider__arrow--next"
+          type="button"
+        >
+          {% include "@images/arrow-right.svg" %}
+        </button>
+      </div>
+    </div>
+    <div class="postsSlider__inner swiper">
+      <ul role="list" class="swiper-wrapper infinite-scroll-swiper">
+        {% for i in 1..10 %}
+        <li class="swiper-slide">
+          {% include "@components/cardPost/cardPost.twig" %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,121 @@
+<section class="weather-section mt-lg-9 pb-lg-15 pb-12">
+  <div class="container">
+    <div class="weatherCurrent">
+      <div class="text-medium-sm">Bedřichov</div>
+      <div class="weatherCurrent__main">
+        <h2 class="h1">-4°</h2>
+        <div class="weatherCurrent__condition">
+          <div class="subtitle-secondary text-white">SNĚŽENÍ</div>
+          <div class="text-medium-sm text-secondary">Pocitově -8°</div>
+        </div>
+      </div>
+      <ul class="weatherCurrent__stats">
+        <li class="weatherCurrent__stat">
+          <div class="subtitle-secondary text-white">38 CM</div>
+          <div class="caption text-secondary">Sníh na trati</div>
+        </li>
+
+        <li class="weatherCurrent__stat">
+          <div class="subtitle-secondary text-white">12 KM/H</div>
+          <div class="caption text-secondary">Vítr SZ</div>
+        </li>
+
+        <li class="weatherCurrent__stat">
+          <div class="subtitle-secondary text-white">81%</div>
+          <div class="caption text-secondary">Vlhkost</div>
+        </li>
+      </ul>
+    </div>
+    <div class="weatherForecast">
+      <h3 class="text-medium-xs mb-1">PŘEDPOVĚĎ NA 6 DNÍ</h3>
+
+      <ul class="weatherForecast-list">
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">DNES</div>
+          <div class="subtitle-secondary text-primary mt-auto">-4°</div>
+          <div class="caption text-secondary">-9°</div>
+        </li>
+
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">ZÍTRA</div>
+          <div class="subtitle-secondary text-primary mt-auto">-4°</div>
+          <div class="caption text-secondary">-9°</div>
+        </li>
+
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">PÁ</div>
+          <div class="subtitle-secondary text-primary mt-auto">-4°</div>
+          <div class="caption text-secondary">-9°</div>
+        </li>
+
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">SO</div>
+          <div class="subtitle-secondary text-primary mt-auto">-4°</div>
+          <div class="caption text-secondary">-9°</div>
+        </li>
+
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">NE</div>
+          <div class="subtitle-secondary text-primary mt-auto">-3°</div>
+          <div class="caption text-secondary">-8°</div>
+        </li>
+
+        <li class="weatherForecast-item">
+          <div class="subtitle-secondary">PO</div>
+          <div class="subtitle-secondary text-primary mt-auto">-2°</div>
+          <div class="caption text-secondary">-7°</div>
+        </li>
+      </ul>
+    </div>
+    <div class="weatherStations">
+      <div class="weatherStations__box">
+        <h4 class="text-medium-xs mb-1">STANICE NA TRATI</h4>
+
+        <ul class="weatherStations__list">
+          {% set stations = [ { number: '01', name: 'Nová louka', snow: '38 cm
+          sníh', temp: '-7.5 °C' }, { number: '02', name: 'Krystal', snow: '38
+          cm sníh', temp: '-7.5 °C' }, { number: '03', name: 'Hřebínek', snow:
+          '38 cm sníh', temp: '-7.5 °C' }, { number: '04', name: 'Sněžka', snow:
+          '45 cm sníh', temp: '-8 °C' }, { number: '05', name: 'Černá hora',
+          snow: '50 cm sníh', temp: '-9 °C' }, { number: '06', name: 'Pec pod
+          Sněžkou', snow: '40 cm sníh', temp: '-7 °C' }, { number: '07', name:
+          'Janské Lázně', snow: '42 cm sníh', temp: '-6 °C' }, { number: '08',
+          name: 'Sněžné jámy', snow: '36 cm sníh', temp: '-7 °C' }, { number:
+          '09', name: 'Rokytnice nad Jizerou', snow: '44 cm sníh', temp: '-8 °C'
+          }, { number: '10', name: 'Špindlerův Mlýn', snow: '55 cm sníh', temp:
+          '-10 °C' } ] %} {% for station in stations %}
+          <li class="weatherStations__item">
+            <div class="weatherStations__info">
+              <div class="weatherStations__number">
+                {{ station.number }}
+              </div>
+
+              <div class="weatherStations__content">
+                <div class="weatherStations__name">
+                  {{ station.name }}
+                </div>
+
+                <div class="text-medium-xs text-secondary">
+                  {{ station.snow }}
+                </div>
+              </div>
+            </div>
+
+            <div class="weatherStations__temp">
+              {{ station.temp }}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <a href="#" class="button-secondary w-100 mt-1"> ZOBRAZIT NA MAPĚ </a>
+      </div>
+
+      <a href="#" class="weather-section__link">
+        {% include "@images/webcam.svg" %} Webkamery
+
+        <div class="ms-auto">{% include "@images/chevron-right.svg" %}</div>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+.table {
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: max-content;
+
+  th {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 115.99999999999999%;
+    letter-spacing: 0.17px;
+    color: var(--color-white);
+    text-align: left;
+    padding: 8px 24px;
+    background: var(--color-overlay);
+    @include media-breakpoint-down(md) {
+      padding: 8px 12px;
+    }
+  }
+  tr {
+    background: var(--color-white);
+
+    &:nth-child(even) {
+      background: var(--color-bg-50);
+    }
+
+    td {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: 0.15px;
+      padding: 18px 24px;
+      color: var(--color-primary);
+      vertical-align: middle;
+      @include media-breakpoint-down(md) {
+        padding: 12px;
+      }
+    }
+  }
+}
+
+.table-responsive {
+  @include media-breakpoint-down(md) {
+    margin: 0 -16px;
+  }
+}

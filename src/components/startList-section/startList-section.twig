@@ -1,0 +1,112 @@
+<section class="startList">
+  <div class="container">
+    <form class="startList__filters">
+      <div class="startList__search">
+        <button class="startList__search-btn" type="submit">
+          <img
+            src="images/ico/search-primary.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+        </button>
+
+        <input
+          type="search"
+          name="search"
+          placeholder="Hledat podle jména nebo klubu"
+        />
+      </div>
+
+      <label class="startList__select">
+        <select name="race">
+          <option value="50">Jizerská 50 | 2026</option>
+          <option value="25">Jizerská 25 | 2026</option>
+          <option value="10">Jizerská 10 | 2026</option>
+        </select>
+
+        <img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
+      </label>
+
+      <button
+        class="startList__filterButton js-startList-filter"
+        type="button"
+        aria-label="Filtr"
+        aria-expanded="false"
+      >
+        <img src="images/ico/filter.svg" width="24" height="24" alt="" />
+      </button>
+
+      <div class="startList__mobileFilter js-startList-mobileFilter">
+        <label class="startList__mobileFilter-item">
+          <span>Závod</span>
+
+          <div class="startList__mobileFilter-select">
+            <select name="race-mobile">
+              <option value="50">Jizerská 50 | 2026</option>
+              <option value="25">Jizerská 25 | 2026</option>
+              <option value="10">Jizerská 10 | 2026</option>
+            </select>
+
+            <img
+              src="images/ico/chevron-down.svg"
+              width="16"
+              height="16"
+              alt=""
+            />
+          </div>
+        </label>
+      </div>
+    </form>
+    <div class="o-content mb-lg-18 mb-12">
+      <table class="">
+        <thead>
+          <tr>
+            <th>Vlna</th>
+            <th>Jméno</th>
+            <th>Rok Nar.</th>
+            <th>Závod</th>
+            <th>Klub</th>
+            <th class="text-end">Zaplaceno</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for i in 1..18 %}
+          <tr>
+            <td>
+              {{ (loop.index % 4) + 1 }}
+            </td>
+
+            <td class="fw-extrabold">Johanes Tjelle</td>
+
+            <td>1975</td>
+
+            <td>ČEZ Jizerská 50</td>
+
+            <td>Klub 1</td>
+
+            <td class="text-end">
+              <img
+                src="images/ico/check.svg"
+                width="24"
+                height="24"
+                class="object-fit-contain d-inline"
+                alt="Zaplaceno"
+              />
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="d-flex gap-3 align-items-center justify-content-center flex-column"
+    >
+      <div class="text-secondary fw-medium text-center">
+        Výsledky 1–20 z 240
+      </div>
+      <button class="button-secondary">Načíst další výsledky</button>
+    </div>
+  </div>
+</section>
