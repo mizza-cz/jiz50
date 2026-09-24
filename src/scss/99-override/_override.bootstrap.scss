@@ -20,6 +20,11 @@ $grid-breakpoints: (
     padding: 0 24px;
   }
 }
+.container-lg {
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin: 0 auto;
+}
 .text-black {
   color: var(--color-black) !important;
 }

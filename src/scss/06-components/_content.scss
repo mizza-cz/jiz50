@@ -10,7 +10,13 @@
   > :last-child {
     margin-bottom: 0;
   }
-
+  h2 {
+    margin-bottom: 24px;
+  }
+  h3,
+  h4 {
+    margin-bottom: 16px;
+  }
   h5 {
     color: var(--color-tertiary);
     text-transform: uppercase;
@@ -50,6 +56,36 @@
         width: 6px;
         height: 6px;
         border-radius: 100%;
+      }
+    }
+  }
+  ol {
+    margin: 0px 0 24px;
+    counter-reset: item;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 32px;
+    }
+
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 8px;
+      &::before {
+        content: counter(item) ")";
+        color: var(--color-primary);
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 8px;
+      }
+      > ol {
+        margin: 16px 0 0;
+        > li {
+          &::before {
+            content: counter(item) ".";
+          }
+        }
       }
     }
   }
