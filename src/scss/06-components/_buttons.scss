@@ -38,7 +38,6 @@
     // Disabled
   }
 }
-
 .button-primary {
   text-decoration: none;
   display: inline-flex;
@@ -57,7 +56,48 @@
   background-color: var(--color-accent);
   transition: color 0.2s ease, background-color 0.2s ease,
     border-color 0.2s ease;
+
   &:hover {
     background-color: var(--color-accent-dark);
+  }
+
+  &--arrow {
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+
+    > span:first-child {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+    }
+
+    &:hover {
+      .button-primary__arrow {
+        svg {
+          transform: translateX(2px);
+        }
+      }
+    }
+  }
+}
+
+.button-primary__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: stretch;
+
+  width: 50px;
+
+  background-color: var(--color-white);
+  color: var(--color-accent);
+
+  svg {
+    width: 18px;
+    height: 18px;
+
+    transition: transform 0.2s ease;
   }
 }

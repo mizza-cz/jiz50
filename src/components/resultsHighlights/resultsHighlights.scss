@@ -1,0 +1,396 @@
+.resultsHighlights {
+  margin-bottom: 68px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 32px;
+  }
+}
+
+.resultsHighlights__head {
+  margin-bottom: 16px;
+
+  @include media-breakpoint-up(md) {
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 8px;
+  }
+}
+
+.resultsHighlights__title {
+  margin: 2px 0 14px;
+
+  color: var(--color-primary);
+
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.05;
+
+  span {
+    font-weight: inherit;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 280px;
+    margin-bottom: 12px;
+
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.05;
+
+    span {
+      display: block;
+
+      color: var(--color-primary) !important;
+    }
+  }
+}
+
+.resultsHighlights__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid var(--border-dark);
+
+  @include media-breakpoint-down(md) {
+    justify-content: flex-start;
+    gap: 24px;
+
+    padding-bottom: 12px;
+
+    flex-wrap: nowrap;
+  }
+}
+
+.resultsHighlights__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  img {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+  }
+
+  @include media-breakpoint-down(md) {
+    gap: 6px;
+
+    font-size: 10px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.resultsHighlights__list {
+  width: 100%;
+}
+
+.resultsHighlights__row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 48px;
+
+  padding: 8px 0 24px;
+
+  border-bottom: 1px solid var(--border-dark);
+
+  & + & {
+    padding-top: 16px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    column-gap: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 16px;
+
+    padding: 8px 0 16px;
+
+    & + & {
+      padding-top: 16px;
+    }
+  }
+}
+
+.resultItem {
+  --result-place-bg: var(--color-gray-20);
+
+  display: grid;
+  grid-template-columns: 60px 160px minmax(0, 1fr);
+  align-items: center;
+
+  min-width: 0;
+  height: 170px;
+
+  &--winner {
+    --result-place-bg: var(--color-accent);
+  }
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 48px 120px minmax(0, 1fr);
+    height: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    --result-place-bg: var(--color-primary);
+
+    grid-template-columns: 36px minmax(0, 1fr);
+
+    height: auto;
+    min-height: 1px;
+  }
+}
+
+.resultItem--winner {
+  @include media-breakpoint-down(md) {
+    --result-place-bg: var(--color-accent);
+
+    grid-column: 1 / -1;
+
+    grid-template-columns: 36px 100px minmax(0, 1fr);
+
+    height: 98px;
+  }
+}
+
+.resultItem__place {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--result-place-bg);
+
+  color: var(--text-secondary);
+
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+
+  .resultItem--winner & {
+    color: var(--color-white);
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 34px;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 54px;
+
+    border-radius: 0 0 10px 0;
+
+    color: var(--color-white);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    .resultItem--winner & {
+      height: 98px;
+
+      border-radius: 0;
+    }
+  }
+}
+
+.resultItem__photo {
+  position: relative;
+
+  width: 160px;
+  height: 170px;
+
+  overflow: hidden;
+
+  border-radius: 0 0 24px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    bottom: 0;
+    left: 4px;
+    z-index: 2;
+    width: 8px;
+    border-radius: 0 16px 0 0;
+    background-color: var(--result-place-bg);
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-down(xl) {
+    width: 120px;
+    height: 130px;
+
+    border-radius: 0 0 18px 0;
+
+    &::before {
+      top: 22px;
+      width: 4px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  .resultItem--winner & {
+    @include media-breakpoint-down(md) {
+      display: block;
+
+      width: 100px;
+      height: 98px;
+
+      border-radius: 0 0 16px 0;
+
+      &::before {
+        top: 18px;
+        width: 4px;
+      }
+    }
+  }
+}
+
+.resultItem__content {
+  min-width: 0;
+
+  padding-left: 24px;
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 16px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 8px;
+  }
+
+  .resultItem--winner & {
+    @include media-breakpoint-down(md) {
+      padding-left: 10px;
+    }
+  }
+}
+
+.resultItem__country {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-bottom: 4px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+
+  img {
+    display: block;
+
+    width: 22px;
+    height: 16px;
+
+    object-fit: contain;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.resultItem__name {
+  margin: 0 0 4px;
+
+  color: var(--color-primary);
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.05;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .resultItem--winner & {
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+.resultItem__time {
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+  }
+
+  .resultItem--winner & {
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+  }
+}
+
+.resultsHighlights__footer {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 24px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 8px;
+
+    .button-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

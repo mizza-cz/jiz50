@@ -1,0 +1,44 @@
+<section class="hp-competitions">
+  <div class="container">
+    <div
+      class="d-flex align-items-center flex-wrap justify-content-between gap-4 mb-4"
+    >
+      <div class="d-gird gap-1">
+        <div class="subtitle-secondary">Nadcházející závody</div>
+        <h5 class="h2">
+          Vyber si <span class="text-secondary"> svou výzvu </span>
+        </h5>
+      </div>
+      <a href="#" class="button-secondary">Všechny závody</a>
+    </div>
+    <div class="row g-lg-6 g-2">
+      <div class="col-xl-6 d-sm-block d-none">
+        {% include "@components/cardCompetition/cardCompetition-main.twig" %}
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

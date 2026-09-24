@@ -15,9 +15,11 @@
   position: relative;
   padding-bottom: 48px;
   margin-bottom: 48px;
+  padding-top: 148px;
   @include media-breakpoint-down(lg) {
     padding-bottom: 36px;
     margin-bottom: 16px;
+    padding-top: 76px;
   }
   &::after {
     content: "";

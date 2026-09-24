@@ -20,6 +20,9 @@ $grid-breakpoints: (
     padding: 0 24px;
   }
 }
+.text-black {
+  color: var(--color-black) !important;
+}
 .text-white {
   color: var(--color-white) !important;
 }

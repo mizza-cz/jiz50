@@ -1,0 +1,31 @@
+<section class="socialGallery">
+  <div class="container">
+    <a href="#" class="socialGallery__banner">SWIX Banner</a>
+  </div>
+
+  <div class="socialGallery__grid">
+    {% for i in 1..7 %}
+    <a href="#" class="socialGallery__item">
+      <img
+        src="https://picsum.photos/id/{{ 30 + i }}/400/260"
+        width="400"
+        height="260"
+        loading="lazy"
+        alt=""
+      />
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="container">
+    <div class="socialGallery__links">
+      <a href="#" class="button-secondary py-2">
+        {% include "@images/insta.svg" %} Instagram
+      </a>
+
+      <a href="#" class="button-secondary py-2">
+        {% include "@images/fb.svg" %} Facebook
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<section class="newsletterBanner">
+  <div class="container">
+    <div class="newsletterBanner__inner">
+      <picture class="newsletterBanner__bg">
+        <source
+          media="(max-width: 575.98px)"
+          srcset="https://picsum.photos/id/1036/640/420"
+        />
+
+        <img
+          src="https://picsum.photos/id/1036/1600/400"
+          width="1600"
+          height="400"
+          alt=""
+          loading="lazy"
+        />
+      </picture>
+
+      <div class="newsletterBanner__overlay"></div>
+
+      <div class="newsletterBanner__content">
+        <h2 class="h2 text-white mb-4">Nenech si nic ujet</h2>
+
+        <p class="text-medium-xs text-inverse-secondary mb-4">
+          Získej jako první informace o registracích, novinkách, programu závodu
+          i důležitých termínech.
+        </p>
+
+        <form class="newsletterBanner__form">
+          <label class="newsletterBanner__label" for="newsletter-email">
+            Email
+          </label>
+
+          <input
+            id="newsletter-email"
+            class="newsletterBanner__input"
+            type="email"
+            name="email"
+            placeholder="Zadej email"
+            required
+          />
+
+          <button
+            class="button-primary button-primary--arrow newsletterBanner__button mt-4"
+            type="submit"
+          >
+            <span>Chci novinky</span>
+
+            <span class="button-primary__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
