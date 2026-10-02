@@ -1,0 +1,15 @@
+{% extends "@components/base/base.twig" %} {% set title = "08.0_gift-voucher" %}
+{% block main %}
+
+<section
+  class="subpageHero d-lg-flex d-none"
+  style="background-image: url('../images/content/archive.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Dárkový poukaz</h1>
+    </div>
+  </div>
+</section>
+
+{% include "@components/giftVoucher/giftVoucher.twig" %} {% endblock %}

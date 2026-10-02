@@ -1,0 +1,147 @@
+<section class="pt-lg-9 pt-20 mb-lg-15 mb-12">
+  <div class="container-lg">
+    <div class="o-content">
+      <h2>DÁRKOVÝ POUKAZ</h2>
+      <h5>Udělejte radost svým blízkým</h5>
+      <p>
+        Dárkový poukaz není registrací závodníka do závodu, ani žádným způsobem
+        nerezervuje místo v závodě. Dotyčný se musí se zaslaným slevovým kódem
+        přihlásit v registračním systému SportID na vybraný závod. Registraci s
+        dárkovým poukazem je nutné provést do vyčerpání kapacity závodu,
+        nejpozději však 14 dní před termínem konání daného závodu.
+        <br />
+        Na dárkové poukazy se nevztahuje sleva 25 % při platbě kartou Mastercard
+        od ČSOB.
+      </p>
+
+      <h5>Dostal jsi startovné jako dárek?</h5>
+      <a href="#" class="button-primary py-2 mt-4"> Zaregistruj se zde </a>
+    </div>
+
+    <div class="giftVoucher__order">
+      <h2 class="h2 mb-4">Objednávka</h2>
+
+      <p class="fw-medium">
+        Formulář slouží pouze k nákupu startovného ve formě DÁRKOVÉHO POUKAZU.
+        Nikoliv jako generátor poukazu při uhrazení startovného ve sportid. V
+        případě problémů kontaktujte
+        <a href="mailto:info@behejlesy.cz">info@behejlesy.cz</a>
+      </p>
+
+      <form class="giftVoucherForm" action="#" method="post">
+        <div class="formSelect">
+          <label class="visually-hidden" for="gift-race"> Výběr závodu </label>
+
+          <select
+            class="formSelect__control"
+            id="gift-race"
+            name="race"
+            required
+          >
+            <option value="" selected disabled>Výběr závodu</option>
+            <option value="race-1">Závod 1</option>
+            <option value="race-2">Závod 2</option>
+            <option value="race-3">Závod 3</option>
+          </select>
+        </div>
+
+        <div class="formField">
+          <label class="formField__label" for="gift-buyer">
+            Jméno a příjmení nakupujícího
+          </label>
+
+          <div class="formField__control">
+            <input
+              class="formField__input"
+              id="gift-buyer"
+              name="buyer"
+              type="text"
+              autocomplete="name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="formField">
+          <label class="formField__label" for="gift-recipient">
+            Jméno a příjmení obdarovaného
+          </label>
+
+          <div class="formField__control">
+            <input
+              class="formField__input"
+              id="gift-recipient"
+              name="recipient"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="formField">
+          <label class="formField__label" for="gift-message">
+            Vzkaz na poukaz (max. 40 znaků)
+          </label>
+
+          <div class="formField__control">
+            <input
+              class="formField__input"
+              id="gift-message"
+              name="message"
+              type="text"
+              maxlength="40"
+            />
+          </div>
+        </div>
+
+        <div class="formField formField--error">
+          <label class="formField__label" for="gift-email"> Váš E-mail </label>
+
+          <div class="formField__control">
+            <input class="formField__input" id="gift-email" type="email" />
+          </div>
+
+          <div class="formField__message formField__message--error">
+            Tady se objeví chybová hláška
+          </div>
+        </div>
+
+        <div class="formField">
+          <label class="formField__label" for="gift-phone"> Telefon </label>
+
+          <div class="formField__control">
+            <input
+              class="formField__input"
+              id="gift-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+
+        <label class="formCheckbox">
+          <input
+            class="formCheckbox__input"
+            type="checkbox"
+            name="privacy"
+            required
+          />
+
+          <span class="formCheckbox__box"></span>
+
+          <span class="fw-medium">
+            Souhlasím se zpracováním osobních údajů výhradně za účelem
+            zpracování dárkového certifikátu.
+          </span>
+        </label>
+        <button
+          class="button-primary py-2 w-100 justify-content-center"
+          type="submit"
+        >
+          Objednat
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,296 @@
+.giftVoucher__order {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 48px;
+  padding: 48px 32px;
+
+  border: 1px solid var(--border-dark);
+  background: var(--color-white);
+
+  @include media-breakpoint-down(md) {
+    margin-top: 40px;
+    padding: 32px 20px;
+  }
+}
+
+.giftVoucherForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 32px;
+}
+
+/* =========================
+   INPUT
+   ========================= */
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  width: 349px;
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+.formField__label {
+  display: block;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: 0.4px;
+}
+
+.formField__control {
+  position: relative;
+  width: 100%;
+}
+
+.formField__input {
+  display: block;
+
+  width: 100%;
+  height: 40px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  outline: 0;
+
+  background-color: var(--color-white);
+  color: var(--color-primary);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.15px;
+
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: var(--border-dark);
+  }
+
+  &:focus {
+    border: 1.5px solid var(--color-accent);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.6;
+
+    border-color: rgba(226, 226, 226, 0.6);
+    background-color: var(--color-white);
+    color: var(--text-secondary);
+  }
+}
+
+/* =========================
+   INPUT ERROR
+   ========================= */
+
+.formField--error {
+  .formField__input {
+    border-color: #ed6262;
+  }
+}
+
+.formField__message {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: 0.4px;
+}
+
+.formField__message--error {
+  color: #ff3a17;
+}
+
+/* =========================
+   INPUT SUCCESS
+   ========================= */
+
+.formField--success {
+  .formField__input {
+    border-color: var(--color-green);
+  }
+}
+
+.formField__message--success {
+  color: var(--color-green);
+}
+
+/* =========================
+   SELECT
+   ========================= */
+
+.formSelect {
+  position: relative;
+
+  width: 349px;
+  max-width: 100%;
+  margin-bottom: 24px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 12px;
+
+    width: 16px;
+    height: 16px;
+
+    pointer-events: none;
+
+    background: url("../images/ico/chevron-down.svg") center / contain no-repeat;
+
+    transform: translateY(-50%);
+  }
+}
+
+.formSelect__control {
+  appearance: none;
+
+  display: block;
+
+  width: 100%;
+  height: 40px;
+
+  padding: 0 44px 0 16px;
+
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  outline: 0;
+
+  background-color: var(--color-white);
+  color: var(--text-secondary);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.15px;
+
+  cursor: pointer;
+
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: var(--border-dark);
+    background-color: #f5f8f8;
+  }
+
+  &:focus {
+    border: 1.5px solid var(--color-accent);
+    background-color: var(--color-white);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+/* =========================
+   CHECKBOX
+   ========================= */
+.formCheckbox {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-items: center;
+  max-width: 446px;
+  margin: 8px 0 32px;
+
+  cursor: pointer;
+
+  color: var(--color-primary);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.15px;
+}
+
+.formCheckbox__input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  margin: 0;
+  padding: 0;
+
+  opacity: 0;
+}
+
+.formCheckbox__box {
+  position: relative;
+
+  flex: 0 0 24px;
+
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+
+  background-color: var(--color-white);
+
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* HOVER */
+
+.formCheckbox:hover .formCheckbox__box {
+  border-color: #c5cdd1;
+  background-color: #edf7fa;
+}
+
+/* CHECKED */
+
+.formCheckbox__input:checked + .formCheckbox__box {
+  border-color: var(--color-tertiary);
+  background-color: var(--color-tertiary);
+}
+
+/* галочка */
+
+.formCheckbox__input:checked + .formCheckbox__box::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 7px;
+
+  width: 7px;
+  height: 11px;
+
+  border-right: 3px solid var(--color-white);
+  border-bottom: 3px solid var(--color-white);
+
+  transform: rotate(45deg);
+}
+
+/* keyboard focus */
+
+.formCheckbox__input:focus-visible + .formCheckbox__box {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

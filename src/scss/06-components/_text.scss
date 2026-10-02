@@ -19,7 +19,8 @@
   }
 }
 
-.h1 {
+.h1,
+.o-content h1 {
   font-size: 88px;
   font-weight: 400;
   line-height: 117%;
@@ -27,7 +28,8 @@
     font-size: 52px;
   }
 }
-.h2 {
+.h2,
+.o-content h2 {
   font-size: 48px;
   font-weight: 400;
   letter-spacing: 0;
@@ -36,7 +38,8 @@
     font-weight: 700;
   }
 }
-.h3 {
+.h3,
+.o-content h3 {
   font-weight: 600;
   font-size: 34px;
   letter-spacing: 0.25px;
@@ -44,7 +47,8 @@
     font-size: 26px;
   }
 }
-.h4 {
+.h4,
+.o-content h4 {
   font-size: 28px;
   line-height: 136%;
   font-weight: 700;
