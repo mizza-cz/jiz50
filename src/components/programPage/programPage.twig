@@ -1,0 +1,464 @@
+<section class="programPage">
+  <div class="container">
+    {# DAYS #}
+    <div class="programPage__days">
+      <button
+        class="programPage__day is-active js-program-day"
+        type="button"
+        data-day="thursday"
+      >
+        <strong>ČT</strong>
+        <span>31.1.</span>
+      </button>
+
+      <button
+        class="programPage__day js-program-day"
+        type="button"
+        data-day="friday"
+      >
+        <strong>PÁ</strong>
+        <span>1.2.</span>
+      </button>
+
+      <button
+        class="programPage__day js-program-day"
+        type="button"
+        data-day="saturday"
+      >
+        <strong>SO</strong>
+        <span>2.2.</span>
+      </button>
+
+      <button
+        class="programPage__day js-program-day"
+        type="button"
+        data-day="sunday"
+      >
+        <strong>NE</strong>
+        <span>3.2.</span>
+      </button>
+    </div>
+
+    {# MAIN TABS #}
+    <div class="programPage__tabs">
+      <button
+        class="programPage__tab is-active js-program-tab"
+        type="button"
+        data-tab="program"
+      >
+        Program
+      </button>
+
+      <button
+        class="programPage__tab js-program-tab"
+        type="button"
+        data-tab="info"
+      >
+        Praktické informace
+      </button>
+    </div>
+
+    {# PROGRAM #}
+    <div
+      class="programPage__panel is-active js-program-panel"
+      data-panel="program"
+    >
+      <div class="programPage__program">
+        <div class="programPage__list js-program-list">
+          <button
+            class="programEvent is-active js-program-event"
+            type="button"
+            data-event="elite-women"
+          >
+            <div class="programEvent__content">
+              <time class="programEvent__time">8:00</time>
+              <strong class="programEvent__title">Start ELITE ženy</strong>
+            </div>
+
+            <span class="programEvent__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+
+          <button
+            class="programEvent js-program-event"
+            type="button"
+            data-event="elite-men"
+          >
+            <div class="programEvent__content">
+              <time class="programEvent__time">9:00</time>
+              <strong class="programEvent__title">Start ELITE ženy</strong>
+            </div>
+
+            <span class="programEvent__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+
+          <button
+            class="programEvent js-program-event"
+            type="button"
+            data-event="wave-two"
+          >
+            <div class="programEvent__content">
+              <time class="programEvent__time">11:00</time>
+              <strong class="programEvent__title">Start 2. vlna</strong>
+            </div>
+
+            <span class="programEvent__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+
+          <button
+            class="programEvent js-program-event"
+            type="button"
+            data-event="ceremony"
+          >
+            <div class="programEvent__content">
+              <time class="programEvent__time">16:00</time>
+              <strong class="programEvent__title">Ceremoniál</strong>
+            </div>
+
+            <span class="programEvent__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+
+          <button
+            class="programEvent js-program-event"
+            type="button"
+            data-event="event"
+          >
+            <div class="programEvent__content">
+              <time class="programEvent__time">18:00</time>
+              <strong class="programEvent__title">Akce</strong>
+            </div>
+
+            <span class="programEvent__arrow">
+              {% include "@images/arrow-right.svg" %}
+            </span>
+          </button>
+        </div>
+
+        {# DETAIL #}
+        <div class="programPage__detail js-program-detail">
+          <button
+            class="programPage__detailClose js-program-detail-close"
+            type="button"
+            aria-label="Zavřít detail"
+          >
+            ×
+          </button>
+
+          <div class="programDetail is-active" data-event-detail="elite-women">
+            <div class="programDetail__mobileTitle">Start Elite ženy</div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Start</div>
+              <div class="programDetail__value">8:00</div>
+            </div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Místo</div>
+              <div class="programDetail__value">
+                Bedřichov – hlavní startovní koridor
+              </div>
+            </div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Pro koho</div>
+              <div class="programDetail__value">Elitní závodnice</div>
+            </div>
+
+            <div class="programDetail__text">
+              <strong>Důležité informace</strong>
+
+              <ul class="programDetail__list">
+                <li>Uzavření koridoru v 7:45.</li>
+                <li>Přístup pouze se startovním číslem.</li>
+                <li>Sledujte pokyny pořadatelů.</li>
+              </ul>
+
+              <strong>Související odkazy</strong>
+
+              <ul class="programDetail__list">
+                <li><a href="#">Zobrazit na mapě</a></li>
+                <li><a href="#">Startovní listina</a></li>
+                <li><a href="#">Propozice závodu</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="programDetail" data-event-detail="elite-men">
+            <div class="programDetail__mobileTitle">Start ELITE ženy</div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Start</div>
+              <div class="programDetail__value">9:00</div>
+            </div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Místo</div>
+              <div class="programDetail__value">
+                Bedřichov – hlavní startovní koridor
+              </div>
+            </div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Pro koho</div>
+              <div class="programDetail__value">Elitní závodnice</div>
+            </div>
+
+            <div class="programDetail__text">
+              <strong>Důležité informace</strong>
+
+              <ul class="programDetail__list">
+                <li>Uzavření koridoru v 8:45.</li>
+                <li>Přístup pouze se startovním číslem.</li>
+                <li>Sledujte pokyny pořadatelů.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="programDetail" data-event-detail="wave-two">
+            <div class="programDetail__mobileTitle">Start 2. vlna</div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Start</div>
+              <div class="programDetail__value">11:00</div>
+            </div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Místo</div>
+              <div class="programDetail__value">
+                Bedřichov – hlavní startovní koridor
+              </div>
+            </div>
+          </div>
+
+          <div class="programDetail" data-event-detail="ceremony">
+            <div class="programDetail__mobileTitle">Ceremoniál</div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Start</div>
+              <div class="programDetail__value">16:00</div>
+            </div>
+          </div>
+
+          <div class="programDetail" data-event-detail="event">
+            <div class="programDetail__mobileTitle">Akce</div>
+
+            <div class="programDetail__row">
+              <div class="programDetail__label">Start</div>
+              <div class="programDetail__value">18:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# PRACTICAL INFO LINKS #}
+      <div class="programPage__quickInfo">
+        <div class="container-lg">
+          <div class="subtitle-secondary text-tertiary mb-4">
+            Praktické info
+          </div>
+
+          <div class="programPage__quickInfoGrid">
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/parking.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Doprava a parkování</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/user.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Pro diváky</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/vydej.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Výdej čísel</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/faq.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>FAQ</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# PRAKTICKÉ INFORMACE #}
+    <div class="programPage__panel js-program-panel" data-panel="info">
+      <div class="programPage__info">
+        <div class="programInfoGroup">
+          <h2 class="programInfoGroup__title">Výdej čísel</h2>
+
+          <div class="programInfoGroup__content">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Informace k výdeji
+            startovních čísel a organizaci.", items: [ "Připravte si doklad
+            totožnosti.", "Výdej probíhá v závodní kanceláři." ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Podrobné
+            informace k platbě a registraci." } %}
+          </div>
+        </div>
+
+        <div class="programInfoGroup">
+          <h2 class="programInfoGroup__title">Doprava</h2>
+
+          <div class="programInfoGroup__content">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Autobusová doprava k
+            výdeji čísel.", items: [ "Naplánujte si cestu včas.", "Doporučujeme
+            využít organizovanou dopravu." ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Informace o
+            dopravě z Liberce." } %}
+          </div>
+        </div>
+
+        <div class="programInfoGroup">
+          <h2 class="programInfoGroup__title">Parkování</h2>
+
+          <div class="programInfoGroup__content">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Informace k parkování." }
+            %} {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Možnosti platby - kreditní karta a PayPal", text: "Další
+            možnosti parkování." } %}
+          </div>
+        </div>
+
+        <div class="programInfoGroup">
+          <h2 class="programInfoGroup__title">Ubytování v libereckém kraji</h2>
+
+          <div class="programInfoGroup__content">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Možnosti ubytování v okolí
+            závodu." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Další informace
+            k ubytování." } %}
+          </div>
+        </div>
+
+        <div class="programInfoGroup">
+          <h2 class="programInfoGroup__title">Kontakt na informační centra</h2>
+
+          <div class="programInfoGroup__content">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Kontakty na informační
+            centra." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Další kontaktní
+            informace." } %}
+          </div>
+        </div>
+      </div>
+      <div class="programPage__quickInfo">
+        <div class="container-lg">
+          <div class="subtitle-secondary text-tertiary mb-4">
+            Praktické info
+          </div>
+
+          <div class="programPage__quickInfoGrid">
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/parking.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Doprava a parkování</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/user.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Pro diváky</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/vydej.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>Výdej čísel</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+
+            <a href="#" class="programQuickLink">
+              <img
+                src="images/ico/faq.svg"
+                width="32"
+                height="32"
+                class="object-fit-contain"
+                alt="ico"
+              />
+              <strong>FAQ</strong>
+              <span class="programQuickLink__arrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

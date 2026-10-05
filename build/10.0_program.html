@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+
+<head>
+	<meta charset="utf-8" />
+	<title>10.0_program - SKI KLUB JIZERSKÁ PADESÁTKA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<!--****** Favicon ******-->
+	<!--****** Fonts ******-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+	<!--****** Styles  ******-->
+	<link rel="preload" href="css/styles.css" as="style" />
+	<link rel="stylesheet" media="screen, handheld" href="css/styles.css" />
+	<link rel="stylesheet" media="print" href="css/prints.css" />
+	<!--****** Styles  ******-->
+
+	<!--****** Scripts  ******-->
+	<link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script" crossorigin />
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin />
+	<link rel="preload" href="js/scripts.js" as="script" />
+	<!-- ****** scripts ****** -->
+</head>
+
+<body>
+	<div class="base">
+		<header class="header">
+			<div class="container-full">
+				<div class="header__inner">
+					<a href="/" class="header__logo">
+						<img src="images/ico/logo.svg" width="56" height="52" alt="Jizerská 50" />
+					</a>
+
+					<nav class="headerNav">
+						<ul class="headerNav__menu">
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Závody
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<div class="megaMenu__column megaMenu__column--featured">
+										<div class="megaMenu__featured">
+											<a class="hover-underline-center fw-bold text-white" href="#">Přehled všech závodů</a>
+											<div class="text-inverse-secondary fw-medium mx-auto">
+												Všechny ročníky a závody za 50 let
+											</div>
+										</div>
+									</div>
+
+									<div class="megaMenu__divider"></div>
+
+									<ul class="megaMenu__list">
+										<li><a href="#">Jizerská 50 2027</a></li>
+										<li><a href="#">Jizerská 30 2027</a></li>
+										<li><a href="#">Jizerská 10 2027</a></li>
+										<li><a href="#">Jizerská ČT 2027</a></li>
+										<li><a href="#">Jizerská 5 2027</a></li>
+										<li><a href="#">Jizerská 50 2027</a></li>
+										<li><a href="#">Jizerská 50 2027</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Výsledky
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<div class="megaMenu__column megaMenu__column--featured">
+										<div class="megaMenu__featured">
+											<a class="hover-underline-center fw-bold text-white" href="#">Výsledky závodů</a>
+										</div>
+									</div>
+
+									<div class="megaMenu__divider"></div>
+
+									<ul class="megaMenu__list">
+										<li><a href="#">Klub mistrů</a></li>
+										<li><a href="#">Král Jizerek</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Praktické informace
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">Program</a></li>
+										<li><a href="#">Doprava a parkování</a></li>
+										<li><a href="#">Ubytování</a></li>
+										<li><a href="#">Pro závodníky</a></li>
+										<li><a href="#">Pro diváky</a></li>
+										<li><a href="#">Jedlu poprvé</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item">
+								<a href="#" class="headerNav__link"> Články </a>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Jizerská 50
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">O Jizerské 50</a></li>
+										<li><a href="#">Historie</a></li>
+										<li><a href="#">Charita</a></li>
+										<li><a href="#">Komunita</a></li>
+										<li><a href="#">Partneři</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="headerNav__item">
+								<a href="#" class="headerNav__link">Eshop</a>
+							</li>
+
+							<li class="headerNav__item js-menu-item">
+								<button class="headerNav__link js-menu-toggle" type="button" aria-expanded="false">
+									Kontakt
+									<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+								</button>
+
+								<div class="megaMenu">
+									<ul class="megaMenu__list">
+										<li><a href="#">Kontakty</a></li>
+										<li><a href="#">Členská sekce</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- <div class="mobileFooter">
+          <a href="#" class="mobileFooter__register">
+            <span class="mobileFooter__icon">ID</span>
+            REGISTROVAT SE
+          </a>
+
+          <a href="#" class="mobileFooter__next">
+            <span></span>
+          </a>
+
+          <button class="mobileFooter__language" type="button">
+            CS
+            <span></span>
+          </button>
+        </div> -->
+					</nav>
+
+					<div class="headerActions">
+						<a href="#" class="button-secondary py-1 d-xxl-flex d-none">
+							<img src="images/ico/sportid.svg" alt="id" />
+							Registrovat se
+						</a>
+
+						<details class="headerActions__language d-xl-flex d-none">
+							<summary class="d-flex align-items-center gap-1">
+								CS
+								<img src="images/ico/chevron-down.svg" width="16" height="16" class="object-fit-contain" alt="ico" />
+							</summary>
+							<ul class="headerActions__language-list">
+								<li>
+									<a class="active" href="#">CS</a>
+								</li>
+								<li>
+									<a href="#">EN</a>
+								</li>
+								<li>
+									<a href="#">DE</a>
+								</li>
+							</ul>
+						</details>
+
+						<button class="headerActions__icon js-search-open" type="button" aria-label="Hledat">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.276 17.277l3.961 3.96" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								<path d="M11 19a8 8 0 100-16 8 8 0 000 16z" stroke="currentColor" stroke-width="1.5" />
+							</svg> </button>
+
+						<a href="#" class="headerActions__icon" aria-label="Počasí">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 2v2M4.93 4.93l1.41 1.41M20 12h2M19.07 4.93l-1.41 1.41M15.947 12.65a4.002 4.002 0 00-5.924-4.128M13 22H7a5 5 0 114.9-6H13a3 3 0 010 6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg> </a>
+
+						<a href="#" class="headerActions__icon d-xl-none">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7616 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<a href="#" class="headerActions__icon d-xl-none">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M23.9997 2.66699H19.9997C18.2316 2.66699 16.5359 3.36937 15.2856 4.61961C14.0354 5.86986 13.333 7.56555 13.333 9.33366V13.3337H9.33301V18.667H13.333V29.3337H18.6663V18.667H22.6663L23.9997 13.3337H18.6663V9.33366C18.6663 8.98004 18.8068 8.6409 19.0569 8.39085C19.3069 8.1408 19.6461 8.00033 19.9997 8.00033H23.9997V2.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<button class="headerActions__menu js-nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+							<img class="headerActions__menu-icon headerActions__menu-icon--open" src="images/ico/menu.svg" width="24" height="24" alt="" />
+
+							<img class="headerActions__menu-icon headerActions__menu-icon--close" src="images/ico/close.svg" width="24" height="24" alt="" />
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="headerSearch js-search">
+				<form class="headerSearch__form">
+					<button class="headerSearch__btn" type="submit">
+						<img src="images/ico/search-primary.svg" alt="" />
+					</button>
+
+					<input class="headerSearch__input" type="search" placeholder="Hledat informace" />
+				</form>
+
+				<div class="headerSearch__section">
+					<div class="headerSearch__title">Často hledané</div>
+
+					<ul class="headerSearch__list">
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Registrace
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Přeregistrace
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Výdej čísel
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Doprava
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Parkování
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/search-secondary.svg" alt="" />
+								Pravidla závodu
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="headerSearch__section">
+					<div class="headerSearch__title">Naposledy navštíveno</div>
+
+					<ul class="headerSearch__list">
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Jizerská 50
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Jizerská 25
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/ico/clock.svg" alt="" />
+								Kontakty
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="main" aria-label="Hlavní obsah">
+
+			<section class="subpageHero d-lg-flex d-none" style="background-image: url('../images/content/archive.png')">
+				<div class="container">
+					<div class="subpageHero__content">
+						<h1 class="h1 mb-4">Program</h1>
+						<div class="subtitle-primary">Závodní víkend</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="programPage">
+				<div class="container">
+
+					<div class="programPage__days">
+						<button class="programPage__day is-active js-program-day" type="button" data-day="thursday">
+							<strong>ČT</strong>
+							<span>31.1.</span>
+						</button>
+
+						<button class="programPage__day js-program-day" type="button" data-day="friday">
+							<strong>PÁ</strong>
+							<span>1.2.</span>
+						</button>
+
+						<button class="programPage__day js-program-day" type="button" data-day="saturday">
+							<strong>SO</strong>
+							<span>2.2.</span>
+						</button>
+
+						<button class="programPage__day js-program-day" type="button" data-day="sunday">
+							<strong>NE</strong>
+							<span>3.2.</span>
+						</button>
+					</div>
+
+					<div class="programPage__tabs">
+						<button class="programPage__tab is-active js-program-tab" type="button" data-tab="program">
+							Program
+						</button>
+
+						<button class="programPage__tab js-program-tab" type="button" data-tab="info">
+							Praktické informace
+						</button>
+					</div>
+
+					<div class="programPage__panel is-active js-program-panel" data-panel="program">
+						<div class="programPage__program">
+							<div class="programPage__list js-program-list">
+								<button class="programEvent is-active js-program-event" type="button" data-event="elite-women">
+									<div class="programEvent__content">
+										<time class="programEvent__time">8:00</time>
+										<strong class="programEvent__title">Start ELITE ženy</strong>
+									</div>
+
+									<span class="programEvent__arrow">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</span>
+								</button>
+
+								<button class="programEvent js-program-event" type="button" data-event="elite-men">
+									<div class="programEvent__content">
+										<time class="programEvent__time">9:00</time>
+										<strong class="programEvent__title">Start ELITE ženy</strong>
+									</div>
+
+									<span class="programEvent__arrow">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</span>
+								</button>
+
+								<button class="programEvent js-program-event" type="button" data-event="wave-two">
+									<div class="programEvent__content">
+										<time class="programEvent__time">11:00</time>
+										<strong class="programEvent__title">Start 2. vlna</strong>
+									</div>
+
+									<span class="programEvent__arrow">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</span>
+								</button>
+
+								<button class="programEvent js-program-event" type="button" data-event="ceremony">
+									<div class="programEvent__content">
+										<time class="programEvent__time">16:00</time>
+										<strong class="programEvent__title">Ceremoniál</strong>
+									</div>
+
+									<span class="programEvent__arrow">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</span>
+								</button>
+
+								<button class="programEvent js-program-event" type="button" data-event="event">
+									<div class="programEvent__content">
+										<time class="programEvent__time">18:00</time>
+										<strong class="programEvent__title">Akce</strong>
+									</div>
+
+									<span class="programEvent__arrow">
+										<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+											<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+											<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+										</svg>
+									</span>
+								</button>
+							</div>
+
+							<div class="programPage__detail js-program-detail">
+								<button class="programPage__detailClose js-program-detail-close" type="button" aria-label="Zavřít detail">
+									×
+								</button>
+
+								<div class="programDetail is-active" data-event-detail="elite-women">
+									<div class="programDetail__mobileTitle">Start Elite ženy</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Start</div>
+										<div class="programDetail__value">8:00</div>
+									</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Místo</div>
+										<div class="programDetail__value">
+											Bedřichov – hlavní startovní koridor
+										</div>
+									</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Pro koho</div>
+										<div class="programDetail__value">Elitní závodnice</div>
+									</div>
+
+									<div class="programDetail__text">
+										<strong>Důležité informace</strong>
+
+										<ul class="programDetail__list">
+											<li>Uzavření koridoru v 7:45.</li>
+											<li>Přístup pouze se startovním číslem.</li>
+											<li>Sledujte pokyny pořadatelů.</li>
+										</ul>
+
+										<strong>Související odkazy</strong>
+
+										<ul class="programDetail__list">
+											<li><a href="#">Zobrazit na mapě</a></li>
+											<li><a href="#">Startovní listina</a></li>
+											<li><a href="#">Propozice závodu</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="programDetail" data-event-detail="elite-men">
+									<div class="programDetail__mobileTitle">Start ELITE ženy</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Start</div>
+										<div class="programDetail__value">9:00</div>
+									</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Místo</div>
+										<div class="programDetail__value">
+											Bedřichov – hlavní startovní koridor
+										</div>
+									</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Pro koho</div>
+										<div class="programDetail__value">Elitní závodnice</div>
+									</div>
+
+									<div class="programDetail__text">
+										<strong>Důležité informace</strong>
+
+										<ul class="programDetail__list">
+											<li>Uzavření koridoru v 8:45.</li>
+											<li>Přístup pouze se startovním číslem.</li>
+											<li>Sledujte pokyny pořadatelů.</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="programDetail" data-event-detail="wave-two">
+									<div class="programDetail__mobileTitle">Start 2. vlna</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Start</div>
+										<div class="programDetail__value">11:00</div>
+									</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Místo</div>
+										<div class="programDetail__value">
+											Bedřichov – hlavní startovní koridor
+										</div>
+									</div>
+								</div>
+
+								<div class="programDetail" data-event-detail="ceremony">
+									<div class="programDetail__mobileTitle">Ceremoniál</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Start</div>
+										<div class="programDetail__value">16:00</div>
+									</div>
+								</div>
+
+								<div class="programDetail" data-event-detail="event">
+									<div class="programDetail__mobileTitle">Akce</div>
+
+									<div class="programDetail__row">
+										<div class="programDetail__label">Start</div>
+										<div class="programDetail__value">18:00</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="programPage__quickInfo">
+							<div class="container-lg">
+								<div class="subtitle-secondary text-tertiary mb-4">
+									Praktické info
+								</div>
+
+								<div class="programPage__quickInfoGrid">
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/parking.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Doprava a parkování</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/user.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Pro diváky</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/vydej.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Výdej čísel</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/faq.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>FAQ</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="programPage__panel js-program-panel" data-panel="info">
+						<div class="programPage__info">
+							<div class="programInfoGroup">
+								<h2 class="programInfoGroup__title">Výdej čísel</h2>
+
+								<div class="programInfoGroup__content">
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Jak získat vrácení peněz
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Informace k výdeji
+															startovních čísel a organizaci.
+														</span>
+														<ul class="infoAccordion__list">
+															<li>Připravte si doklad
+																totožnosti.</li>
+															<li>Výdej probíhá v závodní kanceláři.</li>
+														</ul>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Možnosti platby - kreditní karta a PayPal
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Podrobné
+															informace k platbě a registraci.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="programInfoGroup">
+								<h2 class="programInfoGroup__title">Doprava</h2>
+
+								<div class="programInfoGroup__content">
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Jak získat vrácení peněz
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Autobusová doprava k
+															výdeji čísel.
+														</span>
+														<ul class="infoAccordion__list">
+															<li>Naplánujte si cestu včas.</li>
+															<li>Doporučujeme
+																využít organizovanou dopravu.</li>
+														</ul>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Možnosti platby - kreditní karta a PayPal
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Informace o
+															dopravě z Liberce.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="programInfoGroup">
+								<h2 class="programInfoGroup__title">Parkování</h2>
+
+								<div class="programInfoGroup__content">
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Jak získat vrácení peněz
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Informace k parkování.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Možnosti platby - kreditní karta a PayPal
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Další
+															možnosti parkování.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="programInfoGroup">
+								<h2 class="programInfoGroup__title">Ubytování v libereckém kraji</h2>
+
+								<div class="programInfoGroup__content">
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Jak získat vrácení peněz
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Možnosti ubytování v okolí
+															závodu.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Možnosti platby - kreditní karta a PayPal
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Další informace
+															k ubytování.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="programInfoGroup">
+								<h2 class="programInfoGroup__title">Kontakt na informační centra</h2>
+
+								<div class="programInfoGroup__content">
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Jak získat vrácení peněz
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Kontakty na informační
+															centra.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+									<div class="infoAccordion">
+										<button class="infoAccordion__toggle js-info-accordion" type="button" aria-expanded="false">
+											<span class="infoAccordion__body">
+												<span class="infoAccordion__title">
+													Možnosti platby - kreditní karta a PayPal
+												</span>
+
+												<span class="infoAccordion__content">
+													<span class="infoAccordion__contentInner">
+														<span class="infoAccordion__text">
+															Další kontaktní
+															informace.
+														</span>
+													</span>
+												</span>
+											</span>
+
+											<span class="infoAccordion__icon">
+												<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.9 0v15.129a.9.9 0 01-1.8 0V0h1.8z" fill="#DFE5F1" />
+													<path d="M10.15 15.254L1.173 5.727a1.84 1.84 0 000 2.492l7.801 8.28 1.174-1.245z" fill="#DFE5F1" />
+													<path d="M7.85 15.254l8.976-9.527a1.84 1.84 0 010 2.492L9.025 16.5 7.85 15.255z" fill="#DFE5F1" />
+												</svg> </span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="programPage__quickInfo">
+							<div class="container-lg">
+								<div class="subtitle-secondary text-tertiary mb-4">
+									Praktické info
+								</div>
+
+								<div class="programPage__quickInfoGrid">
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/parking.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Doprava a parkování</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/user.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Pro diváky</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/vydej.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>Výdej čísel</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+
+									<a href="#" class="programQuickLink">
+										<img src="images/ico/faq.svg" width="32" height="32" class="object-fit-contain" alt="ico" />
+										<strong>FAQ</strong>
+										<span class="programQuickLink__arrow">
+											<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8.09985H15.1286C15.6256 8.09985 16.0286 8.5028 16.0286 8.99985C16.0286 9.49691 15.6256 9.89985 15.1286 9.89985H0V8.09985Z" fill="currentColor" />
+												<path d="M15.2539 7.85083L5.72748 16.8262C6.41554 17.4745 7.53112 17.4745 8.21919 16.8262L16.4998 9.02462L15.2539 7.85083Z" fill="currentColor" />
+												<path d="M15.2539 10.1492L5.72748 1.17379C6.41554 0.525529 7.53112 0.525529 8.21919 1.1738L16.4998 8.97538L15.2539 10.1492Z" fill="currentColor" />
+											</svg>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="partners">
+				<div class="container">
+					<div class="partners__inner">
+						<div class="partners__group partners__group--center">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Generální partner</h3>
+
+							<ul class="partners__logos partners__logos--single">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-1.png" alt="Skupina ČEZ" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__group partners__group--center">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Premiový partner</h3>
+
+							<ul class="partners__logos partners__logos--single">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="T-Mobile" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__group partners__group--full">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">Hlavní partneři</h3>
+
+							<ul class="partners__logos partners__logos--main">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-3.png" alt="Orlen" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners//p-4.png" alt="Vinci" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-5.png" alt="Dr. Max" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-6.png" alt="CRA" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-1.png" alt="Volkswagen" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="Generali Investments" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__row">
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">
+									Generální mediální partner
+								</h3>
+
+								<ul class="partners__logos">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-3.png" alt="Česká televize" />
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">
+									Hlavní mediální partner
+								</h3>
+
+								<ul class="partners__logos partners__logos--media">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-4.png" alt="Evropa 2" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-1.png" alt="Sport" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="partners__group partners__group--full">
+							<h3 class="subtitle-secondary mb-lg-5 mb-4">
+								Hlavní institucionální partneři
+							</h3>
+
+							<ul class="partners__logos partners__logos--institutions">
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-6.png" alt="Národní sportovní agentura" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-5.png" alt="Partner" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-4.png" alt="Liberecký kraj" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-3.png" alt="Visit Czechia" />
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="partners__logo">
+										<img src="images/content/partners/p-2.png" alt="Ministerstvo pro místní rozvoj" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="partners__row">
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">Oficiální partneři</h3>
+
+								<ul class="partners__logos partners__logos--official">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-1.png" alt="Mincovna" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-2.png" alt="Swix" />
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-4.png" alt="Intersport" />
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="partners__group">
+								<h3 class="subtitle-secondary mb-lg-5 mb-4">VIP catering partner</h3>
+
+								<ul class="partners__logos">
+									<li>
+										<a href="#" class="partners__logo">
+											<img src="images/content/partners/p-5.png" alt="Delirest" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="partners__bottom">
+							<img src="images/content/partners/p-7.png" alt="Ski Classics" />
+
+							<span> Ski Classics World Championship 2026/2027 Season XVIII </span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="pubs">
+				<div class="container">
+					<div class="row g-md-4 g-8 justify-content-center">
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="pub" target="_blank">
+								<img src="images/content/pub.png" width="200" height="200" loading="lazy" alt="pub" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footerMenu">
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Závody</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Všechny závody</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 50 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 30 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 10 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 5 | 2026</a>
+							</li>
+							<li>
+								<a href="#">Jizerská 2 | 2026</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Výsledky</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Výsledky závodů</a>
+							</li>
+							<li>
+								<a href="#">Klub mistrů</a>
+							</li>
+							<li>
+								<a href="#">Král Jizerek</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Informace</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Aktuality</a>
+							</li>
+							<li>
+								<a href="#">Servis</a>
+							</li>
+							<li>
+								<a href="#">Charita</a>
+							</li>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__col">
+						<h3 class="footerMenu__title">Kontakty</h3>
+
+						<ul class="footerMenu__list">
+							<li>
+								<a href="#">Kontakty</a>
+							</li>
+							<li>
+								<a href="#">Členská sekce</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footerMenu__socials">
+						<a href="#" aria-label="Facebook"> <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M23.9997 2.66699H19.9997C18.2316 2.66699 16.5359 3.36937 15.2856 4.61961C14.0354 5.86986 13.333 7.56555 13.333 9.33366V13.3337H9.33301V18.667H13.333V29.3337H18.6663V18.667H22.6663L23.9997 13.3337H18.6663V9.33366C18.6663 8.98004 18.8068 8.6409 19.0569 8.39085C19.3069 8.1408 19.6461 8.00033 19.9997 8.00033H23.9997V2.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+
+						<a href="#" aria-label="Instagram">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7616 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footerInfo">
+				<div class="container">
+					<div class="d-flex flex-sm-row flex-column align-items-sm-center justify-content-between gap-4 flex-wrap">
+						<div class="text-white d-flex flex-md-row flex-column align-items-md-center gap-lg-8 gap-sm-3 gap-1 flex-wrap">
+							<div class="fw-extrabold text-uppercase">
+								SKI KLUB JIZERSKÁ PADESÁTKA
+							</div>
+
+							<a class="fw-medium hover-outline" href="mailto:info@jiz50.cz">
+								<span>e-mail:</span>
+								info@jiz50.cz
+							</a>
+						</div>
+
+						<a class="d-block" href="#" target="_blank">
+							<img src="images/ico/raul.svg" width="130" height="32" loading="lazy" class="object-fit-contain" alt="raul" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="container">
+					<div class="footerBottom__inner fw-medium text-white">
+						<a class="hover-underline-center" href="#">Obchodní podmínky</a>
+						<a class="hover-underline-center" href="#">Pravidla závodu </a>
+						<a class="hover-underline-center" href="#">Nastavení cookies </a>
+						<a class="hover-underline-center" href="#">Podmínky GDPR </a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script defer src="js/scripts.js"></script>
+</body>
+
+</html>
