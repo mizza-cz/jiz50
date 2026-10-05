@@ -1,0 +1,133 @@
+.infoAccordion {
+  width: 100%;
+}
+
+.infoAccordion + .infoAccordion {
+  margin-top: 8px;
+}
+
+.infoAccordion__toggle {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  min-height: 40px;
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 0 0 16px 0;
+
+  background-color: var(--color-white);
+  color: var(--color-primary);
+
+  text-align: left;
+
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+}
+
+.infoAccordion__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px 16px;
+}
+
+.infoAccordion__title {
+  display: block;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+
+  transition: color 0.2s ease;
+}
+.infoAccordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+}
+
+.infoAccordion__contentInner {
+  min-height: 0;
+  overflow: hidden;
+
+  padding-top: 0;
+
+  transition: padding-top 0.3s ease;
+}
+
+.infoAccordion__toggle[aria-expanded="true"] {
+  .infoAccordion__content {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .infoAccordion__contentInner {
+    padding-top: 12px;
+  }
+
+  .infoAccordion__title {
+    color: var(--color-tertiary);
+  }
+
+  .infoAccordion__icon svg {
+    transform: rotate(180deg);
+  }
+}
+
+.infoAccordion__icon {
+  display: flex;
+  flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  min-height: 32px;
+
+  background-color: var(--color-tertiary);
+
+  svg {
+    width: 16px;
+    height: 16px;
+
+    transition: transform 0.25s ease;
+  }
+}
+
+.infoAccordion__toggle[aria-expanded="true"] {
+  .infoAccordion__title {
+    color: var(--color-tertiary);
+  }
+
+  .infoAccordion__icon svg {
+    transform: rotate(180deg);
+  }
+}
+.infoAccordion__text {
+  display: block;
+
+  margin-bottom: 4px;
+}
+
+.infoAccordion__list {
+  margin: 0;
+  padding-left: 20px;
+
+  list-style: disc;
+}
+
+.infoAccordion__list li {
+  margin-bottom: 2px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

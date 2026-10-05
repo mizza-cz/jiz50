@@ -1,0 +1,35 @@
+<div class="infoAccordion">
+  <button
+    class="infoAccordion__toggle js-info-accordion"
+    type="button"
+    aria-expanded="false"
+  >
+    <span class="infoAccordion__body">
+      <span class="infoAccordion__title">
+        {{ title }}
+      </span>
+
+      {% if text or items %}
+      <span class="infoAccordion__content">
+        <span class="infoAccordion__contentInner">
+          {% if text %}
+          <span class="infoAccordion__text">
+            {{ text }}
+          </span>
+          {% endif %} {% if items %}
+          <ul class="infoAccordion__list">
+            {% for item in items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </span>
+      </span>
+      {% endif %}
+    </span>
+
+    <span class="infoAccordion__icon">
+      {% include "@images/arrow-down.svg" %}
+    </span>
+  </button>
+</div>

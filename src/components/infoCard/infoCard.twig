@@ -1,0 +1,19 @@
+<article class="infoCard{% if variant %} infoCard--{{ variant }}{% endif %}">
+  <div class="infoCard__content">
+    <h3 class="infoCard__title">
+      {{ title }}
+    </h3>
+
+    {% if text %}
+    <p class="infoCard__text">
+      {{ text }}
+    </p>
+    {% endif %}
+  </div>
+
+  {% if button %}
+  <a href="{{ url|default('#') }}" class="button-primary px-4 py-2">
+    {{ button }}
+  </a>
+  {% endif %}
+</article>

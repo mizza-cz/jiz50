@@ -1,0 +1,106 @@
+.practicalInformation__button {
+  margin-top: 16px;
+}
+
+.practicalInformation__pickup {
+  display: flex;
+  align-items: stretch;
+
+  margin-top: 18px;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+
+.practicalInformation__pickupItem {
+  min-width: 260px;
+  padding: 0 36px;
+
+  text-align: center;
+
+  + .practicalInformation__pickupItem {
+    border-left: 1px solid var(--border-dark-hover);
+
+    @include media-breakpoint-down(md) {
+      margin-top: 16px;
+      padding-top: 16px;
+
+      border-top: 1px solid var(--border-dark-hover);
+      border-left: 0;
+    }
+  }
+
+  span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--color-tertiary);
+
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  strong {
+    display: block;
+
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+.practicalInformation__infoRows {
+  max-width: 57rem;
+  margin: 0 auto;
+}
+
+.practicalInformation__infoGroup {
+  display: grid;
+  grid-template-columns: 17.5rem 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.practicalInformation__infoTitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 115.99999999999999%;
+}
+
+.practicalInformation__infoContent {
+  min-width: 0;
+}
+
+.practicalInformation__serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 348px);
+  justify-content: center;
+  gap: 24px;
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.practicalInformation__dangerButton {
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent-dark);
+  }
+}
+
+.practicalInformation__faq {
+  padding: 36px 0 48px;
+
+  border-top: 1px solid var(--border-dark-hover);
+
+  background-color: rgba(233, 233, 225, 0.5);
+}

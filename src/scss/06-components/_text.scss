@@ -1,9 +1,9 @@
 .subtitle-primary {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 133%;
   @include media-breakpoint-down(lg) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .subtitle-secondary {

@@ -1,0 +1,290 @@
+<section class=" ">
+  {# TOP CARDS #}
+  <div class="bg-light-gray pb-sm-12 pb-2 pt-lg-12 pt-sm-26 pt-17">
+    <div class="container">
+      <div class="row g-sm-6 g-2">
+        <div class="col-xl-3 col-sm-6">
+          {% include "@components/infoCard/infoCard.twig" with { title:
+          "Registrace", text: "Termíny, startovné a změny registrace", button:
+          "Přejít na registraci", url: "#" } %}
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          {% include "@components/infoCard/infoCard.twig" with { title: "Doprava
+          a parkování", text: "Jak se dostat na start a kde zaparkovat", button:
+          "Více informací", url: "#doprava" } %}
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          {% include "@components/infoCard/infoCard.twig" with { title:
+          "Program", text: "Časy startů, výdeje čísel a dalšího programu",
+          button: "Zobrazit program", url: "#" } %}
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          {% include "@components/infoCard/infoCard.twig" with { title:
+          "Ubytování", text: "Možnosti ubytování v okolí", button: "Více
+          informací", url: "#ubytovani" } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# START LIST #}
+  <section class="py-lg-14 py-12 border-bottom-dark" id="startovni-cislo">
+    <div class="container-lg">
+      <div class="d-flex flex-column align-items-center text-center gap-4">
+        <h2 class="h2">Startovní listina</h2>
+
+        <p>Ověřte si své zařazení a startovní číslo.</p>
+
+        <p>Startovní listina <strong>bude zveřejněna 15. 1. 2027.</strong></p>
+
+        <a href="#" class="button-secondary py-2 px-4"> Startovní listina </a>
+      </div>
+    </div>
+  </section>
+
+  {# NUMBER PICKUP #}
+  <section class="py-12 border-bottom-dark">
+    <div class="container-lg">
+      <h2 class="h2 mb-4 text-center">Výdej startovních čísel</h2>
+      <div class="d-flex flex-column align-items-center text-center gap-6">
+        <div class="">
+          <div class="subtitle-secondary mb-1">kdy:</div>
+          <div class="h5">pátek 10:00–20:00</div>
+        </div>
+        <div class="">
+          <div class="subtitle-secondary mb-1">KDE:</div>
+          <div class="h5">Bedřichov, závodní kancelář</div>
+        </div>
+
+        <a href="#" class="button-secondary py-2 px-4">
+          Kompletní informace o výdeji
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {# TRANSPORT #}
+  <section class="py-12 border-bottom-dark" id="doprava">
+    <div class="container-lg">
+      <h2 class="h2 text-center mb-6">Doprava a parkování</h2>
+
+      <div class="practicalInformation__infoRows">
+        <div class="practicalInformation__infoGroup">
+          <h3 class="practicalInformation__infoTitle">Doprava</h3>
+
+          <div class="practicalInformation__infoContent">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Autobusová doprava k výdeji čísel", text: "DÍKY PODPOŘE
+            NAŠICH PARTNERŮ JSME PRO KAŽDÉHO ÚČASTNÍKA PŘIPRAVILI ATRAKTIVNÍ
+            BENEFITY:", items: [ "Startovní číslo s nalepeným měřícím čipem",
+            "Křišťálová medaile Jizerská 50 (v cíli závodu)", "Pamětní kovová
+            medaile od České mincovny", "Dárky a slevy od partnerů" ] } %} {%
+            include "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Autobusová doprava z Liberce", text: "Autobusová doprava z Liberce
+            bude zajištěna v pravidelných intervalech před startem závodu.",
+            items: [ "Odjezdy z centra Liberce", "Příjezd přímo do Bedřichova",
+            "Doporučujeme využít veřejnou dopravu", "Přesný jízdní řád bude
+            zveřejněn před závodem" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Autobusová doprava z Prahy", text: "Pro závodníky bude připravena
+            možnost autobusové dopravy z Prahy.", items: [ "Odjezd v ranních
+            hodinách", "Příjezd do Bedřichova před zahájením programu",
+            "Rezervace místa bude nutná předem" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Autobusová doprava do Brna", text: "Po skončení závodu bude možné
+            využít organizovanou autobusovou dopravu.", items: [ "Odjezd po
+            skončení hlavního programu", "Přesný čas bude upřesněn", "Kapacita
+            autobusu je omezená" ] } %}
+          </div>
+        </div>
+
+        <div class="practicalInformation__infoGroup">
+          <h3 class="practicalInformation__infoTitle">Parkování</h3>
+
+          <div class="practicalInformation__infoContent">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Parkování v Bedřichově", text: "Parkování v místě závodu
+            bude během akce omezené.", items: [ "Řiďte se pokyny pořadatelů",
+            "Využívejte pouze vyznačená parkoviště", "Příjezd doporučujeme s
+            dostatečným předstihem" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Parkování v Liberci", text: "Doporučujeme využít záchytná
+            parkoviště v Liberci a dále pokračovat hromadnou dopravou.", items:
+            [ "Parkovací kapacity jsou větší než v Bedřichově", "Na závod
+            navazují autobusové spoje", "Aktuální informace budou zveřejněny
+            před akcí" ] } %}
+          </div>
+        </div>
+
+        <div class="practicalInformation__infoGroup" id="ubytovani">
+          <h3 class="practicalInformation__infoTitle">
+            Ubytování v libereckém kraji
+          </h3>
+
+          <div class="practicalInformation__infoContent">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Ubytování v Bedřichově", text: "V Bedřichově a jeho okolí je
+            možné využít hotely, penziony i soukromé ubytování.", items: [
+            "Doporučujeme rezervovat ubytování s předstihem", "Kapacity v
+            termínu závodu bývají rychle obsazené", "Ověřte si možnosti dopravy
+            na start" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Ubytování v Liberci", text: "Liberec nabízí širší výběr hotelů a
+            dalších možností ubytování.", items: [ "Dobré spojení do
+            Bedřichova", "Širší nabídka hotelů a apartmánů", "Možnost využít
+            závodní autobusovou dopravu" ] } %}
+          </div>
+        </div>
+
+        <div class="practicalInformation__infoGroup">
+          <h3 class="practicalInformation__infoTitle">
+            Další možnosti ubytování
+          </h3>
+
+          <div class="practicalInformation__infoContent">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jablonec nad Nisou", text: "Další možnosti ubytování nabízí
+            také Jablonec nad Nisou.", items: [ "Hotely", "Penziony",
+            "Apartmány", "Dobrá dostupnost do Bedřichova" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title: "Okolí
+            Jizerských hor", text: "Ubytování lze využít také v dalších obcích v
+            okolí Jizerských hor.", items: [ "Janov nad Nisou", "Josefův Důl",
+            "Hejnice", "Desná" ] } %}
+          </div>
+        </div>
+
+        <div class="practicalInformation__infoGroup">
+          <h3 class="practicalInformation__infoTitle">
+            Kontakt na informační centra
+          </h3>
+
+          <div class="practicalInformation__infoContent">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Turistické informační centrum Liberec", text: "Informační
+            centrum vám pomůže s dopravou, ubytováním a dalšími službami v
+            regionu.", items: [ "Informace o ubytování", "Turistické informace",
+            "Doprava v regionu" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Turistické informační centrum Jablonec nad Nisou", text: "Další
+            informace o službách a možnostech ubytování získáte také v
+            informačním centru v Jablonci nad Nisou.", items: [ "Ubytování",
+            "Doprava", "Tipy v okolí", "Aktuální turistické informace" ] } %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# SERVICE #}
+  <section class="py-12">
+    <div class="container-lg">
+      <h2 class="h2 text-center mb-8">Servis pro závodníky</h2>
+
+      <div class="practicalInformation__serviceGrid">
+        {% include "@components/infoCard/infoCard.twig" with { title: "Mazací
+        servis SWIX", text: "Termíny, startovné a změny registrace", button:
+        "Více", url: "#", variant: "service" } %} {% include
+        "@components/infoCard/infoCard.twig" with { title: "Pojištění", text:
+        "Kdy a kde si ho vyzvednout", button: "Více", url: "#", variant:
+        "service" } %} {% include "@components/infoCard/infoCard.twig" with {
+        title: "Výživové okénko ENERVIT", text: "Jak se dostat na start a kde
+        zaparkovat", button: "Více", url: "#", variant: "service" } %} {%
+        include "@components/infoCard/infoCard.twig" with { title: "Zázemí",
+        text: "Časy startů, výdeje čísel a dalšího programu", button: "Více",
+        url: "#", variant: "service" } %}
+      </div>
+    </div>
+  </section>
+
+  {# REREGISTRATION #}
+  <section class="pt-lg-12 pb-12 border-bottom-dark">
+    <div class="container-md">
+      <h2 class="h2 mb-4 text-center">Přeregistrace</h2>
+
+      <p class="fw-medium text-center mb-4">
+        Online přeregistrace je možná pouze v době spuštěných registrací (do 31.
+        1. 2027). Po uzavření online registrací je přeregistrace možná již pouze
+        na místě.
+      </p>
+
+      <div class="practicalInformation__accordionList">
+        {% include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Důležité upozornění k přeregistracím", text: "Přeregistraci je možné
+        provést pouze za splnění podmínek stanovených pořadatelem.", items: [
+        "Přeregistrace je možná pouze do stanoveného termínu.", "Po uzavření
+        online registrací lze změnu provést pouze na místě.", "Při změně
+        závodníka je nutné uvést správné osobní údaje nového účastníka.",
+        "Původní startovní číslo nelze převést bez provedení oficiální
+        přeregistrace." ] } %} {% include
+        "@components/infoAccordion/infoAccordion.twig" with { title: "Návod na
+        změnu v registraci online", text: "Změnu údajů nebo převod registrace
+        můžete provést ve svém účtu v registračním systému.", items: [
+        "Přihlaste se do svého účtu.", "Otevřete detail své registrace.",
+        "Zvolte možnost změny nebo přeregistrace.", "Vyplňte nové údaje a změnu
+        potvrďte.", "Po úspěšném dokončení obdržíte potvrzení e-mailem." ] } %}
+        {% include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Návod na změnu v registraci na místě", text: "Po ukončení online
+        registrací je možné provést přeregistraci pouze osobně v závodní
+        kanceláři.", items: [ "Dostavte se do závodní kanceláře během výdeje
+        startovních čísel.", "Připravte si údaje původního i nového závodníka.",
+        "Pořadatel provede změnu registrace v systému.", "Po dokončení změny
+        obdrží nový závodník odpovídající startovní číslo." ] } %}
+      </div>
+
+      <div
+        class="d-flex align-items-center gap-4 flex-wrap justify-content-center mt-4"
+      >
+        <a href="#" class="button-secondary py-2 px-4"> Přeregistrace </a>
+
+        <a
+          href="#"
+          class="button-secondary practicalInformation__dangerButton py-2 px-4"
+        >
+          Podvodný přeprodej startovného
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {# FAQ #}
+  <section class="py-12 bg-50">
+    <div class="container-md">
+      <h2 class="h2 text-center mb-6">Často se ptáte</h2>
+
+      <div class="practicalInformation__accordionList">
+        {% include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Jak změnit platební metodu", text: "Platební metodu můžete změnit ve
+        svém účtu v registračním systému.", items: [ "Přihlaste se do svého
+        účtu.", "Otevřete detail registrace.", "Zvolte možnost změny platební
+        metody.", "Vyberte novou platební metodu a změnu potvrďte." ] } %} {%
+        include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Jak upravit údaje v registraci", text: "Některé osobní údaje je možné
+        upravit přímo v detailu registrace.", items: [ "Přihlaste se do svého
+        účtu.", "Otevřete svou registraci.", "Upravte dostupné údaje.", "Změny
+        uložte." ] } %} {% include
+        "@components/infoAccordion/infoAccordion.twig" with { title: "Co dělat
+        při chybné platbě", text: "Pokud při platbě došlo k chybě, nejprve
+        zkontrolujte stav své registrace.", items: [ "Ověřte, zda nebyla platba
+        přesto přijata.", "Zkontrolujte potvrzovací e-mail.", "Při
+        přetrvávajícím problému kontaktujte podporu.", "Neprovádějte opakovanou
+        platbu bez ověření stavu." ] } %} {% include
+        "@components/infoAccordion/infoAccordion.twig" with { title: "Kde najdu
+        potvrzení o registraci", text: "Potvrzení registrace je dostupné po
+        přihlášení do registračního systému.", items: [ "Přihlaste se do svého
+        účtu.", "Otevřete detail registrace.", "Zkontrolujte stav registrace a
+        platby.", "Potvrzení bývá zároveň zasláno na registrační e-mail." ] } %}
+        {% include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Ověření identity při registraci", text: "V některých případech může být
+        potřeba ověřit identitu závodníka.", items: [ "Používejte správné osobní
+        údaje.", "Jméno a datum narození musí odpovídat závodníkovi.", "Při
+        výdeji startovního čísla může být vyžadován doklad totožnosti." ] } %}
+        {% include "@components/infoAccordion/infoAccordion.twig" with { title:
+        "Jak získat vrácení peněz", text: "Možnost vrácení startovného se řídí
+        podmínkami registrace a storna.", items: [ "Zkontrolujte storno podmínky
+        závodu.", "Kontaktujte pořadatele včas před termínem závodu.", "Uveďte
+        údaje potřebné k dohledání registrace.", "Vrácení peněz závisí na
+        konkrétních podmínkách registrace." ] } %}
+      </div>
+    </div>
+  </section>
+</section>
