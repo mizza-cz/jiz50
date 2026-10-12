@@ -1,0 +1,288 @@
+<section class="waxService">
+  <div class="pt-8 pb-lg-12 pb-6">
+    <div class="container">
+      <h2 class="h2 mb-lg-8 mb-5">Jak mazací servis funguje</h2>
+
+      <div class="waxServiceSteps">
+        <div class="waxServiceStep">
+          <div class="subtitle-secondary">01</div>
+
+          <div class="h5 mt-2">Objednejte servis</div>
+        </div>
+
+        <div class="waxServiceStep">
+          <div class="subtitle-secondary">02</div>
+
+          <div class="h5 mt-2">Předejte lyže</div>
+        </div>
+
+        <div class="waxServiceStep">
+          <div class="subtitle-secondary">03</div>
+
+          <div class="h5 mt-2">SWIX je připraví</div>
+        </div>
+
+        <div class="waxServiceStep">
+          <div class="subtitle-secondary">04</div>
+
+          <div class="h5 mt-2">Vyzvedněte si lyže</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-lg-14 py-6 pb-lg-12 bg-50">
+    <div class="container">
+      <h2 class="h2 mb-8">Ceník</h2>
+
+      <div class="row g-md-6 g-4">
+        <div class="col-xl-3 col-md-6">
+          <article class="waxServicePrice">
+            <div class="text-medium-sm text-tertiary mb-2">1 790 Kč</div>
+
+            <h3 class="h5 fw-semibold mb-2">Jizerská 50</h3>
+
+            <p class="text-medium-xs text-secondary mb-4">
+              Kompletní příprava skluzných i stoupacích zón pro 50km závod.
+            </p>
+
+            <a href="#" class="button-primary"> Objednat za 1 790 Kč </a>
+          </article>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <article class="waxServicePrice">
+            <div class="text-medium-sm text-tertiary mb-2">1 790 Kč</div>
+
+            <h3 class="h5 fw-semibold mb-2">Jizerská 50</h3>
+
+            <p class="text-medium-xs text-secondary mb-4">
+              Kompletní příprava skluzných i stoupacích zón pro 50km závod.
+            </p>
+
+            <a href="#" class="button-primary"> Objednat za 1 790 Kč </a>
+          </article>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <article class="waxServicePrice">
+            <div class="text-medium-sm text-tertiary mb-2">1 790 Kč</div>
+
+            <h3 class="h5 fw-semibold mb-2">Jizerská 50</h3>
+
+            <p class="text-medium-xs text-secondary mb-4">
+              Kompletní příprava skluzných i stoupacích zón pro 50km závod.
+            </p>
+
+            <a href="#" class="button-primary"> Objednat za 1 790 Kč </a>
+          </article>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <article class="waxServicePrice">
+            <div class="text-medium-sm text-tertiary mb-2">1 790 Kč</div>
+
+            <h3 class="h5 fw-semibold mb-2">
+              APLIKACE SAMOSTATNÝCH STOUPACÍCH VOSKŮ
+            </h3>
+
+            <a href="#" class="button-primary"> Objednat za 150 Kč </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="waxService__info">
+    <div class="container">
+      <div class="row gy-lg-10 gy-4 align-items-start">
+        <div class="col-lg-3">
+          <h2 class="h2 mt-lg-2">Co přesně servis zahrnuje</h2>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="d-flex flex-column gap-2">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "ČEZ Jizerská 50", text: "Kompletní příprava lyží zahrnuje
+            čištění skluznice, volbu vhodného vosku podle aktuálních podmínek a
+            finální vykartáčování před závodem." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Jizerská 25 & Bedřichovská 30", open: true, text: "Ošetření
+            skluzných zón optimální variantou skluzného vosku včetně struktury.
+            Aplikace ideálního stoupacího vosku nebo ošetření stoupacích pásů."
+            } %} {% include "@components/infoAccordion/infoAccordion.twig" with
+            { title: "Jizerská 10 & Jizerská 17", text: "Servis je přizpůsoben
+            kratším tratím a aktuální předpovědi. Součástí je příprava
+            skluznice, kontrola stoupací zóny a doporučení vhodného mazání." }
+            %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-lg-10 gy-4 align-items-start mt-lg-16 mt-6">
+        <div class="col-lg-3 offset-lg-1">
+          <h2 class="h2 mt-lg-2">Kde a kdy lyže předat</h2>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="d-flex flex-column gap-2">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "ČEZ Jizerská 50", text: "Lyže je možné předat v servisním
+            místě SWIX v Bedřichově nejpozději večer před závodem. Přesný čas
+            předání obdržíte po dokončení objednávky." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Jizerská 25 & Bedřichovská 30", open: true, text: "Lyže přijímáme
+            den před závodem ve vyznačeném servisním stanu v areálu Bedřichov.
+            Hotové lyže budou připraveny k vyzvednutí před startem." } %} {%
+            include "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Jizerská 10 & Jizerská 17", text: "Předání probíhá na označeném
+            výdejním místě podle pokynů v potvrzení objednávky. Doporučujeme
+            dorazit s dostatečným předstihem." } %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-50 py-lg-12 py-6">
+    <div class="container">
+      <h2 class="h2 mb-4">Tipy na vosky před závodem</h2>
+
+      <div class="waxService__tableWrap">
+        <table class="waxService__table">
+          <thead>
+            <tr>
+              <th>Závod</th>
+              <th>Druh mázy</th>
+              <th>24 h</th>
+              <th>18:00</th>
+              <th>2,5 h</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td rowspan="2">ČEZ Jizerská 50</td>
+
+              <td class="fw-extrabold">Skluzné</td>
+
+              <td>
+                <strong>SWIX LF6</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX HF8</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX CH7</strong>
+                <span class="waxService__wax"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-extrabold">Stoupací</td>
+
+              <td>
+                <strong>SWIX LF6</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX HF8</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX CH7</strong>
+                <span class="waxService__wax"></span>
+              </td>
+            </tr>
+
+            <tr class="waxService__tableSpacer">
+              <td colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td rowspan="2">ČEZ Jizerská 30</td>
+
+              <td class="fw-extrabold">Skluzné</td>
+
+              <td>
+                <strong>SWIX LF6</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX HF8</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX CH7</strong>
+                <span class="waxService__wax"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-extrabold">Stoupací</td>
+
+              <td>
+                <strong>SWIX LF6</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX HF8</strong>
+                <span class="waxService__wax"></span>
+              </td>
+
+              <td>
+                <strong>SWIX CH7</strong>
+                <span class="waxService__wax"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-lg-16 my-8">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="h1 mb-4">Mazací servis SWIX</h2>
+
+        <p class="subtitle-primary mb-0">
+          Dopřejte svým lyžím profesionální přípravu přesně podle aktuálních
+          podmínek.
+        </p>
+
+        <a href="#" class="button-primary button-primary--arrow mt-lg-12 mt-8">
+          <span>Objednat mazací servis</span>
+
+          <span class="button-primary__arrow bg-light-gray text-accent">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1055 10.7231L6.00168 20.6958C6.73145 21.4161 7.91464 21.4161 8.6444 20.6958L17.4268 12.0274L16.1055 10.7231Z"
+                fill="currentColor"
+              />
+              <path
+                d="M16.1055 13.2769L6.00168 3.30422C6.73145 2.58392 7.91464 2.58392 8.6444 3.30422L17.4268 11.9726L16.1055 13.2769Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider-4"></div>

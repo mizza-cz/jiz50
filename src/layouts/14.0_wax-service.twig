@@ -1,0 +1,88 @@
+{% extends "@components/base/base.twig" %} {% set title = "14.0_wax-service" %}
+{% block main %}
+
+<section
+  class="subpageHero"
+  style="--subpageHero-bg: url('../images/content/service.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Mazací servis SWIX</h1>
+
+      <div class="subtitle-primary mb-4 text-inverse-secondary">
+        Dopřejte svým lyžím profesionální přípravu přesně podle aktuálních
+        podmínek.
+      </div>
+
+      <a href="#" class="button-primary button-primary--arrow">
+        <span>Přidej se na start</span>
+
+        <span class="button-primary__arrow bg-light-gray text-accent">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.1055 10.7231L6.00168 20.6958C6.73145 21.4161 7.91464 21.4161 8.6444 20.6958L17.4268 12.0274L16.1055 10.7231Z"
+              fill="currentColor"
+            />
+            <path
+              d="M16.1055 13.2769L6.00168 3.30422C6.73145 2.58392 7.91464 2.58392 8.6444 3.30422L17.4268 11.9726L16.1055 13.2769Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% include "@components/waxService/waxService.twig" %}
+<section class="bg-light-gray pt-lg-12 pt-6 pb-lg-12 pb-8 m-0">
+  <div class="container">
+    <div
+      class="d-flex align-items-center flex-wrap justify-content-between gap-4 mb-4"
+    >
+      <div class="d-gird gap-1">
+        <div class="subtitle-secondary">Nadcházející závody</div>
+        <h5 class="h2">
+          Vyber si <span class="text-secondary"> svou výzvu </span>
+        </h5>
+      </div>
+      <a href="#" class="button-secondary">Všechny závody</a>
+    </div>
+    <div class="row g-lg-6 g-2">
+      <div class="col-xl-6 d-sm-block d-none">
+        {% include "@components/cardCompetition/cardCompetition-main.twig" %}
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="row g-lg-6 g-2">
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+
+          <div class="col-12">
+            {% include "@components/cardCompetition/cardCompetition.twig" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

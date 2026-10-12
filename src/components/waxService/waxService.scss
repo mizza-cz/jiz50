@@ -1,0 +1,139 @@
+.waxService {
+  color: var(--color-primary);
+}
+.waxServiceSteps {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    gap: 16px;
+  }
+}
+.waxServiceStep {
+  min-height: 100px;
+  padding: 8px 24px 8px 0;
+  flex: 1;
+  @include media-breakpoint-only(sm) {
+    flex: 0 0 calc(50% - 12px);
+  }
+  @include media-breakpoint-only(md) {
+    flex: 0 0 calc(50% - 12px);
+  }
+  @include media-breakpoint-down(sm) {
+    flex: 100%;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid var(--border-dark-hover);
+    @include media-breakpoint-down(lg) {
+      border-right: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    min-height: auto;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-dark-hover);
+  }
+}
+
+/* PRICE */
+
+.waxServicePrice {
+  display: flex;
+  flex-direction: column;
+  min-height: 212px;
+  height: 100%;
+  padding: 16px;
+  background: var(--color-white);
+  border-radius: 0 0 32px 0;
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+  }
+}
+
+.waxServicePrice .button-primary {
+  margin-top: auto;
+  width: fit-content;
+}
+
+/* INFO */
+
+.waxService__info {
+  padding: 48px 0;
+  background: var(--color-white);
+  @include media-breakpoint-down(lg) {
+    padding: 32px 0;
+  }
+  .h2 {
+    @include media-breakpoint-up(lg) {
+      max-width: 279px;
+    }
+  }
+}
+
+/* TIPS */
+
+.waxService__tableWrap {
+  overflow-x: auto;
+}
+
+.waxService__table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: var(--color-white);
+
+  th {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 115.99999999999999%;
+    letter-spacing: 0.17px;
+    color: var(--color-white);
+    text-align: left;
+    padding: 8px 24px;
+    background: var(--color-overlay);
+    @include media-breakpoint-down(md) {
+      padding: 8px 12px;
+    }
+  }
+
+  td {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.15px;
+    padding: 18px 24px;
+    color: var(--color-primary);
+    vertical-align: middle;
+    @include media-breakpoint-down(md) {
+      padding: 12px;
+    }
+    strong {
+      font-weight: 800;
+    }
+  }
+
+  td:nth-child(n + 3) {
+    white-space: nowrap;
+  }
+}
+
+.waxService__wax {
+  display: inline-block;
+  width: 52px;
+  height: 34px;
+  margin-left: 8px;
+  vertical-align: middle;
+  border-radius: 3px;
+  background: var(--color-gray-20);
+}
+
+.waxService__tableSpacer {
+  td {
+    height: 12px;
+    padding: 0;
+    background: var(--color-bg-50);
+  }
+}
+
+/* CTA */
