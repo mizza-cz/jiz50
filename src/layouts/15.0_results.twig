@@ -1,0 +1,32 @@
+{% extends "@components/base/base.twig" %} {% set title = "15.0_results" %} {%
+block main %}
+
+<section
+  class="subpageHero subpageHero--results"
+  style="background-image: url('../images/content/results.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Výsledky</h1>
+      <div class="subtitle-primary">JIZERSKÁ 50 2026</div>
+    </div>
+  </div>
+  <div class="subpageHero__segment">
+    <div class="container w-100">
+      <div
+        class="d-lg-flex d-none align-items-center gap-2   text-white mb-2 py-3 px-4"
+      >
+        <img
+          src="images/ico/dr-max.svg"
+          width="45"
+          height="16"
+          class="object-fit-contain"
+          alt=""
+        />
+        Výsledky měřeného úseku Dr. Max
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "@components/resultsPage/resultsPage.twig" %}{% endblock %}

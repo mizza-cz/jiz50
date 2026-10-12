@@ -81,4 +81,7 @@ $grid-breakpoints: (
 .border-top-dark-hover {
   border-top: 1px solid var(--border-dark-hover);
 }
+.rounded-24 {
+  border-radius: 24px;
+}
 /*! purgecss end ignore */

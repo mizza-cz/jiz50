@@ -1,0 +1,567 @@
+{% set results = [ { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" }, { place: "2", number: "21", name: "Johanes Tjelle", country:
+"Norsko", startTime: "02:05:55", kneipa: "0:30:56", jizerka: "0:58:09", smedava:
+"1:23:37", hrebinek: "1:40:07", categoryPlace: "1.", category: "M39", time:
+"2:32:23" } ] %}
+
+<section class="resultsPage">
+  <div class="container">
+    {# ========================================== DESKTOP
+    ========================================== #}
+
+    <div class="d-none d-lg-block">
+      <form class="resultsPage__filters">
+        <div class="resultsPage__search">
+          <img
+            src="images/ico/search-primary.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+
+          <input type="search" name="search" placeholder="Hledat závodníka" />
+        </div>
+
+        <label class="resultsPage__select resultsPage__select--race">
+          <select name="race">
+            <option>Jizerská 50</option>
+            <option>Jizerská 25</option>
+            <option>Bedřichovská 30</option>
+            <option>Jizerská 17</option>
+          </select>
+
+          <img
+            src="images/ico/chevron-down.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </label>
+
+        <label class="resultsPage__select">
+          <select name="year">
+            <option value="" selected>Ročník</option>
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+          </select>
+
+          <img
+            src="images/ico/chevron-down.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </label>
+
+        <label class="resultsPage__select resultsPage__select--category">
+          <select name="category">
+            <option value="" selected>Věková kategorie</option>
+            <option>M39</option>
+            <option>M49</option>
+            <option>M59</option>
+          </select>
+
+          <img
+            src="images/ico/chevron-down.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </label>
+
+        <label class="resultsPage__select resultsPage__select--gender">
+          <select name="gender">
+            <option value="" selected>Pohlaví</option>
+            <option>Muži</option>
+            <option>Ženy</option>
+          </select>
+
+          <img
+            src="images/ico/chevron-down.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </label>
+
+        <div class="resultsPage__filterActions">
+          <button class="button-primary" type="button">Porovnat</button>
+
+          <button class="button-secondary" type="reset">Zrušit</button>
+        </div>
+      </form>
+
+      <div class="resultsPage__compareHint">
+        Vyberte 2–5 závodníků pro porovnání výsledků
+      </div>
+
+      <div class="resultsPage__tableWrap">
+        <table class="resultsPage__table">
+          <thead>
+            <tr>
+              <th class="resultsPage__checkboxCol"></th>
+
+              <th style="width: 40px">Pořa.</th>
+
+              <th style="width: 40px">St.č.</th>
+
+              <th class="resultsPage__nameCol">Jméno</th>
+
+              <th style="width: 32px">Nár.</th>
+
+              <th>Čas</th>
+
+              <th>Kneipa</th>
+
+              <th style="width: 64px">Jizerka</th>
+
+              <th>Smědava</th>
+
+              <th>Hřebínek</th>
+
+              <th>Poř. Kat.</th>
+
+              <th>Kategorie</th>
+
+              <th>Čas</th>
+
+              <th class="resultsPage__actionsCol">Akce</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for item in results %}
+            <tr>
+              <td>
+                <label class="formCheckbox resultsPage__checkbox">
+                  <input
+                    class="formCheckbox__input"
+                    type="checkbox"
+                    name="results[]"
+                    value="{{ loop.index }}"
+                    {%
+                    if
+                    loop.index
+                    in
+                    [2,
+                    5]
+                    %}checked{%
+                    endif
+                    %}
+                    aria-label="Vybrat {{ item.name }}"
+                  />
+
+                  <span class="formCheckbox__box"></span>
+                </label>
+              </td>
+
+              <td>
+                {{ item.place }}
+              </td>
+
+              <td>
+                {{ item.number }}
+              </td>
+
+              <td>
+                <a
+                  href="#"
+                  class="resultsPage__name resultsTooltip"
+                  data-tooltip="Detail závodníka"
+                >
+                  {{ item.name }}
+                </a>
+              </td>
+
+              <td>
+                <img
+                  class="resultsPage__flag"
+                  src="images/content/norsko.png"
+                  width="24"
+                  height="16"
+                  alt="{{ item.country }}"
+                />
+              </td>
+
+              <td class="fw-extrabold">
+                {{ item.startTime }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.kneipa }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.jizerka }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.smedava }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.hrebinek }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.categoryPlace }}
+              </td>
+
+              <td class="text-secondary">
+                {{ item.category }}
+              </td>
+
+              <td class="fw-extrabold">
+                {{ item.time }}
+              </td>
+
+              <td>
+                <div class="resultsPage__actions">
+                  <a
+                    href="#"
+                    class="resultsPage__action resultsTooltip"
+                    data-tooltip="Generali analýza"
+                    aria-label="Generali analýza"
+                  >
+                    <img
+                      src="images/ico/lev.svg"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />
+                  </a>
+
+                  <a
+                    href="../files/diplom.pdf"
+                    download
+                    class="resultsPage__action resultsTooltip"
+                    data-tooltip="Stáhnout diplom"
+                    aria-label="Stáhnout diplom"
+                  >
+                    <img
+                      src="images/ico/download.svg"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {# ========================================== MOBILE
+    ========================================== #} {#
+    ========================================== MOBILE
+    ========================================== #}
+
+    <div class="resultsPage__mobile d-lg-none">
+      <div class="resultsPage__mobileTop">
+        <div class="resultsPage__segment">
+          <div class="resultsPage__segmentBrand">Dr.Max</div>
+
+          <div class="resultsPage__segmentLabel">Výsledky Dr.Max</div>
+        </div>
+
+        <div class="resultsPage__mobileSearch">
+          <div class="resultsPage__search">
+            <img
+              src="images/ico/search-primary.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+
+            <input
+              type="search"
+              name="search-mobile"
+              placeholder="Hledat závodníka"
+            />
+          </div>
+        </div>
+
+        <div class="resultsPage__mobileControls">
+          <label class="resultsPage__select">
+            <select name="race-mobile">
+              <option>Jizerská 50</option>
+              <option>Jizerská 25</option>
+              <option>Bedřichovská 30</option>
+              <option>Jizerská 17</option>
+            </select>
+
+            <img
+              src="images/ico/chevron-down.svg"
+              width="16"
+              height="16"
+              alt=""
+            />
+          </label>
+
+          <button
+            class="resultsPage__filterButton js-results-filter"
+            type="button"
+            aria-expanded="false"
+            aria-controls="results-mobile-filter"
+            aria-label="Otevřít filtr"
+          >
+            <img src="images/ico/filter.svg" width="24" height="24" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="resultsPage__mobileList">
+        {% for item in results %}
+        <div class="resultsPageMobileRow {% if loop.first %}is-open{% endif %}">
+          <button
+            class="resultsPageMobileRow__toggle js-results-row"
+            type="button"
+            aria-expanded="{{ loop.first ? 'true' : 'false' }}"
+          >
+            <span class="resultsPageMobileRow__place">
+              {{ loop.index }}
+            </span>
+
+            <span class="resultsPageMobileRow__name">
+              {{ item.name }}
+            </span>
+
+            <span class="resultsPageMobileRow__time">
+              {{ item.time }}
+            </span>
+
+            <span class="resultsPageMobileRow__chevron">
+              {% include "@images/chevron-down.svg" %}
+            </span>
+          </button>
+
+          <div class="resultsPageMobileRow__content">
+            <div class="resultsPageMobileRow__contentInner">
+              <div class="resultsPageMobileRow__stat">
+                <span>Statistika 1</span>
+                <strong>38,3 km/h</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__stat">
+                <span>Úsek 1</span>
+                <strong>12:34</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__stat">
+                <span>Úsek 2</span>
+                <strong>12:34</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__actions">
+                <a href="#" class="resultsPageMobileRow__action">
+                  <img src="images/ico/lev.svg" width="24" height="24" alt="" />
+
+                  <span> Analýza výsledků Generali Investments </span>
+
+                  {% include "@images/external-link.svg" %}
+                </a>
+
+                <a
+                  href="../files/diplom.pdf"
+                  download
+                  class="resultsPageMobileRow__action"
+                >
+                  <img
+                    src="images/ico/download.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+
+                  <span> Stáhnout diplom </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {# FILTER PANEL #}
+
+      <div
+        class="resultsPageFilter js-results-mobile-filter"
+        id="results-mobile-filter"
+        aria-hidden="true"
+      >
+        <div class="resultsPageFilter__header">
+          <strong>Filtr</strong>
+
+          <button
+            class="resultsPageFilter__close js-results-filter-close"
+            type="button"
+            aria-label="Zavřít filtr"
+          >
+            {% include "@images/close.svg" %}
+          </button>
+        </div>
+
+        <form class="resultsPageFilter__form">
+          <div class="resultsPageFilter__body">
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Ročník</h3>
+
+              <div class="resultsPageFilter__range">
+                <label class="resultsPageFilter__rangeField">
+                  <span>Od</span>
+                  <input type="text" name="year-from" />
+                </label>
+
+                <label class="resultsPageFilter__rangeField">
+                  <span>Do</span>
+                  <input type="text" name="year-to" />
+                </label>
+              </div>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2026" />
+                  <span></span>
+                  2026
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2025" />
+                  <span></span>
+                  2025
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2024" />
+                  <span></span>
+                  2024
+                </label>
+              </div>
+
+              <button class="resultsPageFilter__more" type="button">
+                + dalších 38 {% include "@images/chevron-down.svg" %}
+              </button>
+            </div>
+
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Věková kategorie</h3>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="18-30" />
+                  <span></span>
+                  18 - 30
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="31-50" />
+                  <span></span>
+                  31 - 50
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="51-70" />
+                  <span></span>
+                  51 - 70
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="71-90" />
+                  <span></span>
+                  71 - 90+
+                </label>
+              </div>
+            </div>
+
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Pohlaví</h3>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="gender-filter" value="male" />
+                  <span></span>
+                  Muž
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="gender-filter" value="female" />
+                  <span></span>
+                  Žena
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="resultsPageFilter__footer">
+            <button
+              class="button-primary resultsPageFilter__submit"
+              type="submit"
+            >
+              Zobrazit výsledky
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="resultsPage__pagination">
+      <div class="text-secondary fw-medium text-center">
+        Výsledky 1–20 z 240
+      </div>
+
+      <button class="button-secondary" type="button">
+        Načíst další výsledky
+      </button>
+    </div>
+  </div>
+</section>
