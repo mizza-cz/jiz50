@@ -1,0 +1,27 @@
+.competitionEco {
+  margin-bottom: 64px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.competitionEco__inner {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.competitionEco__item {
+  text-align: center;
+
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.competitionEco__logo {
+  display: block;
+  width: 124px;
+  height: auto;
+  margin: 0 auto;
+}

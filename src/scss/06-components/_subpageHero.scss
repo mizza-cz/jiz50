@@ -1,13 +1,3 @@
-// .headerSection {
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   width: 100%;
-//   height: 410px;
-//   position: relative;
-//   border-radius: 0 0 56px 0;
-
-// }
-
 .subpageHero {
   position: relative;
   display: flex;
@@ -69,6 +59,21 @@
 
     @include media-breakpoint-down(md) {
       font-size: 30px;
+    }
+  }
+}
+
+.subpageHero--competition {
+  min-height: 780px;
+  background-image: var(--subpageHero-bg);
+  border-radius: 0;
+  @include media-breakpoint-down(lg) {
+    min-height: 500px;
+    background-image: var(--subpageHero-bg-mobile);
+  }
+  .subpageHero__content {
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 72px;
     }
   }
 }

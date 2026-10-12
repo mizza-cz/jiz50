@@ -1,0 +1,15 @@
+{% extends "@components/base/base.twig" %} {% set title = "13.0_gallery-detail"
+%} {% block main %}
+
+<section
+  class="subpageHero d-lg-flex d-none"
+  style="background-image: url('../images/content/archive.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Galerie</h1>
+    </div>
+  </div>
+</section>
+
+{% include "@components/galleryDetail/galleryDetail.twig" %} {% endblock %}

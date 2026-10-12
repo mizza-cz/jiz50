@@ -1,0 +1,105 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"11.0_competition-detail" %} {% block main %}
+
+<section
+  class="subpageHero subpageHero--competition pt-17"
+  style="
+    --subpageHero-bg: url('../images/content/competition-hero.png');
+    --subpageHero-bg-mobile: url('../images/content/competition-mob-after.png');
+  "
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <div class="mb-3 tag-tertiary p-2">2027 / 60. ROČNÍK</div>
+      <h1 class="h1 mb-4">Jizerská 50</h1>
+
+      <div class="d-grid gap-4">
+        <a href="#" class="d-flex align-items-center gap-2">
+          {% include "@images/pin.svg" %}
+          <div class="subtitle-secondary text-white">SKI STADION BEDŘICHOV</div>
+        </a>
+        <div class="d-flex align-items-center gap-2">
+          {% include "@images/calendar-ter.svg" %}
+
+          <div class="subtitle-secondary text-white">
+            1. 2. 2027 / 1.2.2026 - ukončeno
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button-primary button-primary--arrow mt-6">
+        <span>Přidat se na start</span>
+
+        <span class="button-primary__arrow">
+          {% include "@images/arrow-right.svg" %}
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% include "@components/competitionInfo/competitionInfo.twig" %} {% include
+"@components/competitionPrice/competitionPrice.twig" %} {% include
+"@components/competitionRoute/competitionRoute.twig" %} {% include
+"@components/competitionFaq/competitionFaq.twig" %}
+
+<div class="divider-blue my-6 d-md-none"></div>
+
+<section class="bg-primary py-16 d-md-block d-none">
+  <div class="container">
+    <div
+      class="d-md-flex d-none align-items-center gap-lg-14 gap-6 flex-wrap justify-content-center"
+    >
+      <div>
+        <h2 class="h2 text-white mb-2">Rezervuj si místo na startu</h2>
+
+        <div class="subtitle-primary text-inverse-secondary">Ještě dnes</div>
+      </div>
+
+      <a href="#" class="button-primary button-primary--arrow mt-6">
+        <span>Přidej se na start</span>
+
+        <span class="button-primary__arrow text-accent">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.1055 10.7231L6.00168 20.6958C6.73145 21.4161 7.91464 21.4161 8.6444 20.6958L17.4268 12.0274L16.1055 10.7231Z"
+              fill="currentColor"
+            />
+            <path
+              d="M16.1055 13.2769L6.00168 3.30422C6.73145 2.58392 7.91464 2.58392 8.6444 3.30422L17.4268 11.9726L16.1055 13.2769Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="bg-light-gray">
+  <div class="container">
+    <a href="#" class="d-block w-100">
+      <img
+        class="d-md-block d-none"
+        src="images/content/get-app.png"
+        alt="JIZ50 aplikace"
+        loading="lazy"
+      />
+      <img
+        class="d-md-none d-block"
+        src="images/content/get-app-mob.png"
+        alt="JIZ50 aplikace"
+        loading="lazy"
+      />
+    </a>
+  </div>
+</div>
+<div class="divider-blue my-6"></div>
+
+{% include "@components/competitionOther/competitionOther.twig" %} {% include
+"@components/competitionEco/competitionEco.twig" %} {% endblock %}

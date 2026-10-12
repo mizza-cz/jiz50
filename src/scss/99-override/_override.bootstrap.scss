@@ -42,17 +42,32 @@ $grid-breakpoints: (
 .text-accent {
   color: var(--color-accent) !important;
 }
+.text-green {
+  color: var(--color-green) !important;
+}
 .text-secondary {
   color: var(--text-secondary) !important;
 }
 .text-tertiary {
   color: var(--color-tertiary) !important;
 }
+.text-inverse-secondary {
+  color: var(--text-inverse-secondary) !important;
+}
 .fw-extrabold {
   font-weight: 800 !important;
 }
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
 .bg-primary-light {
   background-color: var(--color-primary-light) !important;
+}
+.bg-accent {
+  background-color: var(--color-accent) !important;
+}
+.bg-tertiary {
+  background-color: var(--color-tertiary) !important;
 }
 .bg-light-gray {
   background-color: var(--color-light-gray) !important;
@@ -62,5 +77,8 @@ $grid-breakpoints: (
 }
 .bg-50 {
   background-color: var(--color-bg-50) !important;
+}
+.border-top-dark-hover {
+  border-top: 1px solid var(--border-dark-hover);
 }
 /*! purgecss end ignore */

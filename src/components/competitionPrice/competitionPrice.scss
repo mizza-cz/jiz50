@@ -1,0 +1,83 @@
+.competitionPrice {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-primary);
+    height: 24px;
+    width: 60%;
+    border-bottom-right-radius: 48px;
+    top: -16px;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    border-radius: 0 0 24px 0;
+  }
+}
+
+.competitionPrice__content {
+  max-width: 400px;
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+}
+
+.competitionPrice__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px 0px #00000014;
+  background-color: rgba(255, 131, 23, 0.2);
+  font-weight: 800;
+}
+
+.competitionPriceCard {
+  overflow: hidden;
+  max-width: 348px;
+  width: 100%;
+  border-radius: 12px 12px 24px 12px;
+  background-color: var(--color-primary-light);
+
+  @include media-breakpoint-only(md) {
+    max-width: none;
+    width: calc(50% - 12px);
+  }
+  @include media-breakpoint-only(sm) {
+    max-width: none;
+    width: calc(50% - 12px);
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.competitionPriceCard__head {
+  padding: 8px 12px 12px;
+  color: var(--color-white);
+}
+
+.competitionPriceCard__body {
+  padding: 4px 16px 8px;
+}
+
+.competitionPriceCard__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--text-inverse-secondary);
+  color: var(--text-inverse-secondary);
+  font-weight: 500;
+  &:last-child {
+    border-bottom: 0;
+  }
+}

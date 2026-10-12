@@ -1,0 +1,111 @@
+<section class="competitionInfo">
+  <div class="container">
+    <div class="row g-6">
+      <div class="col-lg-6">
+        <div class="h4">
+          <span class="text-secondary">Legendární trať</span>
+          přes srdce Jizerských hor. Náročná, krásná a
+
+          <span class="text-secondary">nezapomenutelná.</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-6">
+          <div class="col-xl-6">
+            <a href="#" class="competitionInfo__action">
+              <span class="competitionInfo__actionIcon">
+                {% include "@images/flag-ter.svg" %}
+              </span>
+
+              <span>Startovní listina</span>
+
+              <span class="competitionInfo__actionArrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+          </div>
+          <div class="col-xl-6">
+            <a href="#" class="competitionInfo__action">
+              <span class="competitionInfo__actionIcon">
+                {% include "@images/calendar-ter.svg" %}
+              </span>
+
+              <span>Přidat do kalendáře</span>
+
+              <span class="competitionInfo__actionArrow">
+                {% include "@images/arrow-right.svg" %}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="competitionInfo__divider"></div>
+  <div class="competitionInfo__list">
+    <div class="container">
+      <div class="row g-lg-10 g-0">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Termín</div>
+            <div class="h5">11. 2. 2027 (ČTVRTEK)</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Kde začíná tvůj závod</div>
+
+            <div class="h5">
+              VE VLNÁCH
+              <span class="text-secondary"
+                >(OD 8.30; elitní ženy start 8:00)</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Technika</div>
+            <div class="h5">Volná</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Délka trasy</div>
+            <div class="h5">50,6 km</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Časový limit</div>
+            <div class="h5">DO 17:30</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="competitionInfo__item">
+            <div class="subtitle-secondary mb-2">Přihlášky</div>
+            <div class="h5">do 15. února 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-top-dark-hover d-md-block d-none pt-8">
+    <div class="container">
+      <div class="row g-6">
+        <div class="col-lg-6">
+          {% include "@components/infoAccordion/infoAccordion.twig" with {
+          title: "Limity pro zařazení do startovních vln", text: "Informace o
+          limitech a pravidlech pro zařazení závodníků do jednotlivých
+          startovních vln." } %}
+        </div>
+        <div class="col-lg-6">
+          {% include "@components/infoAccordion/infoAccordion.twig" with {
+          title: "Časový limit závodu", text: "Závod je nutné dokončit do
+          stanoveného časového limitu." } %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

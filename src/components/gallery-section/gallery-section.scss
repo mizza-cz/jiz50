@@ -1,0 +1,43 @@
+.gallerySection {
+  @include media-breakpoint-down(lg) {
+    padding-top: 4.5rem;
+  }
+  .hp-competitions:before {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}
+
+.galleryCard {
+  display: block;
+  color: var(--color-primary);
+  text-decoration: none;
+  &:hover {
+    .galleryCard__image img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.galleryCard__image {
+  aspect-ratio: 472 / 200;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border-bottom-right-radius: 32px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+  }
+}
+
+.galleryCard__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 115.99999999999999%;
+}

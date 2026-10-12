@@ -1,0 +1,99 @@
+<section class="competitionFaq">
+  <div class="container">
+    <div class="row g-6 justify-content-between">
+      <div class="col-md-6">
+        <div class="competitionFaq__group">
+          <h2 class="competitionFaq__title">Informace k závodu</h2>
+
+          <div class="competitionFaq__accordions">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Ověření identity", text: "Při registraci používejte stejné
+            osobní údaje, které budou uvedeny na startovní listině." } %} {%
+            include "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Další info", open: true, items: [ "Start 8:00 - 9:26 ve vlnách",
+            "Limit na Knajpě 11:30", "Limit na Jizerce 13:30", "Limit na Smědavě
+            14:15 (se sběrným busem)", "Limit na Hřebínku 16:00", "Limit v cíli
+            17:30" ] } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title: "Časový
+            limit závodu", text: "Závodník musí projet jednotlivými kontrolními
+            body v předepsaných časových limitech. Po jejich překročení může být
+            ze závodu stažen." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Ověření identity při registraci", text: "Při převzetí startovního
+            čísla může být vyžadován doklad totožnosti nebo potvrzení
+            registrace." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Startovné lze
+            uhradit online platební kartou nebo dalšími platebními metodami
+            dostupnými v registračním systému." } %}
+          </div>
+        </div>
+
+        <div class="competitionFaq__group d-md-block d-none">
+          <h2 class="competitionFaq__title">Platba</h2>
+
+          <div class="competitionFaq__accordions">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak získat vrácení peněz", text: "Možnost vrácení
+            startovného se řídí aktuálními storno podmínkami závodu." } %} {%
+            include "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Možnosti platby - kreditní karta a PayPal", text: "Po dokončení
+            registrace budete přesměrováni na bezpečnou platební bránu." } %}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 d-md-none">
+        <div class="divider-2"></div>
+      </div>
+      <div class="col-xl-5 col-md-6">
+        <div class="competitionFaq__group">
+          <h2 class="competitionFaq__title">Obecné informace</h2>
+
+          <div class="competitionFaq__accordions">
+            {% include "@components/infoAccordion/infoAccordion.twig" with {
+            title: "Jak změnit platební metodu", text: "Pokud platba nebyla
+            dokončena, můžete v detailu registrace zvolit jinou dostupnou
+            platební metodu." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title: "Jak
+            změnit platební metodu", text: "Po úspěšném zaplacení se stav
+            registrace automaticky aktualizuje." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title: "Jak
+            změnit platební metodu", text: "V případě problémů s platbou
+            kontaktujte podporu registračního systému." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title: "Jak
+            změnit platební metodu", text: "Dostupné možnosti platby se mohou
+            lišit podle typu registrace." } %} {% include
+            "@components/infoAccordion/infoAccordion.twig" with { title:
+            "Ověření identity při registraci", text: "Zkontrolujte správnost
+            jména, data narození a kontaktních údajů před odesláním registrace."
+            } %} {% include "@components/infoAccordion/infoAccordion.twig" with
+            { title: "Jak získat vrácení peněz", text: "Žádost o refundaci je
+            nutné podat podle aktuálních pravidel pořadatele." } %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="d-md-none button-primary button-primary--arrow mt-6">
+      <span>Přidej se na start</span>
+
+      <span class="button-primary__arrow bg-light-gray text-accent">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.1055 10.7231L6.00168 20.6958C6.73145 21.4161 7.91464 21.4161 8.6444 20.6958L17.4268 12.0274L16.1055 10.7231Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.1055 13.2769L6.00168 3.30422C6.73145 2.58392 7.91464 2.58392 8.6444 3.30422L17.4268 11.9726L16.1055 13.2769Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>

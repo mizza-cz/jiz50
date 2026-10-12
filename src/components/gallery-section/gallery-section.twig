@@ -1,0 +1,63 @@
+<section class="gallerySection">
+  <div class="menuLinks mb-lg-8 mb-4">
+    <div class="container">
+      <ul class="menuLinks__list">
+        <li>
+          <a href="#" class="active"> Nadcházející </a>
+        </li>
+
+        <li>
+          <a href="#"> Proběhlé </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="fw-medium mb-4">
+      Ve fotogalerii najdeš výběr toho nejlepšího z jednotlivých závodů a
+      událostí. Pokud si chceš prohlédnout veškeré fotografie od roku 2019 nejen
+      z ČEZ Jizerské 50, podívej se na náš Flickr. Nejlepší střípky najdeš také
+      na Facebooku Jizerské 50.
+    </p>
+
+    <label class="startList__select mb-4">
+      <select name="race">
+        <option value="">Ročník</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+      </select>
+
+      <img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
+    </label>
+
+    <div class="row g-lg-6 g-4">
+      {% set galleries = [ "ČEZ Energy Fest Jablonec - POETIKA", "Tech
+      Innovations Summit 2023 - FUTURE VISION", "Creative Coding Workshop - ART
+      & TECH", "Green Energy Expo - SUSTAINABLE FUTURE", "Digital Marketing
+      Conference - STRATEGY & INSIGHT", "Health and Wellness Fair - BALANCE IN
+      LIFE", "AI in Education Symposium - LEARNING REIMAGINED", "UX Design
+      Hackathon - USER-CENTERED SOLUTIONS", "Blockchain for Business -
+      DISRUPTIVE TECHNOLOGIES" ] %} {% for item in galleries %}
+      <div class="col-lg-4 col-md-6">
+        <a href="#" class="galleryCard">
+          <div class="galleryCard__image">
+            <img
+              src="../images/content/archive.png"
+              alt="{{ item }}"
+              loading="lazy"
+            />
+          </div>
+
+          <h3 class="galleryCard__title">
+            {{ item }}
+          </h3>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="divider-2 my-lg-20 my-10"></div>
+  {% include "@components/hp-competitions/hp-competitions.twig" %}
+</section>

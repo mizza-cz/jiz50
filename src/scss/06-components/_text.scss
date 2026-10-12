@@ -31,6 +31,7 @@
 .h2,
 .o-content h2 {
   font-size: 48px;
+  line-height: 121%;
   font-weight: 400;
   letter-spacing: 0;
   @include media-breakpoint-down(lg) {
@@ -90,4 +91,5 @@
   font-size: 15px;
   line-height: 115%;
   letter-spacing: 0.17px;
+  font-weight: 500;
 }

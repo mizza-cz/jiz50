@@ -1,0 +1,33 @@
+.competitionFaq {
+  padding: 80px 0;
+  background-color: var(--color-bg-50);
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--color-white);
+  }
+}
+
+.competitionFaq__group + .competitionFaq__group {
+  margin-top: 32px;
+  @include media-breakpoint-down(md) {
+    margin-top: 24px;
+  }
+}
+
+.competitionFaq__title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 115.99999999999999%;
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+}
+
+.competitionFaq__accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

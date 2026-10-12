@@ -1,0 +1,103 @@
+.competitionInfo {
+  padding: 68px 0 64px;
+  @include media-breakpoint-down(lg) {
+    padding: 24px 0 32px;
+  }
+}
+
+.competitionInfo__action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 72px;
+  padding: 0 16px;
+  background-color: var(--color-light-gray);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom-right-radius: 24px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  &:hover {
+    background-color: var(--color-bg-50);
+    color: var(--color-accent);
+  }
+
+  @include media-breakpoint-down(lg) {
+    min-height: 54px;
+    padding: 0 8px;
+
+    background-color: transparent;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid var(--border-dark-hover);
+  }
+}
+
+.competitionInfo__actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  color: var(--color-tertiary);
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.competitionInfo__actionArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+
+  color: var(--color-tertiary);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    color: var(--color-primary);
+  }
+}
+
+.competitionInfo__divider {
+  width: 100%;
+  height: 20px;
+  margin-top: 40px;
+  margin-bottom: 72px;
+  background-image: url("../images/content/divider-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 32px;
+  }
+}
+
+.competitionInfo__item {
+  max-width: 320px;
+  height: 100%;
+  padding: 8px 0;
+  @include media-breakpoint-down(md) {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-dark-hover);
+  }
+}
+
+.competitionInfo__list {
+  margin-bottom: 72px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+  }
+}
