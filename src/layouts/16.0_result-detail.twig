@@ -1,0 +1,27 @@
+{% extends "@components/base/base.twig" %} {% set title = "16.0_result-detail"
+%} {% block main %}
+
+<section
+  class="subpageHero"
+  style="background-image: url('../images/content/archive.png')"
+>
+  <div class="container">
+    <div class="subpageHero__content">
+      <h1 class="h1 mb-4">Kasper Stadaas</h1>
+      <div class="subtitle-primary d-flex align-items-center gap-2">
+        <img
+          src="images/content/norsko.png"
+          width="24"
+          height="16"
+          alt="Norsko"
+        />
+
+        <span>Norsko</span>
+        <span>1994</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "@components/resultDetail/resultDetail.twig" %} {% include
+"@components/hp-competitions/hp-competitions.twig" %} {% endblock %}

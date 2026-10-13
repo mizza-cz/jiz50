@@ -1,0 +1,170 @@
+{% set runnerResults = [ { race: "Sprint", year: "2026", number: "26", place:
+"3", categoryPlace: "3", time: "00:03:06", gallery: false }, { race: "Sprint",
+year: "2026", number: "26", place: "3", categoryPlace: "3", time: "00:03:06",
+gallery: false }, { race: "Jizerská 50", year: "2025", number: "16", place: "7",
+categoryPlace: "7", time: "01:52:09", gallery: true }, { race: "Sprint", year:
+"2026", number: "26", place: "3", categoryPlace: "3", time: "00:03:06", gallery:
+false }, { race: "Jizerská 50", year: "2023", number: "19", place: "1",
+categoryPlace: "1", time: "02:05:50", gallery: true } ] %}
+
+<section class="resultDetail">
+  <div class="container">
+    <div class="subtitle-secondary mb-4">Výsledky závodníka</div>
+
+    {# DESKTOP #}
+    <div class="d-none d-lg-block">
+      <div class="resultsPage__tableWrap">
+        <table class="resultsPage__table resultDetail__table">
+          <thead>
+            <tr>
+              <th>Závod</th>
+              <th>Rok závodu</th>
+              <th>St. č.</th>
+              <th>Poř.</th>
+              <th>Poř. kat.</th>
+              <th>Čas</th>
+              <th class="resultsPage__actionsCol">Akce</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for item in runnerResults %}
+            <tr>
+              <td class="fw-extrabold">
+                {{ item.race }}
+              </td>
+
+              <td>
+                {{ item.year }}
+              </td>
+
+              <td>
+                {{ item.number }}
+              </td>
+
+              <td>
+                {{ item.place }}
+              </td>
+
+              <td>
+                {{ item.categoryPlace }}
+              </td>
+
+              <td class="fw-extrabold">
+                {{ item.time }}
+              </td>
+
+              <td>
+                <div class="resultsPage__actions">
+                  <a
+                    href="#"
+                    class="resultsPage__action resultsTooltip"
+                    data-tooltip="Generali analýza"
+                    aria-label="Generali analýza"
+                  >
+                    <img
+                      src="images/ico/lev.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                    />
+                  </a>
+
+                  {% if item.gallery %}
+                  <a
+                    href="#"
+                    class="resultsPage__action resultsTooltip"
+                    data-tooltip="Galerie"
+                    aria-label="Galerie"
+                  >
+                    <img
+                      src="images/ico/camera.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                    />
+                  </a>
+                  {% endif %}
+
+                  <a
+                    href="../files/diplom.pdf"
+                    download
+                    class="resultsPage__action resultsTooltip"
+                    data-tooltip="Stáhnout diplom"
+                    aria-label="Stáhnout diplom"
+                  >
+                    <img
+                      src="images/ico/download.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {# MOBILE #}
+    <div class="resultDetail__mobile d-lg-none">
+      {% for item in runnerResults %}
+      <article class="resultDetailCard">
+        <div class="resultDetailCard__head">
+          <div>
+            <div class="resultDetailCard__race">
+              {{ item.race }}
+            </div>
+
+            <div class="resultDetailCard__year">
+              {{ item.year }}
+            </div>
+          </div>
+
+          <div class="resultDetailCard__time">
+            {{ item.time }}
+          </div>
+        </div>
+
+        <div class="resultDetailCard__stats">
+          <div class="resultDetailCard__stat">
+            <span>St. č.</span>
+            <strong>{{ item.number }}</strong>
+          </div>
+
+          <div class="resultDetailCard__stat">
+            <span>Poř.</span>
+            <strong>{{ item.place }}</strong>
+          </div>
+
+          <div class="resultDetailCard__stat">
+            <span>Poř. kat.</span>
+            <strong>{{ item.categoryPlace }}</strong>
+          </div>
+        </div>
+        <div class="resultDetailCard__actions">
+          <a href="#">
+            <img src="images/ico/lev.svg" width="20" height="20" alt="" />
+            <span>Generali analýza</span>
+          </a>
+
+          {% if item.gallery %}
+          <a href="#">
+            <img src="images/ico/camera.svg" width="20" height="20" alt="" />
+            <span>Galerie</span>
+          </a>
+          {% endif %}
+
+          <a href="../files/diplom.pdf" download>
+            <img src="images/ico/download.svg" width="20" height="20" alt="" />
+            <span>Stáhnout diplom</span>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

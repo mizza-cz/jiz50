@@ -207,7 +207,7 @@
 
 .resultsPage__actionsCol {
   width: 90px;
-  text-align: center !important;
+  text-align: right !important;
 }
 
 /* существующий checkbox из giftVoucher */
@@ -240,7 +240,7 @@
 .resultsPage__actions {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 10px;
 }
 
