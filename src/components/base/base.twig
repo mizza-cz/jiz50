@@ -38,14 +38,28 @@
     />
     <link rel="preload" href="js/scripts.js" as="script" />
     <!-- ****** scripts ****** -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@raruto/leaflet-gesture-handling@latest/dist/leaflet-gesture-handling.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/js/leaflet-fullscreen/Control.FullScreen.css"
+    />
   </head>
   <body>
     <div class="base">
       {% include "@components/header/header.twig" %}
       <main class="main" aria-label="Hlavní obsah">
-        {% block main %}{% endblock %}
-         {% include "@components/partners/partners.twig" %}
-          {% include "@components/pubs/pubs.twig" %}
+        {% block main %}{% endblock %} {% include
+        "@components/partners/partners.twig" %} {% include
+        "@components/pubs/pubs.twig" %}
       </main>
       {% include "@components/footer/footer.twig" %}
     </div>
@@ -61,6 +75,13 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/2.1.2/gpx.js"></script>
+
+    <script src="https://unpkg.com/@raruto/leaflet-gesture-handling@latest/dist/locales/cs.js"></script>
+    <script src="https://unpkg.com/@raruto/leaflet-gesture-handling@latest/dist/leaflet-gesture-handling.min.js"></script>
+
+    <script src="js/leaflet-fullscreen/Control.FullScreen.js"></script>
     <script defer src="js/scripts.js"></script>
   </body>
 </html>

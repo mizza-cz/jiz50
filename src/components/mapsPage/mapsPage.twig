@@ -1,0 +1,121 @@
+{% set routes = [ "ČEZ Jizerská 50", "Volkswagen Bedřichovská 30", "ČRA Jizerská
+25", "VINCI Construction Jizerská 17", "ORLEN Sprint", "ČT Jizerská 10",
+"T-Mobile Jizerská firemní štafeta" ] %} {% set routeStats = [ { label: "Celkové
+převýšení", value: "762 m" }, { label: "Nejnižší bod", value: "738 m.n.m" }, {
+label: "Maximální stoupání", value: "10,9 %" }, { label: "Maximální klesání",
+value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
+"Celková délka závodu", value: "50,6 km" } ] %}
+
+<section class="mapsPage">
+  <div class="container">
+    <div class="mapsPage__routes">
+      {% for route in routes %}
+      <a
+        href="#"
+        class="mapsPage__route {% if loop.first %}is-active{% endif %}"
+      >
+        {{ route }}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="mapsPage__head">
+      <div>
+        <div class="subtitle-secondary mb-2">Trasa</div>
+
+        <h2 class="h2 mb-0">Jizerská 50</h2>
+      </div>
+    </div>
+
+    <div class="mapsPage__content">
+      <div class="mapsPage__info">
+        <div class="subtitle-secondary mb-4">Údaje</div>
+
+        <div class="mapsPage__stats">
+          {% for stat in routeStats %}
+          <div class="mapsPage__stat">
+            <span class="mapsPage__statValue">
+              {{ stat.value }}
+            </span>
+
+            <span class="mapsPage__statLabel">
+              {{ stat.label }}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="mapsPage__downloads">
+          <div class="subtitle-secondary mb-3">Ke stažení</div>
+
+          <a
+            href="../files/jizerska-50.kml"
+            download
+            class="mapsPage__download"
+          >
+            <span> Keyhole Markup Language </span>
+
+            <span class="mapsPage__downloadType"> KML </span>
+
+            <img src="images/ico/download.svg" width="24" height="24" alt="" />
+          </a>
+
+          <a
+            href="../files/jizerska-50.gpx"
+            download
+            class="mapsPage__download"
+          >
+            <span> GPS eXchange Format </span>
+
+            <span class="mapsPage__downloadType"> GPX </span>
+
+            <img src="images/ico/download.svg" width="24" height="24" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="mapsPage__map">
+        <div id="map_j50" class="mapsPage__mapCanvas js-route-map"></div>
+
+        <div class="d-none">
+          <div id="route-map-arrow">
+            <svg width="26" height="26" viewBox="0 0 105 105">
+              <path
+                d="m50.76 80.22-34.71 19.82a3.708 3.708 41.64 0 1-5.252-4.669l37.39-88.05a4.671 4.671 6.678e-6 0 1 8.6 1e-6l37.39 88.05a3.708 3.708 138.4 0 1-5.252 4.669l-34.71-19.82a3.502 3.502 7.994e-6 0 0-3.473 0z"
+                fill="#fff"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mapsPage__profile">
+    <div class="container">
+      <div class="mapsPage__profileHead">
+        <div class="subtitle-secondary">Výškový profil závodu</div>
+
+        <img
+          src="images/ico/arrow-right.svg"
+          width="24"
+          height="24"
+          class="d-lg-none"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="mapsPage__profileScroll">
+      <div class="mapsPage__profileImage">
+        <img
+          src="images/content/profil-zavodu.png"
+          alt="Výškový profil závodu Jizerská 50"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,309 @@
+.mapsPage {
+  padding-top: 48px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 24px;
+  }
+}
+
+/* =========================
+   ROUTES
+   ========================= */
+
+.mapsPage__routes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 48px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-right: -12px;
+    margin-bottom: 32px;
+    padding-right: 12px;
+  }
+}
+
+.mapsPage__route {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+
+  min-height: 40px;
+  padding: 0 16px;
+
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+
+  color: var(--color-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &.is-active {
+    border-color: var(--color-primary);
+
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+/* =========================
+   HEAD
+   ========================= */
+
+.mapsPage__head {
+  margin-bottom: 24px;
+}
+
+/* =========================
+   MAIN
+   ========================= */
+
+.mapsPage__content {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 48px;
+
+  margin-bottom: 64px;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+
+    margin-bottom: 40px;
+  }
+}
+
+/* =========================
+   MAP
+   ========================= */
+
+.mapsPage__map {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 0 0 24px 24px;
+
+  @include media-breakpoint-down(lg) {
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+.mapsPage__mapCanvas {
+  width: 100%;
+  height: 620px;
+
+  @include media-breakpoint-down(lg) {
+    height: 480px;
+  }
+
+  .leaflet-control-attribution {
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   STATS
+   ========================= */
+
+.mapsPage__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  margin-bottom: 32px;
+
+  border-top: 1px solid var(--border-dark);
+}
+
+.mapsPage__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-height: 78px;
+  padding: 14px 12px 14px 0;
+
+  border-bottom: 1px solid var(--border-dark);
+
+  &:nth-child(even) {
+    padding-left: 16px;
+
+    border-left: 1px solid var(--border-dark);
+  }
+}
+
+.mapsPage__statValue {
+  color: var(--color-primary);
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.mapsPage__statLabel {
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* =========================
+   DOWNLOADS
+   ========================= */
+
+.mapsPage__downloads {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapsPage__download {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 24px;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 48px;
+  padding: 0 12px;
+
+  border-top: 1px solid var(--border-dark);
+
+  color: var(--color-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:last-child {
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    color: var(--color-tertiary);
+  }
+}
+
+.mapsPage__downloadType {
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================
+   PROFILE
+   ========================= */
+
+.mapsPage__profile {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 96px;
+  padding: 56px 0;
+
+  background: var(--color-light-gray);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background-image: url("../images/content/divider-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+    padding: 0;
+
+    background: var(--color-white);
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.mapsPage__profileHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.mapsPage__profileScroll {
+  width: 100%;
+
+  @include media-breakpoint-down(lg) {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.mapsPage__profileImage {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 1200px;
+    max-width: none;
+    margin: 0;
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
