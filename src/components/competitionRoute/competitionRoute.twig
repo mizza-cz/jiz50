@@ -27,7 +27,24 @@
       </div>
 
       <div class="competitionRoute__map">
-        <img src="images/content/map.png" alt="Mapa trasy Jizerské 50" />
+        <div
+          id="map_competition"
+          class="competitionRoute__mapCanvas js-route-map"
+        ></div>
+
+        <div class="d-none">
+          <div id="route-map-arrow">
+            <svg width="26" height="26" viewBox="0 0 105 105">
+              <path
+                d="m50.76 80.22-34.71 19.82a3.708 3.708 41.64 0 1-5.252-4.669l37.39-88.05a4.671 4.671 6.678e-6 0 1 8.6 1e-6l37.39 88.05a3.708 3.708 138.4 0 1-5.252 4.669l-34.71-19.82a3.502 3.502 7.994e-6 0 0-3.473 0z"
+                fill="#fff"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>

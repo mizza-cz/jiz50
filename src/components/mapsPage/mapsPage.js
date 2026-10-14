@@ -20,21 +20,7 @@ if (routeMapElement && typeof L !== "undefined") {
 function initRouteMap(gpxDocument) {
   const API_KEY = "HUMp4IBM7-A3BE-euIBdY0_SovFkS6Ce90fl8MbI37c";
 
-  const MAP_ID = "map_j50";
-
-  function hexToRGB(hex, alpha) {
-    return (
-      "rgba(" +
-      parseInt(hex.slice(1, 3), 16) +
-      ", " +
-      parseInt(hex.slice(3, 5), 16) +
-      ", " +
-      parseInt(hex.slice(5, 7), 16) +
-      ", " +
-      alpha +
-      ")"
-    );
-  }
+  const MAP_ID = routeMapElement.id;
 
   function computePopupWidth(mapW, mapH) {
     const el = document.getElementById(MAP_ID);
@@ -94,11 +80,13 @@ function initRouteMap(gpxDocument) {
     } catch (e) {}
   }
 
+  const arrowElement = document.querySelector("#route-map-arrow");
+
   const icons = {
     circle: L.DivIcon.extend({
       options: {
         className: "",
-        html: '<div style="width: 8px; height: 8px; border-radius: 50%; border: 2px white solid; background: currentColor"></div>',
+        html: '<div style="width:8px;height:8px;border-radius:50%;border:2px solid white;background:currentColor"></div>',
         iconAnchor: [7, 7],
       },
     }),
@@ -197,7 +185,7 @@ function initRouteMap(gpxDocument) {
     arrow: L.DivIcon.extend({
       options: {
         className: "",
-        html: document.querySelector("#route-map-arrow").innerHTML,
+        html: arrowElement ? arrowElement.innerHTML : "",
         iconAnchor: [13, 13],
       },
     }),
@@ -231,67 +219,6 @@ function initRouteMap(gpxDocument) {
     })
     .addTo(map);
 
-  map
-    .on("popupopen", function (e) {
-      const mapEl = document.getElementById(MAP_ID);
-
-      const mapW = mapEl ? mapEl.clientWidth : window.innerWidth;
-
-      const mapH = mapEl ? mapEl.clientHeight : window.innerHeight;
-
-      const desired = computePopupWidth(mapW, mapH);
-
-      applyPopupWidth(e.popup, desired);
-
-      const content = e.popup._contentNode;
-
-      if (content) {
-        content.style.width = "auto";
-        content.style.maxWidth = "100%";
-
-        const images = content.querySelectorAll("img");
-
-        images.forEach(function (img) {
-          if (img.complete) {
-            return;
-          }
-
-          img.addEventListener("load", function () {
-            applyPopupWidth(e.popup, desired);
-          });
-        });
-
-        setTimeout(function () {
-          applyPopupWidth(e.popup, desired);
-        }, 0);
-      }
-
-      if (
-        e.popup._container &&
-        e.popup._container.offsetWidth > screen.width - 50 &&
-        e.popup._container.offsetHeight > 100
-      ) {
-        const controls =
-          document.querySelector(
-            "#" + MAP_ID + " ~ .leaflet-control-container"
-          ) || document.querySelector(".leaflet-control-container");
-
-        if (controls) {
-          controls.hidden = true;
-        }
-      }
-    })
-    .on("popupclose", function () {
-      const controls =
-        document.querySelector(
-          "#" + MAP_ID + " ~ .leaflet-control-container"
-        ) || document.querySelector(".leaflet-control-container");
-
-      if (controls) {
-        controls.hidden = false;
-      }
-    });
-
   const LogoControl = L.Control.extend({
     options: {
       position: "bottomleft",
@@ -306,7 +233,8 @@ function initRouteMap(gpxDocument) {
 
       link.setAttribute("target", "_blank");
 
-      link.innerHTML = '<img src="https://api.mapy.cz/img/api/logo.svg">';
+      link.innerHTML =
+        '<img src="https://api.mapy.cz/img/api/logo.svg" alt="Mapy.cz">';
 
       L.DomEvent.disableClickPropagation(link);
 
@@ -316,69 +244,7 @@ function initRouteMap(gpxDocument) {
 
   new LogoControl().addTo(map);
 
-  /*
-   * Duplicate track as white stroke
-   */
-  L.GPX.prototype._orig_parse_gpx_data = L.GPX.prototype._parse_gpx_data;
-
-  L.GPX.prototype._parse_gpx_data = function (xml, options) {
-    const trk = xml.getElementsByTagName("trk")[0];
-
-    if (trk) {
-      const strokeTrk = trk.cloneNode(true);
-
-      strokeTrk.setAttribute("data-trkstroke", true);
-
-      trk.parentNode.insertBefore(strokeTrk, trk);
-    }
-
-    return L.GPX.prototype._orig_parse_gpx_data.apply(this, arguments);
-  };
-
-  /*
-   * Track styling
-   */
-  L.GPX.prototype._orig_extract_styling = L.GPX.prototype._extract_styling;
-
-  L.GPX.prototype._extract_styling = function (trk) {
-    const values = L.GPX.prototype._orig_extract_styling.apply(this, arguments);
-
-    if (trk.getAttribute("data-trkstroke")) {
-      values.color = "white";
-      values.opacity = 0.6;
-      values.weight = 13;
-    } else {
-      const color = trk.getAttribute("data-color") || "#082654";
-
-      const el = document.getElementById(MAP_ID);
-
-      if (el) {
-        el.style.color = color;
-      }
-
-      values.color = hexToRGB(color, 0.8);
-
-      values.opacity = 1;
-      values.weight = 7;
-    }
-
-    return values;
-  };
-
-  const gpx = new L.GPX(gpxDocument, {
-    async: true,
-
-    markers: {
-      startIcon: null,
-      endIcon: null,
-    },
-  }).addTo(map);
-
-  gpx.on("addpoint", function (e) {
-    if (e.point_type !== "waypoint") {
-      return;
-    }
-
+  map.on("popupopen", function (e) {
     const mapEl = document.getElementById(MAP_ID);
 
     const mapW = mapEl ? mapEl.clientWidth : window.innerWidth;
@@ -387,12 +253,52 @@ function initRouteMap(gpxDocument) {
 
     const desired = computePopupWidth(mapW, mapH);
 
-    const popup = e.point.getPopup();
+    applyPopupWidth(e.popup, desired);
 
-    if (popup) {
-      popup.options.maxWidth = desired;
+    const content = e.popup._contentNode;
 
-      popup.options.minWidth = desired;
+    if (!content) {
+      return;
+    }
+
+    content.style.width = "auto";
+    content.style.maxWidth = "100%";
+
+    const images = content.querySelectorAll("img");
+
+    images.forEach(function (img) {
+      if (img.complete) {
+        return;
+      }
+
+      img.addEventListener("load", function () {
+        applyPopupWidth(e.popup, desired);
+      });
+    });
+
+    setTimeout(function () {
+      applyPopupWidth(e.popup, desired);
+    }, 0);
+  });
+
+  const gpx = new L.GPX(gpxDocument, {
+    async: true,
+
+    markers: {
+      startIcon: null,
+      endIcon: null,
+    },
+
+    polyline_options: {
+      color: "#E34D1D",
+      opacity: 0.85,
+      weight: 7,
+    },
+  }).addTo(map);
+
+  gpx.on("addpoint", function (e) {
+    if (e.point_type !== "waypoint") {
+      return;
     }
 
     const iconName = e.element.getAttribute("data-icon") || "circle";
@@ -410,19 +316,47 @@ function initRouteMap(gpxDocument) {
       e.point.getIcon().options.html
     ) {
       e.point.getIcon().options.html =
-        '<div style="width: fit-content; transform: rotate(' +
+        '<div style="width:fit-content;transform:rotate(' +
         rotate +
         'deg)">' +
         e.point.getIcon().options.html +
         "</div>";
     }
+
+    const popup = e.point.getPopup();
+
+    if (popup) {
+      const mapEl = document.getElementById(MAP_ID);
+
+      const mapW = mapEl ? mapEl.clientWidth : window.innerWidth;
+
+      const mapH = mapEl ? mapEl.clientHeight : window.innerHeight;
+
+      const desired = computePopupWidth(mapW, mapH);
+
+      popup.options.maxWidth = desired;
+
+      popup.options.minWidth = desired;
+    }
   });
 
   gpx.on("loaded", function () {
-    map.fitBounds(gpx.getBounds());
+    console.log("GPX LOADED");
+
+    const bounds = gpx.getBounds();
+
+    if (bounds && bounds.isValid()) {
+      map.fitBounds(bounds, {
+        padding: [20, 20],
+      });
+    }
   });
 
   gpx.on("error", function (error) {
-    console.error("GPX load error:", error);
+    console.error("GPX ERROR:", error);
+  });
+
+  window.addEventListener("resize", function () {
+    map.invalidateSize();
   });
 }
