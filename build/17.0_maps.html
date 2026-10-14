@@ -313,151 +313,279 @@
 
 			<section class="mapsPage">
 				<div class="container">
-					<div class="mapsPage__routes">
-						<a href="#" class="mapsPage__route is-active">
-							ČEZ Jizerská 50
-						</a>
-						<a href="#" class="mapsPage__route ">
-							Volkswagen Bedřichovská 30
-						</a>
-						<a href="#" class="mapsPage__route ">
-							ČRA Jizerská
-							25
-						</a>
-						<a href="#" class="mapsPage__route ">
-							VINCI Construction Jizerská 17
-						</a>
-						<a href="#" class="mapsPage__route ">
-							ORLEN Sprint
-						</a>
-						<a href="#" class="mapsPage__route ">
-							ČT Jizerská 10
-						</a>
-						<a href="#" class="mapsPage__route ">
-							T-Mobile Jizerská firemní štafeta
-						</a>
+					<div class="d-none d-lg-block">
+						<form class="resultsPage__filters">
+							<label class="resultsPage__select resultsPage__select--race">
+								<select name="race">
+									<option>Jizerská 50 | 2026</option>
+									<option>Jizerská 25</option>
+									<option>Bedřichovská 30</option>
+									<option>Jizerská 17</option>
+								</select>
+
+								<img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
+							</label>
+						</form>
 					</div>
+					<div class="resultsPage__mobile d-lg-none">
+						<div class="resultsPage__mobileTop">
 
-					<div class="mapsPage__head">
-						<div>
-							<div class="subtitle-secondary mb-2">Trasa</div>
+							<div class="resultsPage__mobileSearch">
 
-							<h2 class="h2 mb-0">Jizerská 50</h2>
-						</div>
-					</div>
+								<div class="resultsPage__mobileControls">
+									<label class="resultsPage__select">
+										<select name="race-mobile">
+											<option>Jizerská 50</option>
+											<option>Jizerská 25</option>
+											<option>Bedřichovská 30</option>
+											<option>Jizerská 17</option>
+										</select>
 
-					<div class="mapsPage__content">
-						<div class="mapsPage__info">
-							<div class="subtitle-secondary mb-4">Údaje</div>
+										<img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
+									</label>
 
-							<div class="mapsPage__stats">
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										762 m
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Celkové
-										převýšení
-									</span>
-								</div>
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										738 m.n.m
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Nejnižší bod
-									</span>
-								</div>
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										10,9 %
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Maximální stoupání
-									</span>
-								</div>
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										-9,3 %
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Maximální klesání
-									</span>
-								</div>
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										1002 m.n.m
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Nejvyšší bod
-									</span>
-								</div>
-								<div class="mapsPage__stat">
-									<span class="mapsPage__statValue">
-										50,6 km
-									</span>
-
-									<span class="mapsPage__statLabel">
-										Celková délka závodu
-									</span>
+									<button class="resultsPage__filterButton js-results-filter" type="button" aria-expanded="false" aria-controls="results-mobile-filter" aria-label="Otevřít filtr">
+										<img src="images/ico/filter.svg" width="24" height="24" alt="" />
+									</button>
 								</div>
 							</div>
 
-							<div class="mapsPage__downloads">
-								<div class="subtitle-secondary mb-3">Ke stažení</div>
+							<div class="resultsPage__mobileList">
+							</div>
 
-								<a href="../files/jizerska-50.kml" download class="mapsPage__download">
-									<span> Keyhole Markup Language </span>
+							<div class="resultsPageFilter js-results-mobile-filter" id="results-mobile-filter" aria-hidden="true">
+								<div class="resultsPageFilter__header">
+									<strong>Filtr</strong>
 
-									<span class="mapsPage__downloadType"> KML </span>
+									<button class="resultsPageFilter__close js-results-filter-close" type="button" aria-label="Zavřít filtr">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 2l15.556 15.556-3.535 3.536L2.464 5.536 6 2z" fill="#58ADDC" />
+											<path d="M18 2L2.444 17.556l3.535 3.536L21.535 5.536 18 2z" fill="#58ADDC" />
+										</svg> </button>
+								</div>
 
-									<img src="images/ico/download.svg" width="24" height="24" alt="" />
-								</a>
+								<form class="resultsPageFilter__form">
+									<div class="resultsPageFilter__body">
+										<div class="resultsPageFilter__group">
+											<h3 class="resultsPageFilter__title">Ročník</h3>
 
-								<a href="../files/jizerska-50.gpx" download class="mapsPage__download">
-									<span> GPS eXchange Format </span>
+											<div class="resultsPageFilter__range">
+												<label class="resultsPageFilter__rangeField">
+													<span>Od</span>
+													<input type="text" name="year-from" />
+												</label>
 
-									<span class="mapsPage__downloadType"> GPX </span>
+												<label class="resultsPageFilter__rangeField">
+													<span>Do</span>
+													<input type="text" name="year-to" />
+												</label>
+											</div>
 
-									<img src="images/ico/download.svg" width="24" height="24" alt="" />
-								</a>
+											<div class="resultsPageFilter__options">
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="year-filter" value="2026" />
+													<span></span>
+													2026
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="year-filter" value="2025" />
+													<span></span>
+													2025
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="year-filter" value="2024" />
+													<span></span>
+													2024
+												</label>
+											</div>
+
+											<button class="resultsPageFilter__more" type="button">
+												+ dalších 38 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M8.894 11.073L1.913 4a1.32 1.32 0 000 1.85l6.068 6.148.913-.925z" fill="#97A5C2" />
+													<path d="M7.106 11.073L14.087 4a1.32 1.32 0 010 1.85L8.02 11.998l-.913-.925z" fill="#97A5C2" />
+												</svg> </button>
+										</div>
+
+										<div class="resultsPageFilter__group">
+											<h3 class="resultsPageFilter__title">Věková kategorie</h3>
+
+											<div class="resultsPageFilter__options">
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="age-filter" value="18-30" />
+													<span></span>
+													18 - 30
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="age-filter" value="31-50" />
+													<span></span>
+													31 - 50
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="age-filter" value="51-70" />
+													<span></span>
+													51 - 70
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="age-filter" value="71-90" />
+													<span></span>
+													71 - 90+
+												</label>
+											</div>
+										</div>
+
+										<div class="resultsPageFilter__group">
+											<h3 class="resultsPageFilter__title">Pohlaví</h3>
+
+											<div class="resultsPageFilter__options">
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="gender-filter" value="male" />
+													<span></span>
+													Muž
+												</label>
+
+												<label class="resultsPageFilter__radio">
+													<input type="radio" name="gender-filter" value="female" />
+													<span></span>
+													Žena
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="resultsPageFilter__footer">
+										<button class="button-primary resultsPageFilter__submit" type="submit">
+											Zobrazit výsledky
+										</button>
+									</div>
+								</form>
 							</div>
 						</div>
 
-						<div class="mapsPage__map">
-							<div id="map_j50" class="mapsPage__mapCanvas js-route-map"></div>
+						<div class="mapsPage__head">
+							<div>
+								<div class="subtitle-secondary mb-2">Trasa</div>
 
-							<div class="d-none">
-								<div id="route-map-arrow">
-									<svg width="26" height="26" viewBox="0 0 105 105">
-										<path d="m50.76 80.22-34.71 19.82a3.708 3.708 41.64 0 1-5.252-4.669l37.39-88.05a4.671 4.671 6.678e-6 0 1 8.6 1e-6l37.39 88.05a3.708 3.708 138.4 0 1-5.252 4.669l-34.71-19.82a3.502 3.502 7.994e-6 0 0-3.473 0z" fill="#fff" stroke="currentColor" stroke-linejoin="round" stroke-width="5" />
-									</svg>
+								<h2 class="h2 mb-0">Jizerská 50</h2>
+							</div>
+						</div>
+
+						<div class="mapsPage__content">
+							<div class="mapsPage__info">
+								<div class="subtitle-secondary mb-4">Údaje</div>
+
+								<div class="mapsPage__stats">
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											762 m
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Celkové
+											převýšení
+										</span>
+									</div>
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											738 m.n.m
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Nejnižší bod
+										</span>
+									</div>
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											10,9 %
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Maximální stoupání
+										</span>
+									</div>
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											-9,3 %
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Maximální klesání
+										</span>
+									</div>
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											1002 m.n.m
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Nejvyšší bod
+										</span>
+									</div>
+									<div class="mapsPage__stat">
+										<span class="mapsPage__statValue">
+											50,6 km
+										</span>
+
+										<span class="mapsPage__statLabel">
+											Celková délka závodu
+										</span>
+									</div>
+								</div>
+
+								<div class="mapsPage__downloads">
+									<div class="subtitle-secondary mb-3">Ke stažení</div>
+
+									<a href="../files/jizerska-50.kml" download class="mapsPage__download">
+										<span> Keyhole Markup Language </span>
+
+										<span class="mapsPage__downloadType"> KML </span>
+
+										<img src="images/ico/download.svg" width="24" height="24" alt="" />
+									</a>
+
+									<a href="../files/jizerska-50.gpx" download class="mapsPage__download">
+										<span> GPS eXchange Format </span>
+
+										<span class="mapsPage__downloadType"> GPX </span>
+
+										<img src="images/ico/download.svg" width="24" height="24" alt="" />
+									</a>
+								</div>
+							</div>
+
+							<div class="mapsPage__map">
+								<div id="map_j50" class="mapsPage__mapCanvas js-route-map"></div>
+
+								<div class="d-none">
+									<div id="route-map-arrow">
+										<svg width="26" height="26" viewBox="0 0 105 105">
+											<path d="m50.76 80.22-34.71 19.82a3.708 3.708 41.64 0 1-5.252-4.669l37.39-88.05a4.671 4.671 6.678e-6 0 1 8.6 1e-6l37.39 88.05a3.708 3.708 138.4 0 1-5.252 4.669l-34.71-19.82a3.502 3.502 7.994e-6 0 0-3.473 0z" fill="#fff" stroke="currentColor" stroke-linejoin="round" stroke-width="5" />
+										</svg>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="mapsPage__profile">
-					<div class="container">
-						<div class="mapsPage__profileHead">
-							<div class="subtitle-secondary">Výškový profil závodu</div>
+					<div class="mapsPage__profile">
+						<div class="container">
+							<div class="mapsPage__profileHead">
+								<div class="subtitle-secondary">Výškový profil závodu</div>
 
-							<img src="images/ico/arrow-right.svg" width="24" height="24" class="d-lg-none" alt="" />
+								<img src="images/ico/arrow-right.svg" width="24" height="24" class="d-lg-none" alt="" />
+							</div>
+						</div>
+
+						<div class="mapsPage__profileScroll">
+							<div class="mapsPage__profileImage">
+								<img src="images/content/profil-zavodu.png" alt="Výškový profil závodu Jizerská 50" />
+							</div>
 						</div>
 					</div>
-
-					<div class="mapsPage__profileScroll">
-						<div class="mapsPage__profileImage">
-							<img src="images/content/profil-zavodu.png" alt="Výškový profil závodu Jizerská 50" />
-						</div>
-					</div>
-				</div>
 			</section>
 			<section class="hp-competitions">
 				<div class="container">

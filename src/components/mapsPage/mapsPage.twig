@@ -8,15 +8,253 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
 
 <section class="mapsPage">
   <div class="container">
-    <div class="mapsPage__routes">
-      {% for route in routes %}
-      <a
-        href="#"
-        class="mapsPage__route {% if loop.first %}is-active{% endif %}"
+    <div class="d-none d-lg-block">
+      <form class="resultsPage__filters">
+        <label class="resultsPage__select resultsPage__select--race">
+          <select name="race">
+            <option>Jizerská 50 | 2026</option>
+            <option>Jizerská 25</option>
+            <option>Bedřichovská 30</option>
+            <option>Jizerská 17</option>
+          </select>
+
+          <img
+            src="images/ico/chevron-down.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </label>
+      </form>
+    </div>
+    <div class="resultsPage__mobile d-lg-none">
+      <div class="resultsPage__mobileTop">
+       
+
+        <div class="resultsPage__mobileSearch">
+        
+
+        <div class="resultsPage__mobileControls">
+          <label class="resultsPage__select">
+            <select name="race-mobile">
+              <option>Jizerská 50</option>
+              <option>Jizerská 25</option>
+              <option>Bedřichovská 30</option>
+              <option>Jizerská 17</option>
+            </select>
+
+            <img
+              src="images/ico/chevron-down.svg"
+              width="16"
+              height="16"
+              alt=""
+            />
+          </label>
+
+          <button
+            class="resultsPage__filterButton js-results-filter"
+            type="button"
+            aria-expanded="false"
+            aria-controls="results-mobile-filter"
+            aria-label="Otevřít filtr"
+          >
+            <img src="images/ico/filter.svg" width="24" height="24" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="resultsPage__mobileList">
+        {% for item in results %}
+        <div class="resultsPageMobileRow {% if loop.first %}is-open{% endif %}">
+          <button
+            class="resultsPageMobileRow__toggle js-results-row"
+            type="button"
+            aria-expanded="{{ loop.first ? 'true' : 'false' }}"
+          >
+            <span class="resultsPageMobileRow__place">
+              {{ loop.index }}
+            </span>
+
+            <span class="resultsPageMobileRow__name">
+              {{ item.name }}
+            </span>
+
+            <span class="resultsPageMobileRow__time">
+              {{ item.time }}
+            </span>
+
+            <span class="resultsPageMobileRow__chevron">
+              {% include "@images/chevron-down.svg" %}
+            </span>
+          </button>
+
+          <div class="resultsPageMobileRow__content">
+            <div class="resultsPageMobileRow__contentInner">
+              <div class="resultsPageMobileRow__stat">
+                <span>Statistika 1</span>
+                <strong>38,3 km/h</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__stat">
+                <span>Úsek 1</span>
+                <strong>12:34</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__stat">
+                <span>Úsek 2</span>
+                <strong>12:34</strong>
+              </div>
+
+              <div class="resultsPageMobileRow__actions">
+                <a href="#" class="resultsPageMobileRow__action">
+                  <img src="images/ico/lev.svg" width="24" height="24" alt="" />
+
+                  <span> Analýza výsledků Generali Investments </span>
+
+                  {% include "@images/external-link.svg" %}
+                </a>
+
+                <a
+                  href="../files/diplom.pdf"
+                  download
+                  class="resultsPageMobileRow__action"
+                >
+                  <img
+                    src="images/ico/download.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+
+                  <span> Stáhnout diplom </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {# FILTER PANEL #}
+
+      <div
+        class="resultsPageFilter js-results-mobile-filter"
+        id="results-mobile-filter"
+        aria-hidden="true"
       >
-        {{ route }}
-      </a>
-      {% endfor %}
+        <div class="resultsPageFilter__header">
+          <strong>Filtr</strong>
+
+          <button
+            class="resultsPageFilter__close js-results-filter-close"
+            type="button"
+            aria-label="Zavřít filtr"
+          >
+            {% include "@images/close.svg" %}
+          </button>
+        </div>
+
+        <form class="resultsPageFilter__form">
+          <div class="resultsPageFilter__body">
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Ročník</h3>
+
+              <div class="resultsPageFilter__range">
+                <label class="resultsPageFilter__rangeField">
+                  <span>Od</span>
+                  <input type="text" name="year-from" />
+                </label>
+
+                <label class="resultsPageFilter__rangeField">
+                  <span>Do</span>
+                  <input type="text" name="year-to" />
+                </label>
+              </div>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2026" />
+                  <span></span>
+                  2026
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2025" />
+                  <span></span>
+                  2025
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="year-filter" value="2024" />
+                  <span></span>
+                  2024
+                </label>
+              </div>
+
+              <button class="resultsPageFilter__more" type="button">
+                + dalších 38 {% include "@images/chevron-down.svg" %}
+              </button>
+            </div>
+
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Věková kategorie</h3>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="18-30" />
+                  <span></span>
+                  18 - 30
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="31-50" />
+                  <span></span>
+                  31 - 50
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="51-70" />
+                  <span></span>
+                  51 - 70
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="age-filter" value="71-90" />
+                  <span></span>
+                  71 - 90+
+                </label>
+              </div>
+            </div>
+
+            <div class="resultsPageFilter__group">
+              <h3 class="resultsPageFilter__title">Pohlaví</h3>
+
+              <div class="resultsPageFilter__options">
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="gender-filter" value="male" />
+                  <span></span>
+                  Muž
+                </label>
+
+                <label class="resultsPageFilter__radio">
+                  <input type="radio" name="gender-filter" value="female" />
+                  <span></span>
+                  Žena
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="resultsPageFilter__footer">
+            <button
+              class="button-primary resultsPageFilter__submit"
+              type="submit"
+            >
+              Zobrazit výsledky
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="mapsPage__head">
