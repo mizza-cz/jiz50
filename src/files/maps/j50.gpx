@@ -19,7 +19,7 @@
         <wpt lat="50.8326314" lon="15.2437981" data-icon="ceska_mincovna">
             <name>Prémie České mincovny</name>
             <desc><![CDATA[
-                                <img src="/img/pop-up/pop-up-mincovna.jpg" style="width: 530px; height: 492px; display: block">
+                                <img src="images/content/map/pop-up/pop-up-mincovna.jpg" style="width: 530px; height: 492px; display: block">
                             ]]>
             </desc>
         </wpt>
@@ -27,7 +27,7 @@
         <wpt lat="50.8185717" lon="15.3432881" data-icon="cez">
             <name>ČEZ Prémie</name>
             <desc><![CDATA[
-                                <img src="/img/pop-up/pop-up-cez.jpg" style="width: 530px; height: 492px; display: block">
+                                <img src="images/content/map/pop-up/pop-up-cez.jpg" style="width: 530px; height: 492px; display: block">
                             ]]>
             </desc>
         </wpt>
@@ -35,7 +35,7 @@
         <wpt lat="50.8122953" lon="15.1482697" data-icon="dr_max_topright">
                 <name>Jedu na MAX</name>
                 <desc><![CDATA[
-                            <img src="/img/pop-up/pop-up-dr-max.jpg" style="width: 530px; height: 492px; display: block">
+                            <img src="images/content/map/pop-up/pop-up-dr-max.jpg" style="width: 530px; height: 492px; display: block">
                         ]]>
                 </desc>
         </wpt>
@@ -45,7 +45,7 @@
         <desc><![CDATA[
             <a href="https://eshop.enervit.cz/obecne" target="_blank">
                 <img src="images/content/map/map2019/cs50_kristianov.png" style="width: 530px; height: 492px; display: block">
-                <img src="/img/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
+                <img src="images/content/map/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
             </a>
         ]]></desc>
     </wpt>
@@ -53,8 +53,8 @@
         <name>Hraniční</name>
         <desc><![CDATA[
             <a href="https://eshop.enervit.cz/obecne" target="_blank">
-                <img src="/img/map2019/cs50_hranicni.png" style="width: 530px; height: 492px; display: block">
-                <img src="/img/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
+                <img src="images/content/map/map2019/cs50_hranicni.png" style="width: 530px; height: 492px; display: block">
+                <img src="images/content/map/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
             </a>
         ]]></desc>
     </wpt>
@@ -62,8 +62,8 @@
         <name>Jizerka</name>
         <desc><![CDATA[
             <a href="https://eshop.enervit.cz/obecne" target="_blank">
-                <img src="/img/map2019/cs50_jizerka.png" style="width: 530px; height: 492px; display: block">
-                <img src="/img/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
+                <img src="images/content/map/map2019/cs50_jizerka.png" style="width: 530px; height: 492px; display: block">
+                <img src="images/content/map/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
             </a>
         ]]></desc>
     </wpt>
@@ -71,8 +71,8 @@
         <name>Smědava</name>
         <desc><![CDATA[
             <a href="https://eshop.enervit.cz/obecne" target="_blank">
-                <img src="/img/map2019/cs50_smedava.png" style="width: 530px; height: 492px; display: block">
-                <img src="/img/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
+                <img src="images/content/map/map2019/cs50_smedava.png" style="width: 530px; height: 492px; display: block">
+                <img src="images/content/map/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
             </a>
         ]]></desc>
     </wpt>
@@ -80,8 +80,8 @@
         <name>Hřebínek</name>
         <desc><![CDATA[
             <a href="https://eshop.enervit.cz/obecne" target="_blank">
-                <img src="/img/map2019/cs50_hrebinek.png" style="width: 530px; height: 492px; display: block">
-                <img src="/img/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
+                <img src="images/content/map/map2019/cs50_hrebinek.png" style="width: 530px; height: 492px; display: block">
+                <img src="images/content/map/map2019/map-footer.png" style="width: 530px; height: 34px; display: block">
             </a>
         ]]></desc>
     </wpt>

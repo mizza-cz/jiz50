@@ -1,8 +1,26 @@
 const routeMapElement = document.querySelector(".js-route-map");
 
 if (routeMapElement && typeof L !== "undefined") {
+  fetch("files/maps/j50.gpx")
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("GPX HTTP error: " + response.status);
+      }
+
+      return response.text();
+    })
+    .then(function (gpxDocument) {
+      initRouteMap(gpxDocument);
+    })
+    .catch(function (error) {
+      console.error("GPX load error:", error);
+    });
+}
+
+function initRouteMap(gpxDocument) {
   const API_KEY = "HUMp4IBM7-A3BE-euIBdY0_SovFkS6Ce90fl8MbI37c";
-  const MAP_ID = routeMapElement.id;
+
+  const MAP_ID = "map_j50";
 
   function hexToRGB(hex, alpha) {
     return (
@@ -42,7 +60,9 @@ if (routeMapElement && typeof L !== "undefined") {
     let desired = Math.round(h * 0.8625);
 
     desired = Math.min(desired, Math.round(w * 0.95));
+
     desired = Math.min(desired, Math.round(window.innerWidth * 0.95));
+
     desired = Math.min(desired, 960);
     desired = Math.max(desired, 320);
 
@@ -63,7 +83,9 @@ if (routeMapElement && typeof L !== "undefined") {
 
         if (wrapper) {
           wrapper.style.width = desiredPx + "px";
+
           wrapper.style.maxWidth = desiredPx + "px";
+
           wrapper.style.minWidth = desiredPx + "px";
         }
       }
@@ -76,7 +98,7 @@ if (routeMapElement && typeof L !== "undefined") {
     circle: L.DivIcon.extend({
       options: {
         className: "",
-        html: '<div style="width:8px;height:8px;border-radius:50%;border:2px white solid;background:currentColor"></div>',
+        html: '<div style="width: 8px; height: 8px; border-radius: 50%; border: 2px white solid; background: currentColor"></div>',
         iconAnchor: [7, 7],
       },
     }),
@@ -229,7 +251,7 @@ if (routeMapElement && typeof L !== "undefined") {
 
         const images = content.querySelectorAll("img");
 
-        images.forEach((img) => {
+        images.forEach(function (img) {
           if (img.complete) {
             return;
           }
@@ -243,8 +265,32 @@ if (routeMapElement && typeof L !== "undefined") {
           applyPopupWidth(e.popup, desired);
         }, 0);
       }
+
+      if (
+        e.popup._container &&
+        e.popup._container.offsetWidth > screen.width - 50 &&
+        e.popup._container.offsetHeight > 100
+      ) {
+        const controls =
+          document.querySelector(
+            "#" + MAP_ID + " ~ .leaflet-control-container"
+          ) || document.querySelector(".leaflet-control-container");
+
+        if (controls) {
+          controls.hidden = true;
+        }
+      }
     })
-    .on("popupclose", function () {});
+    .on("popupclose", function () {
+      const controls =
+        document.querySelector(
+          "#" + MAP_ID + " ~ .leaflet-control-container"
+        ) || document.querySelector(".leaflet-control-container");
+
+      if (controls) {
+        controls.hidden = false;
+      }
+    });
 
   const LogoControl = L.Control.extend({
     options: {
@@ -257,6 +303,7 @@ if (routeMapElement && typeof L !== "undefined") {
       const link = L.DomUtil.create("a", "", container);
 
       link.setAttribute("href", "https://mapy.cz/");
+
       link.setAttribute("target", "_blank");
 
       link.innerHTML = '<img src="https://api.mapy.cz/img/api/logo.svg">';
@@ -270,7 +317,7 @@ if (routeMapElement && typeof L !== "undefined") {
   new LogoControl().addTo(map);
 
   /*
-   * White stroke under the route
+   * Duplicate track as white stroke
    */
   L.GPX.prototype._orig_parse_gpx_data = L.GPX.prototype._parse_gpx_data;
 
@@ -288,6 +335,9 @@ if (routeMapElement && typeof L !== "undefined") {
     return L.GPX.prototype._orig_parse_gpx_data.apply(this, arguments);
   };
 
+  /*
+   * Track styling
+   */
   L.GPX.prototype._orig_extract_styling = L.GPX.prototype._extract_styling;
 
   L.GPX.prototype._extract_styling = function (trk) {
@@ -315,8 +365,9 @@ if (routeMapElement && typeof L !== "undefined") {
     return values;
   };
 
-  const gpx = new L.GPX("files/maps/j50.gpx", {
+  const gpx = new L.GPX(gpxDocument, {
     async: true,
+
     markers: {
       startIcon: null,
       endIcon: null,
@@ -340,6 +391,7 @@ if (routeMapElement && typeof L !== "undefined") {
 
     if (popup) {
       popup.options.maxWidth = desired;
+
       popup.options.minWidth = desired;
     }
 
@@ -351,9 +403,14 @@ if (routeMapElement && typeof L !== "undefined") {
 
     const rotate = e.element.getAttribute("data-rotate");
 
-    if (rotate && e.point.getIcon().options.html) {
+    if (
+      rotate &&
+      e.point.getIcon() &&
+      e.point.getIcon().options &&
+      e.point.getIcon().options.html
+    ) {
       e.point.getIcon().options.html =
-        '<div style="width:fit-content;transform:rotate(' +
+        '<div style="width: fit-content; transform: rotate(' +
         rotate +
         'deg)">' +
         e.point.getIcon().options.html +
@@ -363,5 +420,9 @@ if (routeMapElement && typeof L !== "undefined") {
 
   gpx.on("loaded", function () {
     map.fitBounds(gpx.getBounds());
+  });
+
+  gpx.on("error", function (error) {
+    console.error("GPX load error:", error);
   });
 }
