@@ -111,6 +111,32 @@
   @include media-breakpoint-down(lg) {
     border-radius: 0 0 16px 16px;
   }
+  .leaflet-popup-content-wrapper {
+    max-width: min(95vw, 960px);
+    min-width: 320px;
+  }
+
+  .leaflet-popup-content {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .leaflet-popup-content img {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  @media (max-width: 768px) {
+    .leaflet-popup-close-button {
+      right: auto;
+      left: 0;
+
+      padding: 4px 0 0 4px;
+    }
+  }
 }
 
 .mapsPage__mapCanvas {
