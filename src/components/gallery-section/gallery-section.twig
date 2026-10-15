@@ -20,17 +20,20 @@
       z ČEZ Jizerské 50, podívej se na náš Flickr. Nejlepší střípky najdeš také
       na Facebooku Jizerské 50.
     </p>
+    <form
+      class="d-flex flex-wrap align-items-center position-relative gap-md-3 gap-2 mb-3"
+    >
+      <div class="formSelect">
+        <select class="js-select" name="years[]" data-placeholder="Ročník">
+          <option value="2">2027</option>
+          <option value="3">2026</option>
+          <option value="4">2025</option>
+          <option value="5">2024</option>
+        </select>
+      </div>
 
-    <label class="startList__select mb-4">
-      <select name="race">
-        <option value="">Ročník</option>
-        <option value="2026">2026</option>
-        <option value="2025">2025</option>
-        <option value="2024">2024</option>
-      </select>
-
-      <img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
-    </label>
+     
+    </form>
 
     <div class="row g-lg-6 g-4">
       {% set galleries = [ "ČEZ Energy Fest Jablonec - POETIKA", "Tech

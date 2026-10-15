@@ -58,79 +58,64 @@
 
     <div class="d-none d-lg-block">
       <form class="resultsPage__filters">
-        <div class="resultsPage__search">
-          <img
-            src="images/ico/search-primary.svg"
-            width="20"
-            height="20"
-            alt=""
-          />
+        <div class="resultsPage__filters-top">
+          <div class="formSelect">
+            <select class="js-select" name="race" data-placeholder="Závod">
+              <option></option>
+              <option value="j50" selected>Jizerská 50</option>
+              <option value="j25">Jizerská 25</option>
+              <option value="b30">Bedřichovská 30</option>
+              <option value="j17">Jizerská 17</option>
+            </select>
+          </div>
 
-          <input type="search" name="search" placeholder="Hledat závodníka" />
+          <div class="formSelect">
+            <select class="js-select" name="year" data-placeholder="Ročník">
+              <option></option>
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+
+          <div class="formSelect">
+            <select
+              class="js-select"
+              name="category"
+              data-placeholder="Věková kategorie"
+            >
+              <option></option>
+              <option value="m39">M39</option>
+              <option value="m49">M49</option>
+              <option value="m59">M59</option>
+            </select>
+          </div>
+
+          <div class="formSelect">
+            <select class="js-select" name="gender" data-placeholder="Pohlaví">
+              <option></option>
+              <option value="male">Muži</option>
+              <option value="female">Ženy</option>
+            </select>
+          </div>
+          <div class="formSelect formSelect--multiple w-100">
+            <select
+              class="js-select"
+              name="runners[]"
+              multiple
+              data-placeholder="Hledat závodníka"
+              data-search-placeholder="Začněte psát jméno"
+            >
+              <option value="1">Johanes Tjelle</option>
+              <option value="2">Kasper Stadaas</option>
+              <option value="3">Andreas Nygaard</option>
+              <option value="4">Emil Persson</option>
+              <option value="5">Petter Northug</option>
+              <option value="6">Martin Jakš</option>
+              <option value="7">Jiří Ročárek</option>
+            </select>
+          </div>
         </div>
-
-        <label class="resultsPage__select resultsPage__select--race">
-          <select name="race">
-            <option>Jizerská 50</option>
-            <option>Jizerská 25</option>
-            <option>Bedřichovská 30</option>
-            <option>Jizerská 17</option>
-          </select>
-
-          <img
-            src="images/ico/chevron-down.svg"
-            width="16"
-            height="16"
-            alt=""
-          />
-        </label>
-
-        <label class="resultsPage__select">
-          <select name="year">
-            <option value="" selected>Ročník</option>
-            <option>2026</option>
-            <option>2025</option>
-            <option>2024</option>
-          </select>
-
-          <img
-            src="images/ico/chevron-down.svg"
-            width="16"
-            height="16"
-            alt=""
-          />
-        </label>
-
-        <label class="resultsPage__select resultsPage__select--category">
-          <select name="category">
-            <option value="" selected>Věková kategorie</option>
-            <option>M39</option>
-            <option>M49</option>
-            <option>M59</option>
-          </select>
-
-          <img
-            src="images/ico/chevron-down.svg"
-            width="16"
-            height="16"
-            alt=""
-          />
-        </label>
-
-        <label class="resultsPage__select resultsPage__select--gender">
-          <select name="gender">
-            <option value="" selected>Pohlaví</option>
-            <option>Muži</option>
-            <option>Ženy</option>
-          </select>
-
-          <img
-            src="images/ico/chevron-down.svg"
-            width="16"
-            height="16"
-            alt=""
-          />
-        </label>
 
         <div class="resultsPage__filterActions">
           <button class="button-primary" type="button">Porovnat</button>
@@ -316,38 +301,39 @@
         </div>
 
         <div class="resultsPage__mobileSearch">
-          <div class="resultsPage__search">
-            <img
-              src="images/ico/search-primary.svg"
-              width="20"
-              height="20"
-              alt=""
-            />
-
-            <input
-              type="search"
-              name="search-mobile"
-              placeholder="Hledat závodníka"
-            />
+          <div class="formSelect formSelect--multiple formSelect--fluid">
+            <select
+              class="js-select"
+              name="runners-mobile[]"
+              multiple
+              data-placeholder="Hledat závodníka"
+              data-search-placeholder="Začněte psát jméno"
+            >
+              <option value="1">Johanes Tjelle</option>
+              <option value="2">Kasper Stadaas</option>
+              <option value="3">Andreas Nygaard</option>
+              <option value="4">Emil Persson</option>
+              <option value="5">Petter Northug</option>
+              <option value="6">Martin Jakš</option>
+              <option value="7">Jiří Ročárek</option>
+            </select>
           </div>
         </div>
 
         <div class="resultsPage__mobileControls">
-          <label class="resultsPage__select">
-            <select name="race-mobile">
-              <option>Jizerská 50</option>
-              <option>Jizerská 25</option>
-              <option>Bedřichovská 30</option>
-              <option>Jizerská 17</option>
+          <div class="formSelect formSelect--fluid">
+            <select
+              class="js-select"
+              name="race-mobile"
+              data-placeholder="Závod"
+            >
+              <option></option>
+              <option value="j50" selected>Jizerská 50</option>
+              <option value="j25">Jizerská 25</option>
+              <option value="b30">Bedřichovská 30</option>
+              <option value="j17">Jizerská 17</option>
             </select>
-
-            <img
-              src="images/ico/chevron-down.svg"
-              width="16"
-              height="16"
-              alt=""
-            />
-          </label>
+          </div>
 
           <button
             class="resultsPage__filterButton js-results-filter"
@@ -424,7 +410,7 @@
                     alt=""
                   />
 
-                  <span> Stáhnout diplom </span>
+                  <span>Stáhnout diplom</span>
                 </a>
               </div>
             </div>

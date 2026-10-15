@@ -1,7 +1,8 @@
-const customSelects = $(".js-custom-select");
-
-if (customSelects.length) {
-  customSelects.each(function () {
+if (
+  typeof window.jQuery !== "undefined" &&
+  typeof window.jQuery.fn.select2 !== "undefined"
+) {
+  $(".js-select").each(function () {
     const select = $(this);
     const isMultiple = this.multiple;
 
@@ -10,60 +11,131 @@ if (customSelects.length) {
       placeholder: select.data("placeholder") || "",
       closeOnSelect: !isMultiple,
       allowClear: false,
+      minimumResultsForSearch: Infinity,
 
       templateResult: function (option) {
         if (!option.id) {
           return option.text;
         }
 
-        const selected = select
-          .find('option[value="' + option.id + '"]')
-          .prop("selected");
+        const optionEl = document.createElement("span");
+        optionEl.className = "customSelectOption";
 
-        return $(`
-          <span class="customSelectOption ${selected ? "is-selected" : ""}">
-            <span class="customSelectOption__check"></span>
+        const check = document.createElement("span");
+        check.className = "customSelectOption__check";
 
-            <span class="customSelectOption__text">
-              ${option.text}
-            </span>
-          </span>
-        `);
+        const text = document.createElement("span");
+        text.className = "customSelectOption__text";
+        text.textContent = option.text;
+
+        optionEl.appendChild(check);
+        optionEl.appendChild(text);
+
+        return optionEl;
       },
     });
 
-    select.on("select2:open", function () {
-      const dropdown = $(".select2-container--open .select2-dropdown");
+    const select2Container = select.next(".select2-container");
+    const selection = select2Container.find(".select2-selection");
 
-      if (
-        dropdown.length &&
-        !dropdown.find(".customSelectDropdown__head").length
-      ) {
-        dropdown.prepend(`
-          <div class="customSelectDropdown__head">
-            <strong>${select.data("title") || ""}</strong>
-
-            <button
-              class="customSelectDropdown__close"
-              type="button"
-              aria-label="Zavřít"
-            >
-              ×
-            </button>
-          </div>
-        `);
-      }
-    });
-
-    if (isMultiple) {
-      select.on("select2:select select2:unselect", function () {
-        select.select2("close");
-        select.select2("open");
-      });
+    /*
+     * Multiple Select2 nemá vlastní arrow.
+     * Přidáme stejnou strukturu jako používá single select.
+     */
+    if (
+      isMultiple &&
+      !selection.find(".select2-selection__arrow").length
+    ) {
+      selection.append(`
+        <span
+          class="select2-selection__arrow"
+          role="presentation"
+        >
+          <b role="presentation"></b>
+        </span>
+      `);
     }
-  });
 
-  $(document).on("click", ".customSelectDropdown__close", function () {
-    $(".select2-container--open").prev("select").select2("close");
+    if (!isMultiple) {
+      return;
+    }
+
+    /*
+     * Inline input necháme kvůli placeholderu,
+     * ale vyhledávání probíhá až v dropdownu.
+     */
+    const selectionSearch = select2Container.find(
+      ".select2-search__field"
+    );
+
+    selectionSearch.attr("readonly", true);
+
+    /*
+     * Dropdown search pro multiple
+     */
+    select.on("select2:open", function () {
+      const dropdown = document.querySelector(
+        ".select2-container--open .select2-dropdown"
+      );
+
+      if (!dropdown) {
+        return;
+      }
+
+      let searchWrap = dropdown.querySelector(
+        ".customSelectDropdownSearch"
+      );
+
+      if (!searchWrap) {
+        searchWrap = document.createElement("div");
+        searchWrap.className = "customSelectDropdownSearch";
+
+        const searchInput = document.createElement("input");
+
+        searchInput.type = "search";
+        searchInput.className =
+          "customSelectDropdownSearch__input";
+
+        searchInput.autocomplete = "off";
+
+        searchInput.placeholder =
+          select.data("search-placeholder") ||
+          select.data("placeholder") ||
+          "Začněte psát jméno";
+
+        searchWrap.appendChild(searchInput);
+
+        dropdown.insertBefore(
+          searchWrap,
+          dropdown.firstChild
+        );
+
+        searchInput.addEventListener("input", function () {
+          const select2 = select.data("select2");
+
+          if (!select2) {
+            return;
+          }
+
+          select2.trigger("query", {
+            term: this.value,
+          });
+        });
+      }
+
+      const searchInput = searchWrap.querySelector(
+        ".customSelectDropdownSearch__input"
+      );
+
+      if (!searchInput) {
+        return;
+      }
+
+      searchInput.value = "";
+
+      setTimeout(function () {
+        searchInput.focus();
+      }, 0);
+    });
   });
 }

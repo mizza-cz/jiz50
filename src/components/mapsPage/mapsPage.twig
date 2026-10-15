@@ -4,52 +4,51 @@
 převýšení", value: "762 m" }, { label: "Nejnižší bod", value: "738 m.n.m" }, {
 label: "Maximální stoupání", value: "10,9 %" }, { label: "Maximální klesání",
 value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
-"Celková délka závodu", value: "50,6 km" } ] %}
+"Celková délka závodu", value: "50,6 km" } ] %} {% set routes = [ "ČEZ Jizerská
+50", "Volkswagen Bedřichovská 30", "ČRA Jizerská 25", "VINCI Construction
+Jizerská 17", "ORLEN Sprint", "ČT Jizerská 10", "T-Mobile Jizerská firemní
+štafeta" ] %} {% set routeStats = [ { label: "Celkové převýšení", value: "762 m"
+}, { label: "Nejnižší bod", value: "738 m.n.m" }, { label: "Maximální stoupání",
+value: "10,9 %" }, { label: "Maximální klesání", value: "-9,3 %" }, { label:
+"Nejvyšší bod", value: "1002 m.n.m" }, { label: "Celková délka závodu", value:
+"50,6 km" } ] %}
 
 <section class="mapsPage">
   <div class="container">
-    <div class="d-none d-lg-block">
-      <form class="resultsPage__filters">
-        <label class="resultsPage__select resultsPage__select--race">
-          <select name="race">
-            <option>Jizerská 50 | 2026</option>
-            <option>Jizerská 25</option>
-            <option>Bedřichovská 30</option>
-            <option>Jizerská 17</option>
-          </select>
+    {# DESKTOP FILTER #}
 
-          <img
-            src="images/ico/chevron-down.svg"
-            width="16"
-            height="16"
-            alt=""
-          />
-        </label>
+    <div class="d-none d-lg-block">
+      <form class="mb-6">
+        <div class="formSelect">
+          <select class="js-select" name="race" data-placeholder="Závod">
+            <option></option>
+            <option value="j50" selected>Jizerská 50 | 2026</option>
+            <option value="j25">Jizerská 25</option>
+            <option value="b30">Bedřichovská 30</option>
+            <option value="j17">Jizerská 17</option>
+          </select>
+        </div>
       </form>
     </div>
+
+    {# MOBILE #}
+
     <div class="resultsPage__mobile d-lg-none">
       <div class="resultsPage__mobileTop">
-       
-
-        <div class="resultsPage__mobileSearch">
-        
-
         <div class="resultsPage__mobileControls">
-          <label class="resultsPage__select">
-            <select name="race-mobile">
-              <option>Jizerská 50</option>
-              <option>Jizerská 25</option>
-              <option>Bedřichovská 30</option>
-              <option>Jizerská 17</option>
+          <div class="formSelect formSelect--fluid">
+            <select
+              class="js-select"
+              name="race-mobile"
+              data-placeholder="Závod"
+            >
+              <option></option>
+              <option value="j50" selected>Jizerská 50</option>
+              <option value="j25">Jizerská 25</option>
+              <option value="b30">Bedřichovská 30</option>
+              <option value="j17">Jizerská 17</option>
             </select>
-
-            <img
-              src="images/ico/chevron-down.svg"
-              width="16"
-              height="16"
-              alt=""
-            />
-          </label>
+          </div>
 
           <button
             class="resultsPage__filterButton js-results-filter"
@@ -126,7 +125,7 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
                     alt=""
                   />
 
-                  <span> Stáhnout diplom </span>
+                  <span>Stáhnout diplom</span>
                 </a>
               </div>
             </div>
@@ -162,11 +161,13 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
               <div class="resultsPageFilter__range">
                 <label class="resultsPageFilter__rangeField">
                   <span>Od</span>
+
                   <input type="text" name="year-from" />
                 </label>
 
                 <label class="resultsPageFilter__rangeField">
                   <span>Do</span>
+
                   <input type="text" name="year-to" />
                 </label>
               </div>
@@ -174,19 +175,25 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
               <div class="resultsPageFilter__options">
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="year-filter" value="2026" />
+
                   <span></span>
+
                   2026
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="year-filter" value="2025" />
+
                   <span></span>
+
                   2025
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="year-filter" value="2024" />
+
                   <span></span>
+
                   2024
                 </label>
               </div>
@@ -202,25 +209,33 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
               <div class="resultsPageFilter__options">
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="age-filter" value="18-30" />
+
                   <span></span>
+
                   18 - 30
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="age-filter" value="31-50" />
+
                   <span></span>
+
                   31 - 50
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="age-filter" value="51-70" />
+
                   <span></span>
+
                   51 - 70
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="age-filter" value="71-90" />
+
                   <span></span>
+
                   71 - 90+
                 </label>
               </div>
@@ -232,13 +247,17 @@ value: "-9,3 %" }, { label: "Nejvyšší bod", value: "1002 m.n.m" }, { label:
               <div class="resultsPageFilter__options">
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="gender-filter" value="male" />
+
                   <span></span>
+
                   Muž
                 </label>
 
                 <label class="resultsPageFilter__radio">
                   <input type="radio" name="gender-filter" value="female" />
+
                   <span></span>
+
                   Žena
                 </label>
               </div>

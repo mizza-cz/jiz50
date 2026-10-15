@@ -22,12 +22,41 @@
    FILTERS
    ========================= */
 
+/* =========================
+   RESULTS FILTERS
+   ========================= */
+
 .resultsPage__filters {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  .formSelect:not(.formSelect--multiple) {
+    flex: 1;
+  }
+}
+.resultsPage__filters-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resultsPage__filterActions {
   display: flex;
   align-items: center;
   gap: 8px;
 
-  margin-bottom: 8px;
+  flex: 0 0 auto;
+
+  .button-primary,
+  .button-secondary {
+    min-width: 126px;
+    min-height: 42px;
+
+    justify-content: center;
+  }
 }
 
 .resultsPage__search {
@@ -114,25 +143,10 @@
   }
 }
 
-.resultsPage__select--race {
-  width: 190px;
-}
-
-.resultsPage__select--category {
-  width: 200px;
-}
-
-.resultsPage__select--gender {
-  width: 170px;
-}
-
 .resultsPage__filterActions {
   display: flex;
   align-items: center;
   gap: 8px;
-
-  margin-left: auto;
-
   .button-primary,
   .button-secondary {
     min-width: 126px;

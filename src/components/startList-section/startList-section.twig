@@ -1,61 +1,31 @@
 <section class="startList">
   <div class="container">
-    <form class="startList__filters">
-      <div class="startList__search">
-        <button class="startList__search-btn" type="submit">
-          <img
-            src="images/ico/search-primary.svg"
-            width="20"
-            height="20"
-            alt=""
-          />
-        </button>
-
-        <input
-          type="search"
-          name="search"
-          placeholder="Hledat podle jména nebo klubu"
-        />
+    <form
+      class="d-flex flex-wrap align-items-center position-relative gap-md-3 gap-2 mb-3"
+    >
+      <div class="formSelect formSelect--multiple">
+        <select
+          class="js-select"
+          name="players[]"
+          multiple
+          data-placeholder="Hledat závodníka"
+          data-search-placeholder="Začněte psát"
+        >
+          <option value="1">Jan Novák</option>
+          <option value="2">Petr Svoboda</option>
+          <option value="3">Martin Dvořák</option>
+          <option value="4">Tomáš Černý</option>
+          <option value="5">Lukáš Procházka</option>
+        </select>
       </div>
 
-      <label class="startList__select">
-        <select name="race">
+      <div class="formSelect">
+        <select class="js-select" name="race" data-placeholder="Vyberte závod">
+          <option></option>
           <option value="50">Jizerská 50 | 2026</option>
           <option value="25">Jizerská 25 | 2026</option>
           <option value="10">Jizerská 10 | 2026</option>
         </select>
-
-        <img src="images/ico/chevron-down.svg" width="16" height="16" alt="" />
-      </label>
-
-      <button
-        class="startList__filterButton js-startList-filter"
-        type="button"
-        aria-label="Filtr"
-        aria-expanded="false"
-      >
-        <img src="images/ico/filter.svg" width="24" height="24" alt="" />
-      </button>
-
-      <div class="startList__mobileFilter js-startList-mobileFilter">
-        <label class="startList__mobileFilter-item">
-          <span>Závod</span>
-
-          <div class="startList__mobileFilter-select">
-            <select name="race-mobile">
-              <option value="50">Jizerská 50 | 2026</option>
-              <option value="25">Jizerská 25 | 2026</option>
-              <option value="10">Jizerská 10 | 2026</option>
-            </select>
-
-            <img
-              src="images/ico/chevron-down.svg"
-              width="16"
-              height="16"
-              alt=""
-            />
-          </div>
-        </label>
       </div>
     </form>
     <div class="o-content mb-lg-18 mb-12">
