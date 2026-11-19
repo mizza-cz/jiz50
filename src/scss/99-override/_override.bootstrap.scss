@@ -84,4 +84,10 @@ $grid-breakpoints: (
 .rounded-24 {
   border-radius: 24px;
 }
+.hover-underline {
+  text-decoration-color: transparent;
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}
 /*! purgecss end ignore */

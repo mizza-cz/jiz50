@@ -1,7 +1,7 @@
 <section class="hp-competitions">
   <div class="container">
     <div
-      class="d-flex align-items-center flex-wrap justify-content-between gap-4 mb-4"
+      class="d-flex align-items-md-center align-items-end flex-wrap justify-content-between gap-4 mb-4"
     >
       <div class="d-gird gap-1">
         <div class="subtitle-secondary">Nadcházející závody</div>
@@ -9,10 +9,31 @@
           Vyber si <span class="text-secondary"> svou výzvu </span>
         </h5>
       </div>
-      <a href="#" class="button-secondary">Všechny závody</a>
+      <a href="#" class="button-secondary d-md-flex d-none">Všechny závody</a>
+      <a
+        class="d-md-none d-flex gap-2 align-items-center text-tertiary text-medium-xs hover-underline mb-1"
+        href="#"
+        >Více
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.1055 10.7231L6.00168 20.6958C6.73145 21.4161 7.91464 21.4161 8.6444 20.6958L17.4268 12.0274L16.1055 10.7231Z"
+            fill="#28395E"
+          />
+          <path
+            d="M16.1055 13.2769L6.00168 3.30422C6.73145 2.58392 7.91464 2.58392 8.6444 3.30422L17.4268 11.9726L16.1055 13.2769Z"
+            fill="#28395E"
+          />
+        </svg>
+      </a>
     </div>
     <div class="row g-lg-6 g-2">
-      <div class="col-xl-6 d-sm-block d-none">
+      <div class="col-xl-6 d-md-block d-none">
         {% include "@components/cardCompetition/cardCompetition-main.twig" %}
       </div>
 
@@ -28,7 +49,7 @@
         </div>
       </div>
 
-      <div class="col-xl-3 col-md-6">
+      <div class="col-xl-3 col-md-6 d-md-block d-none">
         <div class="row g-lg-6 g-2">
           <div class="col-12">
             {% include "@components/cardCompetition/cardCompetition.twig" %}

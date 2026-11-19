@@ -25,8 +25,12 @@
   grid-template-columns: repeat(7, minmax(0, 1fr));
   width: 100%;
   gap: 8px;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .socialGallery__item:nth-child(n + 5) {
+      display: none;
+    }
   }
 }
 

@@ -1,8 +1,13 @@
 .newsletterBanner {
   margin-bottom: 68px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-bottom: 32px;
+  }
+  .container {
+    @include media-breakpoint-down(md) {
+      padding: 0 !important;
+    }
   }
 }
 
