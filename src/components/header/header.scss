@@ -9,6 +9,9 @@
   @include media-breakpoint-down(xl) {
     padding-right: 16px;
   }
+  .container-full {
+    max-width: 104rem !important;
+  }
 }
 
 .header__inner {
@@ -613,7 +616,6 @@
   }
 }
 
- 
 body.is-nav-open {
   @include media-breakpoint-down(xl) {
     overflow: hidden;

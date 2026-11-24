@@ -55,11 +55,13 @@
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: 0.46px;
-  background-color: var(--color-accent);
+  background-color: var(--color-white);
   transition: color 0.2s ease, background-color 0.2s ease,
     border-color 0.2s ease;
-
-  &:hover {
+  span {
+    background-color: var(--color-accent);
+  }
+  &:hover span {
     background-color: var(--color-accent-dark);
   }
 
@@ -95,7 +97,7 @@
 
   width: 50px;
 
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
   color: var(--color-accent);
 
   svg {

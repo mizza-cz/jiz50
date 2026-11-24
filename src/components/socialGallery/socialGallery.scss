@@ -68,11 +68,12 @@
   gap: 12px;
 
   padding-top: 16px;
-
+  .button-secondary {
+    min-width: 148px;
+    justify-content: center;
+  }
   @include media-breakpoint-down(sm) {
-    justify-content: flex-start;
     gap: 8px;
-
     padding-top: 10px;
   }
   svg {
